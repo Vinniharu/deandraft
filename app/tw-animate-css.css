@@ -1,0 +1,125 @@
+/* tw-animate-css.css */
+/* These animations will be used across the site, particularly in the hero section */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-up {
+  animation: fade-up var(--duration, 1s) var(--delay, 0s) var(--timing, ease) var(--repeat, 1) var(--direction, normal) var(--fill-mode, forwards);
+}
+
+.animate-fade-in {
+  animation: fade-in var(--duration, 1s) var(--delay, 0s) var(--timing, ease) var(--repeat, 1) var(--direction, normal) var(--fill-mode, forwards);
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right var(--duration, 1s) var(--delay, 0s) var(--timing, ease) var(--repeat, 1) var(--direction, normal) var(--fill-mode, forwards);
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left var(--duration, 1s) var(--delay, 0s) var(--timing, ease) var(--repeat, 1) var(--direction, normal) var(--fill-mode, forwards);
+}
+
+.animate-pulse {
+  animation: pulse var(--duration, 2s) var(--delay, 0s) ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float var(--duration, 3s) var(--delay, 0s) ease-in-out infinite;
+}
+
+/* Animation durations */
+.animate-duration-300 { --duration: 0.3s; }
+.animate-duration-500 { --duration: 0.5s; }
+.animate-duration-700 { --duration: 0.7s; }
+.animate-duration-1000 { --duration: 1s; }
+.animate-duration-1500 { --duration: 1.5s; }
+.animate-duration-2000 { --duration: 2s; }
+
+/* Animation delays */
+.animate-delay-100 { --delay: 0.1s; }
+.animate-delay-200 { --delay: 0.2s; }
+.animate-delay-300 { --delay: 0.3s; }
+.animate-delay-500 { --delay: 0.5s; }
+.animate-delay-700 { --delay: 0.7s; }
+.animate-delay-1000 { --delay: 1s; }
+
+/* Animation timing functions */
+.animate-ease { --timing: ease; }
+.animate-ease-in { --timing: ease-in; }
+.animate-ease-out { --timing: ease-out; }
+.animate-ease-in-out { --timing: ease-in-out; }
+.animate-linear { --timing: linear; }
+
+/* Animation repetition */
+.animate-once { --repeat: 1; }
+.animate-infinite { --repeat: infinite; }
+
+/* Animation directions */
+.animate-normal { --direction: normal; }
+.animate-reverse { --direction: reverse; }
+.animate-alternate { --direction: alternate; }
+
+/* Animation fill modes */
+.animate-fill-none { --fill-mode: none; }
+.animate-fill-forwards { --fill-mode: forwards; }
+.animate-fill-backwards { --fill-mode: backwards; }
+.animate-fill-both { --fill-mode: both; } 
