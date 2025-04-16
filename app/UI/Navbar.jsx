@@ -95,10 +95,10 @@ const navLinks = [
     name: "Donate",
     path: "/donate"
   },
-  {
-    name: "Special Intervention Projects",
-    path: "/special-projects"
-  }
+  // {
+  //   name: "Special Intervention Projects",
+  //   path: "/special-projects"
+  // }
 ];
 
 

@@ -9,6 +9,7 @@ import KeyHighlightsSection from './components/KeyHighlightsSection';
 import VisionMissionSection from './components/VisionMissionSection';
 import TeamPartnersSection from './components/TeamPartnersSection';
 import GetInvolvedSection from './components/GetInvolvedSection';
+import SpecialInterventionProjects from './components/SpecialInterventionProjects';
 
 // Page transition variants
 const pageVariants = {
@@ -44,6 +45,7 @@ export default function Home() {
     >
       <HomeHero />
       <OurStorySection />
+      <SpecialInterventionProjects/>
       <KeyHighlightsSection />
       <ImpactSection />
       <VisionMissionSection />
