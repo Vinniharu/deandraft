@@ -31,7 +31,7 @@ const navLinks = [
     ]
   },
   {
-    name: "Edu",
+    name: "Education",
     path: "/programs/education",
     sublinks: [
       { name: "NextGen Teachers", path: "/programs/education/nextgen" },
