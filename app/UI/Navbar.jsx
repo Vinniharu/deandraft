@@ -21,67 +21,86 @@ const navLinks = [
     path: "/"
   },
   {
-    name: "About Us",
+    name: "About",
     path: "/about",
     sublinks: [
-      { name: "Our Vision & Mission", path: "/about#vision-mission" },
-      { name: "Core Values", path: "/about#core-values" },
-      { name: "Board Members", path: "/team#board" },
-      { name: "Youth Advisory Board", path: "/team#youth-advisory" }
+      { name: "Mission", path: "/about#mission" },
+      { name: "Vision", path: "/about#vision" },
+      { name: "Team", path: "/about#team" },
+      { name: "Boards", path: "/about#boards" }
     ]
   },
   {
-    name: "Our Team",
-    path: "/team",
+    name: "Edu",
+    path: "/programs/education",
     sublinks: [
-      { name: "Leadership", path: "/team#leadership" },
-      { name: "Operations", path: "/team#operations" }
+      { name: "NextGen Teachers", path: "/programs/education/nextgen" },
+      { name: "Girls Back to School", path: "/programs/education/girls-back" },
+      { name: "SDGs Activation", path: "/programs/education/sdgs" },
+      { name: "Transforming Education", path: "/programs/education/transforming-edu" },
+      { name: "Education Archive", path: "/programs/education/archive" }
     ]
   },
   {
-    name: "Programs",
-    path: "/programs",
+    name: "Climate",
+    path: "/programs/climate-action",
     sublinks: [
-      {
-        name: "Education",
-        path: "/programs/education"
-      },
-      {
-        name: "Governance",
-        path: "/programs/governance"
-      },
-      {
-        name: "Democracy",
-        path: "/programs/democracy"
-      },
-      {
-        name: "Climate Action",
-        path: "/programs/climate-action"
-      },
-      {
-        name: "Special Projects",
-        path: "/programs/special-projects"
-      }
+      { name: "Lake Chad Fellowship", path: "/programs/climate-action/lake-chad" },
+      { name: "Climate Democracy Accelerator", path: "/programs/climate-action/democracy-accelerator" },
+      { name: "National Action Day", path: "/programs/climate-action/national-action" },
+      { name: "MSC Kenya Workshop", path: "/programs/climate-action/msc-kenya" },
+      { name: "More Climate Projects", path: "/programs/climate-action/more" }
     ]
   },
   {
-    name: "Get Involved",
-    path: "/get-involved",
+    name: "Democracy",
+    path: "/programs/democracy",
     sublinks: [
-      { name: "Volunteer", path: "/get-involved#volunteer" },
-      { name: "Donate", path: "/get-involved#donate" },
-      { name: "Join Us", path: "/get-involved#join" }
+      { name: "#iPledge2Vote", path: "/programs/democracy/ipledge" },
+      { name: "CEEP", path: "/programs/democracy/ceep" },
+      { name: "FixElection Youth Assembly", path: "/programs/democracy/fixelection" },
+      { name: "EEWOM", path: "/programs/democracy/eewom" },
+      { name: "More Democracy Projects", path: "/programs/democracy/more" }
     ]
   },
   {
-    name: "Partners",
-    path: "/partners"
+    name: "Governance",
+    path: "/programs/governance",
+    sublinks: [
+      { name: "#OpenLGAs", path: "/programs/governance/openlgas" },
+      { name: "#BudgetWatch", path: "/programs/governance/budgetwatch" },
+      { name: "Student Open-Gov Fellowship", path: "/programs/governance/student-fellowship" },
+      { name: "More Governance Projects", path: "/programs/governance/more" }
+    ]
   },
   {
-    name: "Contact",
-    path: "/contact"
+    name: "Publications",
+    path: "/publications",
+    sublinks: [
+      { name: "First Report", path: "/publications/first" },
+      { name: "Annual Reports", path: "/publications/annual" },
+      { name: "Project Reports", path: "/publications/projects" }
+    ]
+  },
+  {
+    name: "Media",
+    path: "/media",
+    sublinks: [
+      { name: "Press", path: "/media/press" },
+      { name: "Blog", path: "/media/blog" },
+      { name: "Gallery", path: "/media/gallery" }
+    ]
+  },
+  {
+    name: "Donate",
+    path: "/donate"
+  },
+  {
+    name: "Special Intervention Projects",
+    path: "/special-projects"
   }
 ];
+
 
 const ListItem = ({ className, title, href, children }) => {
   return (
