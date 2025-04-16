@@ -262,7 +262,7 @@ export default function Navbar() {
                   variants={navItemVariants}
                   custom={index}
                 >
-                  <NavigationMenuItem>
+                  <NavigationMenuItem className="relative">
                     {link.sublinks ? (
                       <>
                         <NavigationMenuTrigger 
@@ -275,7 +275,7 @@ export default function Navbar() {
                         >
                           {link.name}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                        <NavigationMenuContent className="absolute left-0 min-w-[200px]">
                           <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                             {link.sublinks.map((sublink) => (
                               <ListItem
