@@ -1,97 +1,121 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselImages = [
   {
     id: "img-1",
     src: "/hero/hero-1.jpg",
-    alt: "Vibrant Youth Action for Democracy"
+    alt: "Vibrant Youth Action for Democracy",
+    text: "Welcome to DEAN Initiative",
   },
   {
     id: "img-2",
     src: "/hero/hero-2.jpg",
-    alt: "Leading Community Action for Climate"
+    alt: "Leading Community Action for Climate",
+    text: "Education",
   },
   {
     id: "img-3",
-    src: "/hero/hero-3.jpeg",
-    alt: "Leading Transformative Youth Action"
+    src: "/hero/hero-3.jpg",
+    alt: "Leading Transformative Youth Action",
+    text: "Climate",
   },
   {
     id: "img-4",
-    src: "/hero/hero-4.jpg",
-    alt: "Education that leads problem solving"
+    src: "/hero/hero-4.jpeg",
+    alt: "Education that leads problem solving",
+    text: "Democracy",
   },
   {
     id: "img-5",
     src: "/hero/hero-5.jpeg",
-    alt: "Building Citizens Centered Local Governments"
-  }
+    alt: "Building Citizens Centered Local Governments",
+    text: "Governance",
+  },
 ];
-
 
 const textVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const buttonVariants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
     transition: {
       duration: 0.5,
       delay: 0.6,
       type: "spring",
-      stiffness: 200
-    }
+      stiffness: 200,
+    },
   },
-  hover: { 
+  hover: {
     scale: 1.05,
     boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)",
     transition: {
-      duration: 0.3
-    }
+      duration: 0.3,
+    },
   },
-  tap: { 
-    scale: 0.95
-  }
+  tap: {
+    scale: 0.95,
+  },
 };
-
 
 // Image animation variants
 const imageVariants = {
   enter: { opacity: 0, scale: 0.8 },
-  center: { 
-    opacity: 1, 
+  center: {
+    opacity: 1,
     scale: 1,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
-  exit: { 
+  exit: {
     opacity: 0,
     scale: 1.2,
     transition: {
       duration: 0.5,
-      ease: "easeIn"
-    }
-  }
+      ease: "easeIn",
+    },
+  },
+};
+
+// Text carousel animation variants
+const textCarouselVariants = {
+  enter: { opacity: 0, x: 50 },
+  center: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -50,
+    transition: {
+      duration: 0.4,
+      ease: "easeIn",
+    },
+  },
 };
 
 export default function HomeHero() {
@@ -105,7 +129,7 @@ export default function HomeHero() {
   const handleNext = useCallback(() => {
     if (!isTransitioning) {
       setIsTransitioning(true);
-      setActiveIndex(prevIndex => 
+      setActiveIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
       setTimeout(() => setIsTransitioning(false), 500);
@@ -116,7 +140,7 @@ export default function HomeHero() {
   const handlePrev = useCallback(() => {
     if (!isTransitioning) {
       setIsTransitioning(true);
-      setActiveIndex(prevIndex => 
+      setActiveIndex((prevIndex) =>
         prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
       );
       setTimeout(() => setIsTransitioning(false), 500);
@@ -124,13 +148,16 @@ export default function HomeHero() {
   }, [isTransitioning]);
 
   // Go to specific slide
-  const goToSlide = useCallback((index) => {
-    if (!isTransitioning && index !== activeIndex) {
-      setIsTransitioning(true);
-      setActiveIndex(index);
-      setTimeout(() => setIsTransitioning(false), 500);
-    }
-  }, [isTransitioning, activeIndex]);
+  const goToSlide = useCallback(
+    (index) => {
+      if (!isTransitioning && index !== activeIndex) {
+        setIsTransitioning(true);
+        setActiveIndex(index);
+        setTimeout(() => setIsTransitioning(false), 500);
+      }
+    },
+    [isTransitioning, activeIndex]
+  );
 
   // Autoplay functionality
   useEffect(() => {
@@ -148,16 +175,16 @@ export default function HomeHero() {
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowLeft') {
+      if (e.key === "ArrowLeft") {
         handlePrev();
-      } else if (e.key === 'ArrowRight') {
+      } else if (e.key === "ArrowRight") {
         handleNext();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleNext, handlePrev]);
 
@@ -174,7 +201,7 @@ export default function HomeHero() {
     // Minimum swipe distance threshold
     const minSwipeDistance = 50;
     const swipeDistance = touchEndX.current - touchStartX.current;
-    
+
     if (swipeDistance > minSwipeDistance) {
       // Swiped right - go to previous slide
       handlePrev();
@@ -185,7 +212,7 @@ export default function HomeHero() {
   };
 
   return (
-    <section 
+    <section
       className="relative h-screen w-full overflow-hidden bg-black"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -194,7 +221,7 @@ export default function HomeHero() {
       {/* Carousel */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={`image-${activeIndex}`}
             className="absolute inset-0"
             initial="enter"
@@ -216,7 +243,7 @@ export default function HomeHero() {
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--dean-blue)]/80 to-[var(--dean-red)]/60 mix-blend-multiply" />
-        
+
         {/* Pattern overlay */}
         <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-30" />
       </div>
@@ -225,33 +252,50 @@ export default function HomeHero() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 md:px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           {/* Heading */}
-          <motion.h1 
+          {/* <motion.h1
             initial="hidden"
             animate="visible"
             variants={textVariants}
             className="text-4xl md:text-6xl font-bold leading-tight"
           >
-            Welcome to <span className="text-white">DEAN</span> <span className="text-white">INITIATIVE</span>
-          </motion.h1>
-          
+            Welcome to <span className="text-white">DEAN</span>{" "}
+            <span className="text-white">INITIATIVE</span>
+          </motion.h1> */}
+
+          {/* Text Carousel */}
+          <div className="h-16 md:h-20 overflow-hidden relative">
+            <AnimatePresence mode="wait">
+              <motion.h2
+                key={`text-carousel-${activeIndex}`}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                variants={textCarouselVariants}
+                className="text-3xl md:text-6xl font-bold flex items-center justify-center"
+              >
+                {carouselImages[activeIndex].text}
+              </motion.h2>
+            </AnimatePresence>
+          </div>
+
           {/* Subheading */}
-          <motion.h2 
+          {/* <motion.h3
             initial="hidden"
             animate="visible"
             variants={textVariants}
             className="text-xl md:text-3xl font-medium leading-relaxed text-white/90"
           >
             Empowering Youth. Transforming Communities.
-          </motion.h2>
-          
+          </motion.h3> */}
+
           {/* CTA */}
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={buttonVariants}
           >
             <Link href="/get-involved">
-              <motion.button 
+              <motion.button
                 whileHover="hover"
                 whileTap="tap"
                 className="px-8 py-3 rounded-full bg-white text-[var(--dean-blue)] font-medium transition-all"
@@ -261,7 +305,7 @@ export default function HomeHero() {
             </Link>
           </motion.div>
         </div>
-        
+
         {/* Carousel navigation arrows */}
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 md:px-10">
           <button
@@ -271,7 +315,7 @@ export default function HomeHero() {
           >
             <ChevronLeft size={24} />
           </button>
-          
+
           <button
             onClick={handleNext}
             className="bg-black/30 hover:bg-black/50 rounded-full p-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
@@ -280,7 +324,7 @@ export default function HomeHero() {
             <ChevronRight size={24} />
           </button>
         </div>
-        
+
         {/* Carousel indicators */}
         <div className="absolute bottom-10 flex space-x-2">
           {carouselImages.map((_, index) => (
@@ -288,8 +332,8 @@ export default function HomeHero() {
               key={`indicator-${index}`}
               className={cn(
                 "w-3 h-3 rounded-full transition-all duration-300",
-                activeIndex === index 
-                  ? "bg-white w-8" 
+                activeIndex === index
+                  ? "bg-white w-8"
                   : "bg-white/50 hover:bg-white/80"
               )}
               onClick={() => goToSlide(index)}
