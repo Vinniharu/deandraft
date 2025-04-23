@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import RevealOnScroll from './RevealOnScroll';
+import RevealOnScroll from '../RevealOnScroll';
 
 export default function VisionMissionSection() {
     const sectionRef = useRef(null);

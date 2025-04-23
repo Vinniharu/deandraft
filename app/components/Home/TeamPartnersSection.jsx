@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import RevealOnScroll from './RevealOnScroll';
+import RevealOnScroll from '../RevealOnScroll';
 
 export default function TeamPartnersSection() {
     const sectionRef = useRef(null);

@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import RevealOnScroll from './RevealOnScroll';
+import RevealOnScroll from '../RevealOnScroll';
 import Image from 'next/image';
 
 export default function OurStorySection() {
