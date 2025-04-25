@@ -9,14 +9,7 @@ import KeyHighlightsSection from './components/Home/KeyHighlightsSection';
 import VisionMissionSection from './components/Home/VisionMissionSection';
 import TeamPartnersSection from './components/Home/TeamPartnersSection';
 import GetInvolvedSection from './components/Home/GetInvolvedSection';
-import HomeHero from './components/HomeHero';
-import OurStorySection from './components/OurStorySection';
-import ImpactSection from './components/ImpactSection';
-import KeyHighlightsSection from './components/KeyHighlightsSection';
-import VisionMissionSection from './components/VisionMissionSection';
-import TeamPartnersSection from './components/TeamPartnersSection';
-import GetInvolvedSection from './components/GetInvolvedSection';
-import SpecialInterventionProjects from './components/SpecialInterventionProjects';
+import SpecialInterventionProjects from './components/Home/SpecialInterventionProjects';
 
 // Page transition variants
 const pageVariants = {

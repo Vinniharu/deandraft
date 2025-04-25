@@ -263,7 +263,7 @@ export default function HomeHero() {
           </motion.h1> */}
 
           {/* Text Carousel */}
-          <div className="h-16 md:h-20 overflow-hidden relative">
+          <div className="overflow-hidden relative">
             <AnimatePresence mode="wait">
               <motion.h2
                 key={`text-carousel-${activeIndex}`}

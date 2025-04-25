@@ -19,17 +19,45 @@ export default function Footer() {
     
     const currentYear = new Date().getFullYear();
     
+    // Navigation categories based on Navbar.jsx structure
+    const footerLinks = {
+        "About": [
+            { name: "Mission", path: "/about" },
+            { name: "Vision", path: "/about#vision" },
+            { name: "Team", path: "/about#team" },
+            { name: "Boards", path: "/about#boards" }
+        ],
+        "Our Programs": [
+            { name: "Education", path: "/programs/education" },
+            { name: "Climate Action", path: "/programs/climate-action" },
+            { name: "Democracy", path: "/programs/democracy" },
+            { name: "Governance", path: "/programs/governance" }
+        ],
+        "Resources": [
+            { name: "Publications", path: "/publications" },
+            { name: "Press", path: "/media/press" },
+            { name: "Blog", path: "/media/blog" },
+            { name: "Gallery", path: "/media/gallery" }
+        ],
+        "Get Involved": [
+            { name: "Volunteer", path: "/volunteer" },
+            { name: "Donate", path: "/donate" },
+            { name: "Partner With Us", path: "/partner" },
+            { name: "Contact Us", path: "/contact" }
+        ]
+    };
+    
     return (
         <footer className="bg-gray-900 text-gray-300">
             {/* Main Footer Content */}
             <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-8">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 xl:gap-8">
                     {/* Organization Info */}
                     <div className="space-y-6">
                         <div className="flex items-center">
                             <Image 
                                 src="/deanlogo.png" 
-                                alt="DEAN Foundation Logo" 
+                                alt="DEAN Initiative Logo" 
                                 width={150}
                                 height={40}
                                 className="h-10 w-auto"
@@ -61,57 +89,37 @@ export default function Footer() {
                         </div>
                     </div>
                     
-                    {/* Quick Links */}
-                    <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-                            Quick Links
-                        </h3>
-                        <ul className="space-y-3">
-                            {['About Us', 'Our Programs', 'Get Involved', 'News & Events', 'Resources', 'Contact Us'].map((item, index) => (
-                                <li key={index}>
-                                    <Link 
-                                        href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="text-sm hover:text-white transition-colors duration-300 flex items-center"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-2 text-[var(--dean-blue)]">
-                                            <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                        </svg>
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    
-                    {/* Our Programs */}
-                    <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-                            Our Programs
-                        </h3>
-                        <ul className="space-y-3">
-                            {['Digital Skills Training', 'Youth Advocacy', 'Sustainable Development', 'Community Outreach', 'Leadership Mentoring'].map((item, index) => (
-                                <li key={index}>
-                                    <Link 
-                                        href={`/programs/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="text-sm hover:text-white transition-colors duration-300 flex items-center"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-2 text-[var(--dean-red)]">
-                                            <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                        </svg>
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Footer Navigation Links */}
+                    {Object.entries(footerLinks).map(([category, links]) => (
+                        <div key={category}>
+                            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+                                {category}
+                            </h3>
+                            <ul className="space-y-3">
+                                {links.map((link, index) => (
+                                    <li key={index}>
+                                        <Link 
+                                            href={link.path}
+                                            className="text-sm hover:text-white transition-colors duration-300 flex items-center"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-2 text-[var(--dean-blue)]">
+                                                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                                            </svg>
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                     
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+                        {/* <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                             Stay Updated
                         </h3>
                         <p className="text-sm mb-4">
-                            Subscribe to our newsletter to receive updates about our programs and initiatives.
+                            Subscribe to our newsletter for updates on our programs and initiatives.
                         </p>
                         <form onSubmit={handleSubscribe} className="space-y-3">
                             <div>
@@ -139,10 +147,10 @@ export default function Footer() {
                             {subscribeStatus === 'success' && (
                                 <p className="text-green-400 text-xs mt-2">Successfully subscribed! Thank you.</p>
                             )}
-                        </form>
+                        </form> */}
 
                         {/* Social Media */}
-                        <div className="mt-6">
+                        {/* <div className="mt-6">
                             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                                 Follow Us
                             </h3>
@@ -171,7 +179,7 @@ export default function Footer() {
                                     </a>
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -180,7 +188,7 @@ export default function Footer() {
             <div className="border-t border-gray-800">
                 <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-between items-center text-sm">
                     <div className="mb-4 md:mb-0">
-                        <p>&copy; {currentYear} DEAN Foundation. All rights reserved.</p>
+                        <p>&copy; {currentYear} DEAN Initiative. All rights reserved.</p>
                     </div>
                     <div className="flex space-x-6">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors duration-300">Privacy Policy</Link>

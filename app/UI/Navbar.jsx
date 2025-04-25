@@ -24,7 +24,7 @@ const navLinks = [
     name: "About",
     path: "/about",
     sublinks: [
-      { name: "Mission", path: "/about#mission" },
+      { name: "Mission", path: "/about" },
       { name: "Vision", path: "/about#vision" },
       { name: "Team", path: "/about#team" },
       { name: "Boards", path: "/about#boards" }
@@ -35,7 +35,7 @@ const navLinks = [
     path: "/programs/education",
     sublinks: [
       { name: "NextGen Teachers", path: "/programs/education/nextgen" },
-      { name: "Girls Back to School", path: "/programs/education/girls-back" },
+      { name: "Girls Back to School", path: "/programs/education/girls-back-to-school" },
       { name: "SDGs Activation", path: "/programs/education/sdgs" },
       { name: "Transforming Education", path: "/programs/education/transforming-edu" },
       { name: "Education Archive", path: "/programs/education/archive" }
@@ -213,7 +213,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       // Check if we've scrolled past the hero section (100vh)
-      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
+      setIsScrolled(window.scrollY > window.innerHeight * 0.1);
     };
 
     window.addEventListener('scroll', handleScroll);

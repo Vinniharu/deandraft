@@ -97,7 +97,7 @@ export default function GetInvolvedSection() {
                 </div>
                 
                 {/* Newsletter subscription */}
-                <RevealOnScroll animation="fadeUp" delay={0.5}>
+                {/* <RevealOnScroll animation="fadeUp" delay={0.5}>
                     <div className="mt-20 bg-[#1a2747]/50 rounded-lg p-8 md:p-10 max-w-4xl mx-auto border border-white/10">
                         <div className="text-center mb-6">
                             <h3 className="text-2xl font-bold mb-2">Stay Connected</h3>
@@ -119,7 +119,7 @@ export default function GetInvolvedSection() {
                             </button>
                         </form>
                     </div>
-                </RevealOnScroll>
+                </RevealOnScroll> */}
             </div>
         </section>
     );
