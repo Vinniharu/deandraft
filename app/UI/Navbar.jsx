@@ -109,18 +109,16 @@ const ListItem = ({ className, title, href, children }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
     >
-      <NavigationMenuLink asChild>
-        <Link
-          href={href}
-          className={cn(
-            "block select-none p-3 leading-none no-underline outline-none transition-colors hover:bg-transparent hover:text-white focus:text-white",
-            className
-          )}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          {children && <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>}
-        </Link>
-      </NavigationMenuLink>
+      <Link
+        href={href}
+        className={cn(
+          "block select-none p-3 leading-none no-underline outline-none transition-colors hover:bg-transparent hover:text-white focus:text-white",
+          className
+        )}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        {children && <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>}
+      </Link>
     </motion.li>
   );
 };
@@ -208,6 +206,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredDropdown, setHoveredDropdown] = useState(null);
 
   // Handle scroll event to change navbar background
   useEffect(() => {
@@ -254,58 +253,72 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block">
-          <NavigationMenu>
-            <NavigationMenuList className="gap-1">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  variants={navItemVariants}
-                  custom={index}
-                >
-                  <NavigationMenuItem className="relative">
-                    {link.sublinks ? (
-                      <>
-                        <NavigationMenuTrigger 
-                          className={cn(
-                            "text-sm font-medium transition-colors border-0 shadow-none bg-transparent",
-                            isScrolled 
-                              ? "text-[var(--dean-blue)] hover:text-[var(--dean-blue)]/80" 
-                              : "text-white hover:text-blue-500/80"
-                          )}
+          <nav className="flex items-center space-x-4">
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={link.name}
+                variants={navItemVariants}
+                custom={index}
+                className="relative"
+                onMouseEnter={() => setHoveredDropdown(index)}
+                onMouseLeave={() => setHoveredDropdown(null)}
+              >
+                {link.sublinks ? (
+                  <>
+                    <div
+                      className={cn(
+                        "flex items-center space-x-1 px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
+                        isScrolled 
+                          ? "text-[var(--dean-blue)] hover:text-[var(--dean-blue)]/80" 
+                          : "text-white hover:text-white/80"
+                      )}
+                    >
+                      <span>{link.name}</span>
+                      <ChevronDown size={16} className={cn(
+                        "transition-transform duration-200",
+                        hoveredDropdown === index ? "rotate-180" : ""
+                      )} />
+                    </div>
+                    
+                    <AnimatePresence>
+                      {hoveredDropdown === index && (
+                        <motion.div
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          variants={dropdownVariants}
+                          className="absolute -right-[12rem] top-full w-[24rem] bg-white shadow-lg rounded-md overflow-hidden"
                         >
-                          {link.name}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="absolute left-0 min-w-[200px]">
-                          <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                          <ul className="p-2 grid grid-cols-2 gap-2">
                             {link.sublinks.map((sublink) => (
                               <ListItem
                                 key={sublink.name}
                                 title={sublink.name}
                                 href={sublink.path}
-                                className={isScrolled ? "hover:text-[var(--dean-blue)] hover:bg-blue-500/10" : "hover:text-blue-500 hover:bg-blue-500/10"}
+                                className="hover:bg-blue-50 text-gray-800 hover:text-[var(--dean-blue)] rounded-md"
                               />
                             ))}
                           </ul>
-                        </NavigationMenuContent>
-                      </>
-                    ) : (
-                      <Link 
-                        href={link.path}
-                        className={cn(
-                          "px-3 py-2 text-sm font-medium transition-colors inline-block",
-                          isScrolled 
-                            ? "text-[var(--dean-blue)] hover:text-[var(--dean-blue)]/80" 
-                            : "text-white hover:text-white/80"
-                        )}
-                      >
-                        {link.name}
-                      </Link>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </>
+                ) : (
+                  <Link 
+                    href={link.path}
+                    className={cn(
+                      "px-3 py-2 text-sm font-medium transition-colors",
+                      isScrolled 
+                        ? "text-[var(--dean-blue)] hover:text-[var(--dean-blue)]/80" 
+                        : "text-white hover:text-white/80"
                     )}
-                  </NavigationMenuItem>
-                </motion.div>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </motion.div>
+            ))}
+          </nav>
         </div>
 
         {/* Mobile Menu Button */}

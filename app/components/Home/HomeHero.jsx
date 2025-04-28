@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const carouselImages = [
   {
     id: "img-1",
-    src: "/hero/hero-1.jpg",
+    src: "/hero/hero-4.jpeg",
     alt: "Vibrant Youth Action for Democracy",
     text: "Welcome to DEAN Initiative",
   },
@@ -28,7 +28,7 @@ const carouselImages = [
   },
   {
     id: "img-4",
-    src: "/hero/hero-4.jpeg",
+    src: "/hero/hero-1.jpg",
     alt: "Education that leads problem solving",
     text: "Democracy",
   },

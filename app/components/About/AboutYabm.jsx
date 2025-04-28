@@ -147,8 +147,7 @@ export default function AboutYabm() {
                                         src={member.image}
                                         alt={member.name}
                                         fill
-                                        style={{ objectFit: "cover" }}
-                                        className="transition-transform duration-500 hover:scale-105"
+                                        className="object-cover object-top transition-transform duration-500 hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
                                 </div>

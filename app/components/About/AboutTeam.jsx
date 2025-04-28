@@ -137,7 +137,7 @@ export default function AboutTeam() {
                   alt={member.name}
                   width={400}
                   height={400}
-                  className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top w-full h-48 sm:h-56 md:h-64 lg:h-72 transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--dean-blue)]/80 via-transparent to-transparent opacity-90 transition-opacity duration-300 flex items-end p-3 sm:p-4 md:p-6">
                   <div className="w-full transform transition-transform duration-300 translate-y-0 group-hover:translate-y-[-4px] sm:group-hover:translate-y-[-6px] md:group-hover:translate-y-[-8px]">
@@ -208,7 +208,7 @@ export default function AboutTeam() {
                         alt={selectedMember.name}
                         width={400}
                         height={400}
-                        className="object-cover w-full h-auto"
+                        className="object-cover object-top w-full h-auto"
                       />
                     </div>
                   </div>

@@ -147,8 +147,7 @@ export default function AboutBoard() {
                                         src={member.image}
                                         alt={member.fullName}
                                         fill
-                                        style={{ objectFit: "cover" }}
-                                        className="transition-transform duration-500 group-hover:scale-105"
+                                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 p-6">

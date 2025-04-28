@@ -107,7 +107,7 @@ export default function TeamPartnersSection() {
                       alt={member.name}
                       width={300}
                       height={300}
-                      className="object-cover w-full h-72"
+                      className="object-cover object-top w-full h-72"
                     />
                     <div className="absolute bg-gradient-to-t from-[var(--dean-blue)]/70 to-transparent from-[1%] inset-0 flex items-end p-6">
                       <div className="w-full">
