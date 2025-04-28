@@ -2,7 +2,7 @@ export const teamMembers = [
   // Lead/Specialist Level
   {
     name: "Semiye Michael",
-    title: "SDGs & Climate Strategist",
+    title: "Founder / Executive Director",
     description:
       "Semiye Michael is a United Nations Global Goals Goalkeeper and renowned advocate for education, election integrity, governance, and climate action. He has reached over 3 million people with SDGs education and leads a national youth volunteer network of 5000+. Semiye has activated Climate Education in 300+ schools and is a global speaker inspiring youth-led change.",
     image: "/team/Semiye Michaels.jpg",

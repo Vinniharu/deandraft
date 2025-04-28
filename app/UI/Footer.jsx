@@ -1,121 +1,159 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Footer() {
-    const [email, setEmail] = useState('');
-    const [subscribeStatus, setSubscribeStatus] = useState(null);
-    
-    const handleSubscribe = (e) => {
-        e.preventDefault();
-        // In a real implementation, you would send this to your API
-        // This is just a mock success for demonstration
-        setSubscribeStatus('success');
-        setEmail('');
-        setTimeout(() => setSubscribeStatus(null), 3000);
-    };
-    
-    const currentYear = new Date().getFullYear();
-    
-    // Navigation categories based on Navbar.jsx structure
-    const footerLinks = {
-        "About": [
-            { name: "Mission", path: "/about" },
-            { name: "Vision", path: "/about#vision" },
-            { name: "Team", path: "/about#team" },
-            { name: "Boards", path: "/about#boards" }
-        ],
-        "Our Programs": [
-            { name: "Education", path: "/programs/education" },
-            { name: "Climate Action", path: "/programs/climate-action" },
-            { name: "Democracy", path: "/programs/democracy" },
-            { name: "Governance", path: "/programs/governance" }
-        ],
-        "Resources": [
-            { name: "Publications", path: "/publications" },
-            { name: "Press", path: "/media/press" },
-            { name: "Blog", path: "/media/blog" },
-            { name: "Gallery", path: "/media/gallery" }
-        ],
-        "Get Involved": [
-            { name: "Volunteer", path: "/volunteer" },
-            { name: "Donate", path: "/donate" },
-            { name: "Partner With Us", path: "/partner" },
-            { name: "Contact Us", path: "/contact" }
-        ]
-    };
-    
-    return (
-        <footer className="bg-gray-900 text-gray-300">
-            {/* Main Footer Content */}
-            <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 xl:gap-8">
-                    {/* Organization Info */}
-                    <div className="space-y-6">
-                        <div className="flex items-center">
-                            <Image 
-                                src="/deanlogo.png" 
-                                alt="DEAN Initiative Logo" 
-                                width={150}
-                                height={40}
-                                className="h-10 w-auto"
-                            />
-                        </div>
-                        <p className="text-sm leading-6">
-                            Empowering youth through digital skills development and advocacy for sustainable futures in Africa.
-                        </p>
-                        <div className="space-y-2">
-                            <p className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-3 text-[var(--dean-blue)]">
-                                    <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                                </svg>
-                                1234 Main St, Lagos, Nigeria
-                            </p>
-                            <p className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-3 text-[var(--dean-blue)]">
-                                    <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
-                                </svg>
-                                +234 810 123 4567
-                            </p>
-                            <p className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-3 text-[var(--dean-blue)]">
-                                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                                    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                                </svg>
-                                info@deanfoundation.ng
-                            </p>
-                        </div>
-                    </div>
-                    
-                    {/* Footer Navigation Links */}
-                    {Object.entries(footerLinks).map(([category, links]) => (
-                        <div key={category}>
-                            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-                                {category}
-                            </h3>
-                            <ul className="space-y-3">
-                                {links.map((link, index) => (
-                                    <li key={index}>
-                                        <Link 
-                                            href={link.path}
-                                            className="text-sm hover:text-white transition-colors duration-300 flex items-center"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 mr-2 text-[var(--dean-blue)]">
-                                                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                            </svg>
-                                            {link.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    
-                    {/* Newsletter */}
-                    <div>
-                        {/* <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+  const [email, setEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState(null);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    // In a real implementation, you would send this to your API
+    // This is just a mock success for demonstration
+    setSubscribeStatus("success");
+    setEmail("");
+    setTimeout(() => setSubscribeStatus(null), 3000);
+  };
+
+  const currentYear = new Date().getFullYear();
+
+  // Navigation categories based on Navbar.jsx structure
+  const footerLinks = {
+    About: [
+      { name: "Mission", path: "/about" },
+      { name: "Vision", path: "/about#vision" },
+      { name: "Team", path: "/about#team" },
+      { name: "Boards", path: "/about#boards" },
+    ],
+    "Our Programs": [
+      { name: "Education", path: "/programs/education" },
+      { name: "Climate Action", path: "/programs/climate-action" },
+      { name: "Democracy", path: "/programs/democracy" },
+      { name: "Governance", path: "/programs/governance" },
+    ],
+    Resources: [
+      { name: "Publications", path: "/publications" },
+      { name: "Press", path: "/media/press" },
+      { name: "Blog", path: "/media/blog" },
+      { name: "Gallery", path: "/media/gallery" },
+    ],
+    "Get Involved": [
+      { name: "Volunteer", path: "/volunteer" },
+      { name: "Donate", path: "/donate" },
+      { name: "Partner With Us", path: "/partner" },
+      { name: "Contact Us", path: "/contact" },
+    ],
+  };
+
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 xl:gap-8">
+          {/* Organization Info */}
+          <div className="space-y-6">
+            <div className="flex items-center">
+              <Image
+                src="/deanlogo.png"
+                alt="DEAN Initiative Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </div>
+            <p className="text-sm leading-6">
+              Empowering youth through digital skills development and advocacy
+              for sustainable futures in Africa.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-3 text-[var(--dean-blue)] flex-shrink-0 mt-1"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <p className="text-sm leading-tight">
+                  <span className="block font-medium">Global Goals Community Center</span>
+                  <span className="block">No 1, Q Close, Phase 1,</span>
+                  <span className="block">Opposite Obana Gwalagada,</span>
+                  <span className="block">FCT, Abuja, Nigeria</span>
+                </p>
+              </div>
+              <p className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-3 text-[var(--dean-blue)]"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                +234 810 123 4567
+              </p>
+              <p className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-3 text-[var(--dean-blue)]"
+                >
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                info@deanfoundation.ng
+              </p>
+            </div>
+          </div>
+
+          {/* Footer Navigation Links */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+                {category}
+              </h3>
+              <ul className="space-y-3">
+                {links.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.path}
+                      className="text-sm hover:text-white transition-colors duration-300 flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="w-4 h-4 mr-2 text-[var(--dean-blue)]"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Newsletter */}
+          <div>
+            {/* <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                             Stay Updated
                         </h3>
                         <p className="text-sm mb-4">
@@ -149,8 +187,8 @@ export default function Footer() {
                             )}
                         </form> */}
 
-                        {/* Social Media */}
-                        {/* <div className="mt-6">
+            {/* Social Media */}
+            {/* <div className="mt-6">
                             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                                 Follow Us
                             </h3>
@@ -180,23 +218,38 @@ export default function Footer() {
                                 ))}
                             </div>
                         </div> */}
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
 
-            {/* Bottom Footer */}
-            <div className="border-t border-gray-800">
-                <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-between items-center text-sm">
-                    <div className="mb-4 md:mb-0">
-                        <p>&copy; {currentYear} DEAN Initiative. All rights reserved.</p>
-                    </div>
-                    <div className="flex space-x-6">
-                        <Link href="/privacy-policy" className="hover:text-white transition-colors duration-300">Privacy Policy</Link>
-                        <Link href="/terms-of-service" className="hover:text-white transition-colors duration-300">Terms of Service</Link>
-                        <Link href="/cookie-policy" className="hover:text-white transition-colors duration-300">Cookie Policy</Link>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-} 
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-between items-center text-sm">
+          <div className="mb-4 md:mb-0">
+            <p>&copy; {currentYear} DEAN Initiative. All rights reserved.</p>
+          </div>
+          <div className="flex space-x-6">
+            <Link
+              href="/privacy-policy"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-of-service"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              href="/cookie-policy"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Cookie Policy
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
