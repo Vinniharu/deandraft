@@ -123,7 +123,7 @@ export default function MissionVision() {
             </motion.div>
 
             {/* Mission Content */}
-            <div className="space-y-6">
+            <div className="space-y-6" id="mission">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Mission</h3>
               <p className="text-lg font-semibold text-[var(--dean-blue)]">
                 To drive impactful youth-led actions and reforms using 21st-century tools in ensuring sustainable development through innovation, collaboration, and participatory approaches.
@@ -152,7 +152,7 @@ export default function MissionVision() {
             variants={cardVariants}
           >
             {/* Vision Content - Order reversed on mobile */}
-            <div className="space-y-6 md:order-last">
+            <div className="space-y-6 md:order-last" id="vision">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Vision</h3>
               <p className="text-lg font-semibold text-[var(--dean-red)]">
                 A world where empowered youth lead transformative change to achieve inclusive, sustainable, and participatory societies for all.

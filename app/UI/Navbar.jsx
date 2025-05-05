@@ -3,14 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react'; // Added ChevronDown and ChevronUp icons
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -24,7 +16,7 @@ const navLinks = [
     name: "About",
     path: "/about",
     sublinks: [
-      { name: "Mission", path: "/about" },
+      { name: "Mission", path: "/about#mission" },
       { name: "Vision", path: "/about#vision" },
       { name: "Team", path: "/about#team" },
       { name: "Boards", path: "/about#boards" }
@@ -77,9 +69,9 @@ const navLinks = [
     name: "Publications",
     path: "/publications",
     sublinks: [
-      { name: "First Report", path: "/publications/first" },
-      { name: "Annual Reports", path: "/publications/annual" },
-      { name: "Project Reports", path: "/publications/projects" }
+      { name: "Financial Report", path: "/publications/financial-report" },
+      { name: "Annual Reports", path: "/publications/annual-reports" },
+      { name: "Project Reports", path: "/publications/project-reports" }
     ]
   },
   {

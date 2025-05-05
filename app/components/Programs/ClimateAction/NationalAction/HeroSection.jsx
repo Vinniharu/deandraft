@@ -1,8 +1,18 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import ScrollLink from '@/app/components/ScrollLink';
+import Image from 'next/image';
 
 export default function HeroSection() {
+    const [imageError, setImageError] = useState(false);
+    const [isClient, setIsClient] = useState(false);
+    
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
     return (
         <motion.div
             className="relative text-white overflow-hidden"
@@ -11,13 +21,26 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
         >
             {/* Background with gradient overlay */}
-            <div 
-                className="absolute inset-0 bg-cover bg-center z-0"
-                style={{
-                    backgroundImage: "url('/national-action/hero-bg.jpg')",
-                    filter: "brightness(0.5)"
-                }}
-            />
+            {!imageError ? (
+                <div className="absolute inset-0 z-0">
+                    {isClient && (
+                        <Image
+                            src="/national/mainbg.jpg"
+                            alt="National Action Day"
+                            layout="fill"
+                            objectFit="cover"
+                            quality={80}
+                            className="brightness-50"
+                            onError={() => setImageError(true)}
+                            priority
+                        />
+                    )}
+                </div>
+            ) : (
+                <div 
+                    className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 z-0"
+                />
+            )}
             
             {/* Gradient overlay with red and blue theme */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/80 z-10" />
@@ -49,9 +72,24 @@ export default function HeroSection() {
                         <div className="w-10 h-1 bg-blue-400"></div>
                     </div>
                     
-                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed">
+                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed mb-8">
                         Mobilizing Youth Power for the Sustainable Development Goals
                     </p>
+                    
+                    <div className="flex flex-wrap justify-center gap-4 mb-8">
+                        <ScrollLink
+                            to="intro-section"
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block text-center"
+                        >
+                            Learn More
+                        </ScrollLink>
+                        <ScrollLink
+                            to="cta-section"
+                            className="bg-transparent hover:bg-white/10 text-white border border-white/30 px-6 py-3 rounded-full transition-colors duration-300 inline-block font-medium"
+                        >
+                            Get Involved
+                        </ScrollLink>
+                    </div>
                 </motion.div>
             </div>
             

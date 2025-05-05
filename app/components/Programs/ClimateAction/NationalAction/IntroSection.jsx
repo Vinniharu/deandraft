@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import ScrollLink from '@/app/components/ScrollLink';
 
 export default function IntroSection() {
     return (
         <motion.section
+            id="intro-section"
             className="py-20 md:py-28 bg-white relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -51,6 +54,18 @@ export default function IntroSection() {
                                 <span className="inline-block px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Sustainable Development</span>
                                 <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Civic Action</span>
                                 <span className="inline-block px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Education</span>
+                            </div>
+                            
+                            <div className="mt-8 text-center">
+                                <ScrollLink
+                                    to="how-it-works"
+                                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                >
+                                    Learn how it works
+                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </ScrollLink>
                             </div>
                         </div>
                     </motion.div>

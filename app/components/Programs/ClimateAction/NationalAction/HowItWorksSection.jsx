@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import ScrollLink from '@/app/components/ScrollLink';
 
 export default function HowItWorksSection() {
     const approaches = [
@@ -26,6 +27,7 @@ export default function HowItWorksSection() {
 
     return (
         <motion.section
+            id="how-it-works"
             className="py-20 md:py-24 bg-gray-50 relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,6 +99,18 @@ export default function HowItWorksSection() {
                         <p className="text-gray-700">
                             Our initiative has reached 36 states and the FCT, with over 200 local government areas actively participating in the National Action Day movement.
                         </p>
+                        
+                        <div className="mt-6">
+                            <ScrollLink
+                                to="impact-section"
+                                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                            >
+                                See our impact
+                                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </ScrollLink>
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import ScrollLink from '@/app/components/ScrollLink';
 
 export default function ImpactSection() {
     const impacts = [
@@ -52,6 +53,7 @@ export default function ImpactSection() {
 
     return (
         <motion.section
+            id="impact-section"
             className="py-20 md:py-28 bg-gradient-to-br from-blue-50 to-red-50 relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -151,9 +153,19 @@ export default function ImpactSection() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.5 }}
                     >
-                        <p className="text-lg text-gray-700 max-w-3xl mx-auto italic">
+                        <p className="text-lg text-gray-700 max-w-3xl mx-auto italic mb-8">
                             "The National Action Day on SDGs has transformed how young Nigerians engage with global challenges, creating a generation of empowered change-makers across every geopolitical zone."
                         </p>
+                        
+                        <ScrollLink
+                            to="cta-section"
+                            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                        >
+                            Ready to get involved?
+                            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </ScrollLink>
                     </motion.div>
                 </div>
             </div>

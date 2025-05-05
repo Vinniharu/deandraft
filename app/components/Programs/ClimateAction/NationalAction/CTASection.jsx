@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import ExternalLink from '@/app/components/ExternalLink';
+import ScrollLink from '@/app/components/ScrollLink';
 
 export default function CTASection() {
     const [dots, setDots] = useState([]);
@@ -46,6 +48,7 @@ export default function CTASection() {
 
     return (
         <motion.section
+            id="cta-section"
             className="py-20 md:py-28 bg-gradient-to-br from-blue-900 to-red-900 text-white relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -101,7 +104,7 @@ export default function CTASection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2, duration: 0.5 }}
                         >
-                            <h3 className="text-2xl font-bold mb-4">Next National Action Day</h3>
+                            <h3 className="text-2xl font-bold mb-4">National Action Day</h3>
                             <div className="flex items-center mb-6">
                                 <div className="text-2xl mr-3">📅</div>
                                 <p className="text-lg">September <span className="text-red-300">24, 2023</span></p>
@@ -161,7 +164,7 @@ export default function CTASection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.5 }}
                         >
-                            <h3 className="text-2xl font-bold mb-4">Upcoming Events</h3>
+                            <h3 className="text-2xl font-bold mb-4">Past Events</h3>
                             
                             <div className="space-y-4">
                                 {upcomingEvents.map((event, index) => (
@@ -193,18 +196,13 @@ export default function CTASection() {
                                 </p>
                                 
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                    <Link 
-                                        href="#" 
+                                    <ExternalLink 
+                                        href="mailto:info@deanfoundation.ng"
                                         className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block text-center"
+                                        ariaLabel="Contact Us about National Action Day"
                                     >
                                         Contact Us
-                                    </Link>
-                                    <Link 
-                                        href="#" 
-                                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block text-center"
-                                    >
-                                        Download Resource Pack
-                                    </Link>
+                                    </ExternalLink>
                                 </div>
                             </div>
                         </motion.div>
@@ -217,7 +215,7 @@ export default function CTASection() {
                         transition={{ delay: 0.6, duration: 0.5 }}
                     >
                         <p className="text-white/80 text-sm">
-                            For more information, follow us on social media or email <span className="underline">info@deaninitiative.org</span>
+                            For more information, follow us on social media or email <ExternalLink href="mailto:info@deaninitiative.org" className="underline hover:text-white">info@deaninitiative.org</ExternalLink>
                         </p>
                         <p className="text-white/80 text-sm mt-2">
                             Headquarters: 5 Awolowo Road, Ikoyi, Lagos | Regional offices in Abuja, Kano, and Port Harcourt

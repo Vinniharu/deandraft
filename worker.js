@@ -2,10 +2,38 @@ export const teamMembers = [
   // Lead/Specialist Level
   {
     name: "Semiye Michael",
-    title: "Founder / Executive Director",
+    title: "Executive Director",
     description:
       "Semiye Michael is a United Nations Global Goals Goalkeeper and renowned advocate for education, election integrity, governance, and climate action. He has reached over 3 million people with SDGs education and leads a national youth volunteer network of 5000+. Semiye has activated Climate Education in 300+ schools and is a global speaker inspiring youth-led change.",
     image: "/team/Semiye Michaels.jpg",
+  },
+  {
+    name: "Ngozi Edum",
+    title: "Partnership and Innovation Manager",
+    description:
+      "Ngozi leads Partnerships and Innovation at DEAN with expertise in climate justice and development. She holds degrees in Forestry and Forest Science and has spoken globally on inclusion and sustainability.",
+    image: "/team/Ngozi Edum.jpg",
+  },
+  {
+    name: "Doreen Mennom Oho",
+    title: "Grants & Resource Management Associate",
+    description:
+      "Doreen oversees DEAN's governance and climate programs, including the Lake Chad Climate Justice Fellowship. She holds degrees in Diplomacy and English and is a fellow of Carrington, AGNES, and People Powered Climate Accelerator.",
+    image: "/team/Doreen Mennom Oho.jpg",
+  },
+  {
+    name: "Blessing C. Agu",
+    title: "Strategy and Research Lead / Office Manager",
+    description:
+      "Blessing Agu drives evidence-based programming and strategy at DEAN. With over 5 years of experience in research, MEAL, and program management, she holds advanced degrees and is a fellow of Civic Charge, YPLF, and RiseUp Nigeria.",
+    image: "/team/Blessing Agu.jpg",
+  },
+  {
+    name: "Taiye Ojo",
+    title: "Programme Manager",
+    description:
+      "Taiye Ojo leads impactful programs at DEAN Initiative with experience in advocacy, community mobilization, and project implementation. He has led initiatives like Youth Health Access, Open Gov Fellowship, and Adopt-a-Teach.",
+    image: "/team/Ojo Taiye John.jpg",
   },
   {
     name: "Bayere Reuben Ayodeji",
@@ -20,57 +48,18 @@ export const teamMembers = [
     },
   },
   {
-    name: "Doreen Mennom Oho",
-    title: "Technical Programs Lead",
-    description:
-      "Doreen oversees DEAN's governance and climate programs, including the Lake Chad Climate Justice Fellowship. She holds degrees in Diplomacy and English and is a fellow of Carrington, AGNES, and People Powered Climate Accelerator.",
-    image: "/team/Doreen Mennom Oho.jpg",
-  },
-
-  // Leadership/Management Level
-  {
-    name: "Taiye Ojo",
-    title: "Programs Manager",
-    description:
-      "Taiye Ojo leads impactful programs at DEAN Initiative with experience in advocacy, community mobilization, and project implementation. He has led initiatives like Youth Health Access, Open Gov Fellowship, and Adopt-a-Teach.",
-    image: "/team/Ojo Taiye John.jpg",
-  },
-  {
-    name: "Raphael Linus",
-    title: "Operations Manager",
-    description:
-      "Raphael Linus is a strategic problem-solver, data analytics expert, and tech enthusiast dedicated to leveraging smart systems for global progress. As the Operations Manager at DEAN Initiative, he turns innovation into action by optimizing processes and scaling impact. A graduate of Agriculture from the University of Abuja, Raphael is also an agripreneur and mycologist, passionate about sustainable agricultural practices.",
-    image: "/team/Raphael.jpg",
-  },
-  {
-    name: "Blessing C. Agu",
-    title: "Research and Strategy Lead / Office Manager",
-    description:
-      "Blessing Agu drives evidence-based programming and strategy at DEAN. With over 5 years of experience in research, MEAL, and program management, she holds advanced degrees and is a fellow of Civic Charge, YPLF, and RiseUp Nigeria.",
-    image: "/team/Blessing Agu.jpg",
-  },
-  {
     name: "Uche Arinze",
-    title: "Communications Manager",
+    title: "Communication Manager",
     description:
       "Uche Arinze is a development strategist and educator who shapes impactful narratives. As Communications Manager, she amplifies DEAN Initiative's mission and inspires action through storytelling.",
     image: "/team/Uchechukwu Arinze.jpg",
   },
   {
-    name: "Ngozi Edum",
-    title: "Project Manager",
+    name: "Raphael Linus",
+    title: "Operation Manager",
     description:
-      "Ngozi leads Partnerships and Innovation at DEAN with expertise in climate justice and development. She holds degrees in Forestry and Forest Science and has spoken globally on inclusion and sustainability.",
-    image: "/team/Ngozi Edum.jpg",
-  },
-
-  // Officer Level
-  {
-    name: "Dorcas Eniola MOKIKAN",
-    title: "Visual and Data Creative Officer",
-    description:
-      "Dorcas blends creativity with data to tell meaningful stories. As Visual and Data Creative Officer at DEAN Initiative, she transforms insights into visual narratives that engage and inspire. Dorcas believes visuals can spark social change.",
-    image: "/team/Mokikan Dorcas.png",
+      "Raphael Linus is a strategic problem-solver, data analytics expert, and tech enthusiast dedicated to leveraging smart systems for global progress. As the Operations Manager at DEAN Initiative, he turns innovation into action by optimizing processes and scaling impact. A graduate of Agriculture from the University of Abuja, Raphael is also an agripreneur and mycologist, passionate about sustainable agricultural practices.",
+    image: "/team/Raphael.jpg",
   },
   {
     name: "Johnson Ajayi",
@@ -80,17 +69,22 @@ export const teamMembers = [
     image: "/team/Johnson Ajayi.jpg",
   },
   {
+    name: "Dorcas Eniola MOKIKAN",
+    title: "Visual and Data Creative Officer",
+    description:
+      "Dorcas blends creativity with data to tell meaningful stories. As Visual and Data Creative Officer at DEAN Initiative, she transforms insights into visual narratives that engage and inspire. Dorcas believes visuals can spark social change.",
+    image: "/team/Mokikan Dorcas.png",
+  },
+  {
     name: "Oamen Faith E. Flourish",
-    title: "Procurement and Maintenance Officer",
+    title: "Procurement Officer",
     description:
       "Flourish manages office operations and requisitions. A graduate in Guidance and Counseling, she is also a certified educator and gender advocate passionate about climate innovation.",
     image: "/team/Flourish Oamen.jpg",
   },
-
-  // Support Level
   {
     name: "Theophilus Olugbade",
-    title: "Programs Intern",
+    title: "Programme Intern",
     description:
       "Theophilus Olugbade supports DEAN Initiative's program development, with experience in research, community development, and policy. He studied History and Diplomatic Studies at the University of Abuja and worked with NEITI during his NYSC. Theophilus aspires to a career in international diplomacy.",
     image: "/team/Theophilus Olugbade.jpg",

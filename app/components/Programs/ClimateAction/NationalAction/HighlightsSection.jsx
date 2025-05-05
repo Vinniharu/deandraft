@@ -1,9 +1,14 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useState } from 'react';
+import ExternalLink from '@/app/components/ExternalLink';
+import ScrollLink from '@/app/components/ScrollLink';
+import Image from 'next/image';
 
 export default function HighlightsSection() {
+    const [imageError, setImageError] = useState(false);
+
     const highlights = [
         "Engaged over 30,000 youth participants nationwide",
         "Partnered with schools, youth groups, and local government agencies",
@@ -13,6 +18,7 @@ export default function HighlightsSection() {
 
     return (
         <motion.section
+            id="highlights-section"
             className="py-20 md:py-28 bg-white relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -62,13 +68,14 @@ export default function HighlightsSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.9, duration: 0.5 }}
                             >
-                                <Link 
-                                    href="#"
+                                <ExternalLink 
+                                    href="https://drive.google.com/drive/folders/17zDRPs-OgYz_QEpcVWNMw_M176BoqikJ"
                                     className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                                    ariaLabel="View National Action Day photo gallery"
                                 >
                                     <span className="mr-2">📷</span>
                                     <span>See National Action Day in Action</span>
-                                </Link>
+                                </ExternalLink>
                             </motion.div>
                         </motion.div>
                         
@@ -86,17 +93,37 @@ export default function HighlightsSection() {
                                 {/* Main image */}
                                 <div className="relative bg-gradient-to-br from-blue-500 to-red-500 rounded-lg p-1">
                                     <div className="bg-white rounded-lg overflow-hidden">
-                                        <img 
-                                            src="/national-action/sdg-wheel.jpg" 
-                                            alt="SDG Wheel"
-                                            className="w-full h-auto object-cover"
-                                            onError={(e) => {
-                                                e.target.onerror = null;
-                                                e.target.src = "https://placehold.co/600x400/blue/white?text=SDG+Wheel";
-                                            }}
-                                        />
+                                        {!imageError ? (
+                                            <div className="relative w-full" style={{ height: '300px' }}>
+                                                <Image
+                                                    src="/national/img1.jpeg"
+                                                    alt="National Action Day Students"
+                                                    layout="fill"
+                                                    objectFit="cover"
+                                                    className="w-full h-auto object-cover"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="h-[300px] w-full bg-gradient-to-r from-blue-100 to-red-100 flex items-center justify-center">
+                                                <p className="text-gray-800 text-center px-4">
+                                                    National Action Day engaging students across Nigeria
+                                                </p>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div className="mt-6 text-center">
+                                <ScrollLink
+                                    to="impact-section"
+                                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                                >
+                                    See our impact
+                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </ScrollLink>
                             </div>
                         </motion.div>
                     </div>

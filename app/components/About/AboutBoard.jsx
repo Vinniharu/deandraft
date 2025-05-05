@@ -103,12 +103,12 @@ export default function AboutBoard() {
 
     return (
         <motion.section
-            id="board-members"
             ref={sectionRef}
             className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
             variants={sectionVariants}
+            id="boards"
         >
             {/* Background decorations */}
             <div className="absolute -right-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/5 blur-[100px]"></div>

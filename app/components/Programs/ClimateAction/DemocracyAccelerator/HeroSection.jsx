@@ -14,7 +14,7 @@ export default function HeroSection() {
             <div 
                 className="absolute inset-0 bg-cover bg-center z-0"
                 style={{
-                    backgroundImage: "url('/cda/mainbg.JPG')",
+                    backgroundImage: "url('/cda/1.JPG')",
                     filter: "brightness(0.5)"
                 }}
             />
