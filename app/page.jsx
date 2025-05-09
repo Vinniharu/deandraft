@@ -45,8 +45,8 @@ export default function Home() {
     >
       <HomeHero />
       <OurStorySection />
-      <SpecialInterventionProjects/>
       <KeyHighlightsSection />
+      <SpecialInterventionProjects/>
       <ImpactSection />
       <VisionMissionSection />
       <TeamPartnersSection />

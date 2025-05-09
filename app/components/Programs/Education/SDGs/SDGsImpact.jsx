@@ -228,7 +228,7 @@ export default function SDGsImpact() {
                         Whether you're a student, teacher, community leader, or organization, there are many ways to 
                         get involved with the SDGs Activation program and contribute to a sustainable future.
                     </p>
-                    <a href="/contact" className="inline-block bg-white hover:bg-gray-100 text-[var(--dean-blue)] font-medium py-3 px-8 rounded-md transition-colors duration-300 hover:shadow-lg">
+                    <a href="mailto:info@deaninitiative.org" className="inline-block bg-white hover:bg-gray-100 text-[var(--dean-blue)] font-medium py-3 px-8 rounded-md transition-colors duration-300 hover:shadow-lg">
                         Get Involved
                     </a>
                 </motion.div>

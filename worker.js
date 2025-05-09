@@ -152,6 +152,12 @@ export const YabmTeamMembers = [
 
 export const boardMembers = [
   {
+    name: "monday",
+    fullName: "Monday Osasah",
+    image: "/board/monday.jpg",
+    bio: "Monday Osasah is a capacity building professional, advocate of good governance and open society. His career of over 15 years traverses various fields including manufacturing, journalism, and the nonprofit. He trained as an economist and holds a master's degree in public administration from Delta State University but has a strong flair for journalism. He is a member and fellow of two institutes: Institute of Management Consultant of Nigeria and Institute of Strategic Management Nigeria (ISMN). He works at the African Centre for Leadership, Strategy & Development (Centre LSD) as Executive Director. He is married and the marriage is blessed. He loves reading and takes delight in supporting others.",
+  },
+  {
     name: "ruth",
     fullName: "Ruth Eguono Olofin",
     image: "/board/ruth.jpg",
@@ -181,12 +187,7 @@ export const boardMembers = [
     image: "/board/rebecca.jpg",
     bio: "Rebecca Oluwaseun Odugbose, a Legal Practitioner, passionately advocates for girls' and women's rights, health, and gender equality, championing Sustainable Development Goals 4, 5, 8, and 13. Her humanitarian work underscores her commitment to community development. Beyond her career, she enjoys research and sightseeing, deepening her understanding of societal issues. With unwavering dedication, she strives to make a meaningful impact in human rights and sustainable development.",
   },
-  {
-    name: "monday",
-    fullName: "Monday Osasah",
-    image: "/board/monday.jpg",
-    bio: "Monday Osasah is a capacity building professional, advocate of good governance and open society. His career of over 15 years traverses various fields including manufacturing, journalism, and the nonprofit. He trained as an economist and holds a master's degree in public administration from Delta State University but has a strong flair for journalism. He is a member and fellow of two institutes: Institute of Management Consultant of Nigeria and Institute of Strategic Management Nigeria (ISMN). He works at the African Centre for Leadership, Strategy & Development (Centre LSD) as Executive Director. He is married and the marriage is blessed. He loves reading and takes delight in supporting others.",
-  },
+
   {
     name: "james",
     fullName: "James Adewale Oluwole",

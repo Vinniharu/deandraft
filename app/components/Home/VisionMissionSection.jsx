@@ -77,7 +77,7 @@ export default function VisionMissionSection() {
                 <div className="mt-20">
                     <RevealOnScroll animation="fadeUp" delay={0.1}>
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Core Values: YOU-RISE</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Core Values: You-RISE</h2>
                             <div className="h-1 w-24 bg-white mx-auto"></div>
                         </div>
                     </RevealOnScroll>

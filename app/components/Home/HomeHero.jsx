@@ -12,7 +12,7 @@ const carouselImages = [
     id: "img-1",
     src: "/hero/hero-4.jpeg",
     alt: "Vibrant Youth Action for Democracy",
-    text: "Welcome to DEAN Initiative",
+    text: "Leading Transformative Youth Action",
   },
   {
     id: "img-2",
@@ -24,7 +24,7 @@ const carouselImages = [
     id: "img-3",
     src: "/hero/hero-3.jpg",
     alt: "Leading Transformative Youth Action",
-    text: "Climate",
+    text: "Leading Actions for Climate",
   },
   {
     id: "img-4",

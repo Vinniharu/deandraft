@@ -128,28 +128,26 @@ export default function AboutTeam() {
             <motion.div
               key={index}
               variants={cardVariants}
-              whileHover={{ y: -5, transition: { duration: 0.3 } }}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg overflow-hidden transition-all cursor-pointer group"
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer"
               onClick={() => openModal(member)}
             >
-              <div className="aspect-w-1 aspect-h-1 relative">
+              <div className="aspect-w-1 aspect-h-1 relative h-48 sm:h-56 md:h-64">
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={400}
-                  height={400}
-                  className="object-cover object-top w-full h-48 sm:h-56 md:h-64 lg:h-72 transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--dean-blue)]/80 via-transparent to-transparent opacity-90 transition-opacity duration-300 flex items-end p-3 sm:p-4 md:p-6">
-                  <div className="w-full transform transition-transform duration-300 translate-y-0 group-hover:translate-y-[-4px] sm:group-hover:translate-y-[-6px] md:group-hover:translate-y-[-8px]">
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-0.5 sm:mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-white/90 font-medium text-sm sm:text-base">
-                      {member.title}
-                    </p>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+              </div>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-[var(--dean-blue)] font-medium mb-2 sm:mb-3 text-sm sm:text-base">
+                  {member.title}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -162,7 +160,7 @@ export default function AboutTeam() {
           <>
             {/* Overlay */}
             <motion.div 
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
+              className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
               initial="hidden"
               animate="visible"
               exit="exit"
@@ -174,73 +172,55 @@ export default function AboutTeam() {
               <motion.div
                 ref={modalRef}
                 variants={modalVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="bg-white rounded-xl sm:rounded-2xl max-w-4xl w-[95%] sm:w-full max-h-[90vh] overflow-hidden shadow-2xl"
+                className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden"
               >
-                <div className="flex justify-end p-2 sm:p-4">
-                  <button
-                    onClick={closeModal}
-                    className="text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-1.5 sm:p-2 transition-colors"
-                    aria-label="Close modal"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="p-3 sm:p-4 md:p-6 pt-0 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 overflow-y-auto">
-                  <div className="w-full md:w-1/3 max-w-[250px] mx-auto md:mx-0">
-                    <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-md">
-                      <Image
-                        src={selectedMember.image}
-                        alt={selectedMember.name}
-                        width={400}
-                        height={400}
-                        className="object-cover object-top w-full h-auto"
-                      />
-                    </div>
+                <div className="flex flex-col md:flex-row">
+                  {/* Image Column */}
+                  <div className="md:w-2/5 relative h-48 sm:h-56 md:h-auto">
+                    <Image
+                      src={selectedMember.image}
+                      alt={selectedMember.name}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      priority
+                    />
                   </div>
-                  <div className="w-full md:w-2/3 overflow-y-auto">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">
+
+                  {/* Content Column */}
+                  <div className="md:w-3/5 p-4 sm:p-6 flex flex-col h-full relative overflow-y-auto max-h-[60vh] md:max-h-[70vh]">
+                    {/* Close Button */}
+                    <button
+                      className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700"
+                      onClick={closeModal}
+                      aria-label="Close modal"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 sm:h-6 sm:w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* Member Details */}
+                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 pr-8">
                       {selectedMember.name}
-                    </h3>
-                    <p className="text-[var(--dean-blue)] font-semibold text-base sm:text-lg mb-3 sm:mb-4 md:mb-6 border-b border-gray-200 pb-2 sm:pb-4">
+                    </h2>
+                    <p className="text-[var(--dean-blue)] font-medium mb-3 sm:mb-4 text-sm sm:text-base">
                       {selectedMember.title}
                     </p>
-                    <div className="text-gray-700 mb-4 sm:mb-6 md:mb-8 max-w-none text-sm sm:text-base overflow-y-auto max-h-[30vh] sm:max-h-[35vh] md:max-h-[50vh] pr-2 custom-scrollbar">
+                    <div className="h-0.5 w-10 sm:w-12 bg-[var(--dean-red)] mb-3 sm:mb-4"></div>
+                    <div className="prose prose-sm md:prose text-gray-700 overflow-y-auto text-sm sm:text-base">
                       <p>{selectedMember.description}</p>
                     </div>
-
-                    {selectedMember.contacts && (
-                      <div className="flex flex-wrap gap-2 sm:gap-3">
-                        {Object.entries(selectedMember.contacts).map(
-                          ([key, value]) => (
-                            <a
-                              key={key}
-                              href={value}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[var(--dean-blue)] text-white rounded-md hover:bg-[var(--dean-blue)]/80 transition-colors flex items-center gap-1 sm:gap-2 shadow-sm text-xs sm:text-sm md:text-base"
-                            >
-                              <span>{key.charAt(0).toUpperCase() + key.slice(1)}</span>
-                            </a>
-                          )
-                        )}
-                      </div>
-                    )}
                   </div>
                 </div>
               </motion.div>

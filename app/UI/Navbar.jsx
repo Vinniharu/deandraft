@@ -16,7 +16,7 @@ const navLinks = [
     name: "About",
     path: "/about",
     sublinks: [
-      { name: "Mission", path: "/about#mission" },
+      { name: "Mission", path: "/about" },
       { name: "Vision", path: "/about#vision" },
       { name: "Team", path: "/about#team" },
       { name: "Boards", path: "/about#boards" }

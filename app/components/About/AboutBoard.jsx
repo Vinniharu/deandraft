@@ -136,46 +136,24 @@ export default function AboutBoard() {
                         {boardMembers.map((member, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
+                                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer"
                                 variants={cardVariants}
                                 whileHover={{ y: -5 }}
                                 onClick={() => openModal(member)}
                                 custom={index}
                             >
-                                <div className="aspect-w-3 aspect-h-4 relative h-72">
+                                <div className="aspect-w-1 aspect-h-1 relative h-48 sm:h-56 md:h-64">
                                     <Image
                                         src={member.image}
                                         alt={member.fullName}
                                         fill
-                                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        className="object-cover object-center transition-transform duration-500 hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
-                                    <div className="absolute bottom-0 left-0 p-6">
-                                        <h3 className="text-xl font-bold text-white mb-1">{member.fullName}</h3>
-                                        <div className="h-1 w-12 bg-[var(--dean-red)] mb-2"></div>
-                                        <p className="text-white/80 text-sm line-clamp-3 mb-4">{member.bio.substring(0, 120)}...</p>
-                                        <button 
-                                            className="inline-flex items-center text-white bg-[var(--dean-blue)] hover:bg-[var(--dean-blue)]/90 py-2 px-4 rounded-md text-sm transition-colors duration-200"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                openModal(member);
-                                            }}
-                                        >
-                                            Read Full Bio
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-4 w-4 ml-1"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                            >
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+                                </div>
+                                <div className="p-4 sm:p-6">
+                                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{member.fullName}</h3>
+                                    <p className="text-[var(--dean-blue)] font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.title || "Board Member"}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -189,7 +167,7 @@ export default function AboutBoard() {
                     <>
                         {/* Overlay */}
                         <motion.div
-                            className="fixed inset-0 bg-black/70 z-40"
+                            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
                             initial="hidden"
                             animate="visible"
                             exit="exit"
@@ -197,19 +175,11 @@ export default function AboutBoard() {
                             onClick={handleOutsideClick}
                             onKeyDown={handleKeyDown}
                             tabIndex={-1}
-                        />
-
-                        {/* Modal Content */}
-                        <motion.div
-                            className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            variants={modalVariants}
                         >
-                            <div
+                            <motion.div
                                 ref={modalRef}
-                                className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+                                variants={modalVariants}
+                                className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden"
                             >
                                 <div className="flex flex-col md:flex-row">
                                     {/* Image Column */}
@@ -221,25 +191,19 @@ export default function AboutBoard() {
                                             style={{ objectFit: "cover" }}
                                             priority
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:hidden"></div>
-                                        <div className="absolute bottom-0 left-0 p-4 md:hidden">
-                                            <h2 className="text-lg sm:text-xl font-bold text-white">
-                                                {selectedMember.fullName}
-                                            </h2>
-                                        </div>
                                     </div>
 
                                     {/* Content Column */}
-                                    <div className="md:w-3/5 p-4 sm:p-6 flex flex-col h-full relative overflow-y-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh]">
+                                    <div className="md:w-3/5 p-4 sm:p-6 flex flex-col h-full relative overflow-y-auto max-h-[60vh] md:max-h-[70vh]">
                                         {/* Close Button */}
                                         <button
-                                            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-1.5 sm:p-2 transition-colors"
+                                            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700"
                                             onClick={closeModal}
                                             aria-label="Close modal"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
+                                                className="h-5 w-5 sm:h-6 sm:w-6"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -254,19 +218,19 @@ export default function AboutBoard() {
                                         </button>
 
                                         {/* Member Details */}
-                                        <div className="hidden md:block">
-                                            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 pr-8">
-                                                {selectedMember.fullName}
-                                            </h2>
-                                            <div className="h-1 w-16 bg-[var(--dean-red)] mb-4"></div>
-                                        </div>
-
-                                        <div className="prose prose-sm md:prose text-gray-700 mt-4 md:mt-6 overflow-y-auto pr-2 custom-scrollbar">
-                                            <p className="text-sm sm:text-base">{selectedMember.bio}</p>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 pr-8">
+                                            {selectedMember.fullName}
+                                        </h2>
+                                        <p className="text-[var(--dean-blue)] font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                                            {selectedMember.title || "Board Member"}
+                                        </p>
+                                        <div className="h-0.5 w-10 sm:w-12 bg-[var(--dean-red)] mb-3 sm:mb-4"></div>
+                                        <div className="prose prose-sm md:prose text-gray-700 overflow-y-auto text-sm sm:text-base">
+                                            <p>{selectedMember.bio}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </>
                 )}
