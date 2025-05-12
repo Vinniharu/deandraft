@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 export default function Objectives() {
   const objectives = [
     {
-      title: "Critical Evaluation",
-      description: "Provide a platform for youth to thoroughly analyze the challenges encountered in past elections, focusing on issues that have diminished trust in the process."
+      title: "Enhanced Monitoring",
+      description: "Deploy a comprehensive network of observers across all local government areas to monitor electoral processes and ensure transparency."
     },
     {
-      title: "Electoral Law Reform",
-      description: "Gather youth perspectives on reforming the Electoral Act to enhance transparency, fairness, and credibility."
+      title: "Youth Engagement",
+      description: "Empower young Nigerians to actively participate in the electoral monitoring process, fostering a culture of civic responsibility."
     },
     {
-      title: "Future Voting Behavior",
-      description: "Foster discussions aimed at determining how young people can be mobilized and how their voting behavior can positively impact future elections."
+      title: "Real-time Reporting",
+      description: "Establish a robust system for immediate feedback and incident reporting from observers to provide accurate, timely information."
     },
     {
-      title: "Technology-Driven Solutions",
-      description: "Explore how technology can bolster youth confidence in electoral management, including the implementation of secure voting systems and real-time results dissemination."
+      title: "Collaborative Impact",
+      description: "Partner with key organizations to enhance the collective ability to track, analyze, and verify electoral results and incidents."
     }
   ];
 
@@ -67,15 +67,16 @@ export default function Objectives() {
           >
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image 
-                src="/fixelection/objectives.jpeg" 
-                alt="Youth participants discussing electoral reforms"
+                src="/eewom/objectives.jpg" 
+                alt="EEWOM observers engaged in election monitoring"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white">
                 <p className="text-lg font-medium">
-                  The program aims to reignite youth interest in the democratic process and provide a platform for young voices to influence electoral reforms.
+                  By tackling a historically overlooked gap in election monitoring, the EEWOM presents a strong 
+                  potential to fortify Nigeria's electoral processes.
                 </p>
               </div>
             </div>

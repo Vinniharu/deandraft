@@ -5,30 +5,25 @@ import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import JoinUs from "@/app/components/JoinUs";
 import { 
-  FixElectionHero, 
-  AboutFixElection, 
+  EEWOMHero, 
+  AboutEEWOM, 
   Objectives, 
-  YouthParticipation, 
+  Implementation, 
   ImpactReport, 
-  PhotoGallery,
+  Recommendations,
   CallToAction 
-} from "@/app/components/Programs/Democracy/FixElection";
+} from "@/app/components/Programs/Democracy/EEWOM";
 
-export default function FixElectionPage() {
+export default function EEWOMPage() {
   // Preload images for better performance
   useEffect(() => {
     const imageList = [
-      "/fixelection/hero.jpg",
-      "/fixelection/about1.jpg",
-      "/fixelection/about2.jpg",
-      "/fixelection/objectives.jpeg",
-      "/fixelection/impact.jpg",
-      "/fixelection/gallery1.jpg",
-      "/fixelection/gallery2.jpg",
-      "/fixelection/gallery3.jpg",
-      "/fixelection/gallery4.jpeg",
-      "/fixelection/gallery5.jpeg",
-      "/fixelection/gallery6.jpeg"
+      "/eewom/hero.jpg",
+      "/eewom/about1.jpg",
+      "/eewom/about2.jpg",
+      "/eewom/objectives.jpg",
+      "/eewom/implementation.jpg",
+      "/eewom/impact.jpg"
     ];
     
     imageList.forEach((src) => {
@@ -41,12 +36,12 @@ export default function FixElectionPage() {
     <ErrorBoundary>
       <PageTransition>
         <main className="min-h-screen">
-          <FixElectionHero />
-          <AboutFixElection />
+          <EEWOMHero />
+          <AboutEEWOM />
           <Objectives />
-          <YouthParticipation />
+          <Implementation />
           <ImpactReport />
-          <PhotoGallery />
+          <Recommendations />
           <CallToAction />
           <JoinUs />
         </main>

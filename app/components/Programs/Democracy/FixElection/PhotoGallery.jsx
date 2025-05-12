@@ -24,17 +24,17 @@ export default function PhotoGallery() {
       caption: "Workshop on civic education and voter rights"
     },
     {
-      src: "/fixelection/gallery4.jpg",
+      src: "/fixelection/gallery4.jpeg",
       alt: "Participants networking at the assembly",
       caption: "Networking session for youth advocates"
     },
     {
-      src: "/fixelection/gallery5.jpg",
+      src: "/fixelection/gallery5.jpeg",
       alt: "Keynote presentation at the assembly",
       caption: "Keynote address on the future of Nigeria's democracy"
     },
     {
-      src: "/fixelection/gallery6.jpg",
+      src: "/fixelection/gallery6.jpeg",
       alt: "Participants engaging in hands-on activity",
       caption: "Interactive session on election monitoring"
     }
@@ -89,11 +89,6 @@ export default function PhotoGallery() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transform hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 p-4 w-full">
-                  <p className="text-white text-sm font-medium">{image.caption}</p>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -119,10 +114,6 @@ export default function PhotoGallery() {
                   sizes="100vw"
                   className="object-contain"
                 />
-              </div>
-              
-              <div className="bg-white p-4 rounded-b-xl">
-                <p className="text-gray-800 text-lg font-medium">{galleryImages[selectedImage].caption}</p>
               </div>
               
               <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16">
