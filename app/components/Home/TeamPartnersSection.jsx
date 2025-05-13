@@ -260,7 +260,7 @@ export default function TeamPartnersSection() {
             {/* Partners Header */}
             <motion.div className="text-center mb-12" variants={headerVariants}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent inline-block mb-2">
-                Our Partners
+              Our Development Partners
               </h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mt-4 mb-6"></div>
               <p className="text-gray-600 max-w-3xl mx-auto">

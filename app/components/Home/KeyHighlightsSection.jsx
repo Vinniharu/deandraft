@@ -80,23 +80,23 @@ export default function KeyHighlightsSection() {
         <section 
             ref={sectionRef}
             id="key-highlights" 
-            className="relative py-20 md:py-28 overflow-hidden bg-gray-50"
+            className="relative py-20 md:py-28 overflow-hidden bg-slate-900"
         >
             {/* Subtle background elements */}
             <motion.div 
                 className="absolute inset-0 z-0"
                 style={{ y: backgroundY }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-100" />
-                <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-3" />
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-100" />
+                <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-3" /> */}
             </motion.div>
 
-            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 ">
                 {/* Header Section */}
                 <div className="text-center mb-16">
                     <div className="inline-block">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                            Key Programs
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            Key Projects
                         </h2>
                         <div className="h-1 w-24 bg-[var(--dean-blue)] mx-auto"></div>
                     </div>

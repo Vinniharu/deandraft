@@ -42,7 +42,7 @@ export default function OurStorySection() {
           <div className="space-y-8">
             <RevealOnScroll animation="fadeUp">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent inline-block">
-                Our Story
+                Development of Educational Action Network (DEAN) Initiative
               </h2>
             </RevealOnScroll>
 
@@ -50,48 +50,52 @@ export default function OurStorySection() {
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground/90 leading-relaxed">
                   The Development of Educational Action Network (DEAN) envisions
-                  a future where youth lead transformative action in addressing
-                  critical global and local challenges through innovative
-                  technologies and impactful reforms. Founded in 2010 and
-                  registered with the Corporate Affairs Commission in 2015. DEAN
-                  is a non-governmental, not-for-profit, non-partisan
-                  organisation, with a commitment to creating sustainable impact
-                  through youth-driven solutions. We collaborate with state
-                  actors (government and government agencies) and non-state
-                  actors (CSOs, movements, coalitions, networks, allies, youth
-                  groups, and other relevant stakeholders) and these
-                  collaborations work towards building a future where young and
-                  vulnerable people are at the forefront of sustainable
-                  development and transformative change.
+                  a world where empowered youth lead transformative action to
+                  address critical local and global challenges through
+                  innovative technologies and impactful reforms.
                 </p>
                 <p className="text-foreground/90 leading-relaxed mt-4">
+                  Founded in 2010 and officially registered with the Corporate
+                  Affairs Commission in 2015, DEAN is a non-governmental,
+                  non-profit, and non-partisan organisation committed to
+                  creating sustainable impact through youth-driven solutions. We
+                  collaborate with both state and non-state actors to build a
+                  future where young and vulnerable people are at the forefront
+                  of development and change.Founded in 2010 and officially
+                  registered with the Corporate Affairs Commission in 2015, DEAN
+                  is a non-governmental, non-profit, and non-partisan
+                  organisation committed to creating sustainable impact through
+                  youth-driven solutions. We collaborate with both state and
+                  non-state actors to build a future where young and vulnerable
+                  people are at the forefront of development and change.
+                </p>
+                <p className="text-foreground/90 leading-relaxed mt-4">
+                  <p className="text-2xl font-bold">
+                    Why We Are Driven By YOUTH Power
+                  </p>
                   Youths are the heartbeat of innovation and transformation. At
                   DEAN Initiative, we invest in young people by equipping them
-                  with training, resources, and opportunities to lead change. By
-                  fostering their creativity and resilience, we empower them to
-                  tackle pressing social challenges. Young people have the
-                  energy and vision to reimagine solutions, and we ensure they
-                  are at the centre of our interventions. Their leadership
-                  drives the impact we envision in governance, education,
-                  climate action, and democracy
+                  with training, resources, and opportunities to lead change.
+                  Their leadership drives the impact we envision in governance,
+                  education, climate action, and democracy.
                 </p>
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll animation="fadeUp" delay={0.4}>
               <div className="flex flex-wrap gap-2 mt-6">
-                {/* <div className="px-4 py-2 bg-[var(--dean-blue)]/10 rounded-full text-sm font-medium text-[var(--dean-blue)] backdrop-blur-sm">
-                                    <span>Founded 2010</span>
-                                </div> */}
-                <div className="px-4 py-2 bg-[var(--dean-red)]/10 rounded-full text-sm font-medium text-[var(--dean-red)] backdrop-blur-sm">
+                <div className="px-4 py-2 bg-[var(--dean-blue)]/10 rounded-full text-sm font-medium text-[var(--dean-blue)] backdrop-blur-sm">
                   <span>Registered 2015</span>
                 </div>
-                <div className="px-4 py-2 bg-[var(--dean-blue)]/10 rounded-full text-sm font-medium text-[var(--dean-blue)] backdrop-blur-sm">
-                  <span>Youth-powered</span>
+                <div className="px-4 py-2 bg-[var(--dean-red)]/10 rounded-full text-sm font-medium text-[var(--dean-red)] backdrop-blur-sm">
+                  <span>Empowered Youth</span>
                 </div>
-                {/* <div className="px-4 py-2 bg-[var(--dean-red)]/10 rounded-full text-sm font-medium text-[var(--dean-red)] backdrop-blur-sm">
-                                    <span>Non-profit</span>
-                                </div> */}
+                <div className="px-4 py-2 bg-[var(--dean-blue)]/10 rounded-full text-sm font-medium text-[var(--dean-blue)] backdrop-blur-sm">
+                  <span>Youth-Driven Solutions</span>
+                </div>
+                <div className="px-4 py-2 bg-[var(--dean-red)]/10 rounded-full text-sm font-medium text-[var(--dean-red)] backdrop-blur-sm">
+                  <span>Transformative Change</span>
+                </div>
               </div>
             </RevealOnScroll>
           </div>
@@ -102,7 +106,7 @@ export default function OurStorySection() {
               <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
                 <Image
-                  src="/hero/hero-2.jpg"
+                  src="/hero/hero-2.jpeg"
                   alt="DEAN Initiative in action"
                   fill
                   className="object-cover"

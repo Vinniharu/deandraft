@@ -18,39 +18,27 @@ const carouselImages = [
     id: "img-2",
     src: "/hero/hero-2.jpg",
     alt: "Leading Community Action for Climate",
-    text: "Education",
+    text: "Education that Leads Problem Solving",
   },
   {
     id: "img-3",
     src: "/hero/hero-3.jpg",
     alt: "Leading Transformative Youth Action",
-    text: "Leading Actions for Climate",
+    text: "Leading Community Action for Climate",
   },
   {
     id: "img-4",
     src: "/hero/hero-1.jpg",
     alt: "Education that leads problem solving",
-    text: "Democracy",
+    text: "Vibrant Youth Action for Democracy",
   },
   {
     id: "img-5",
     src: "/hero/hero-5.jpeg",
     alt: "Building Citizens Centered Local Governments",
-    text: "Governance",
+    text: "Building Citizens’ Centered Governance",
   },
 ];
-
-const textVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
 
 const buttonVariants = {
   hidden: { opacity: 0, scale: 0.9 },

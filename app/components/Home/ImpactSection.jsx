@@ -66,11 +66,11 @@ export default function ImpactSection() {
                             <ul className="space-y-4">
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">📚</span>
-                                    <span className="text-gray-200">Trained <span className="font-semibold text-white">5,000+ Youth Educators</span> and <span className="font-semibold text-white">300 Hygiene Educators</span></span>
+                                    <span className="text-gray-200">Built capacity of <span className="font-semibold text-white">5,000+ Youth Educators</span> and <span className="font-semibold text-white">300 Hygiene Educators</span> = improved civic awareness and life skills in <span className="font-semibold text-white">500+ schools</span> across Nigeria</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">🌱</span>
-                                    <span className="text-gray-200">Empowered <span className="font-semibold text-white">150 Climate Educators</span> to promote environmental literacy</span>
+                                    <span className="text-gray-200">Empowered <span className="font-semibold text-white">150 Climate Educators</span> driving environmental literacy and sustainability initiatives in schools and communities</span>
                                 </li>
                             </ul>
                         </div>
@@ -89,11 +89,11 @@ export default function ImpactSection() {
                             <ul className="space-y-4">
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">📊</span>
-                                    <span className="text-gray-200">Enabled <span className="font-semibold text-white">30+ communities</span> to track national budgets</span>
+                                    <span className="text-gray-200">Enabled <span className="font-semibold text-white">30+ communities</span> to actively track national budgets = greater accountability and improved civic engagement in local governance</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">🏛️</span>
-                                    <span className="text-gray-200">Strengthened open governance across all <span className="font-semibold text-white">6 FCT Area Councils</span></span>
+                                    <span className="text-gray-200">Strengthened open governance practices across all <span className="font-semibold text-white">6 FCT Area Councils</span> = increased transparency and citizen participation in decision-making</span>
                                 </li>
                             </ul>
                         </div>
@@ -112,11 +112,11 @@ export default function ImpactSection() {
                             <ul className="space-y-4">
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">🗳️</span>
-                                    <span className="text-gray-200">Deployed <span className="font-semibold text-white">3,000+ youth</span> as election observers nationwide</span>
+                                    <span className="text-gray-200">Empowered and Deployed <span className="font-semibold text-white">3,000+ youth</span> as election observers nationwide = Young Nigerians are active participants in the democratic process</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-xl mr-3 flex-shrink-0">📣</span>
-                                    <span className="text-gray-200">Activated <span className="font-semibold text-white">200+ youth advocates</span>, boosting voter turnout to <span className="font-semibold text-white">94%</span> in the FCT</span>
+                                    <span className="text-gray-200">Activated <span className="font-semibold text-white">200+ youth advocates</span>, driving voter education = increasing voter turnout to <span className="font-semibold text-white">94%</span> in the FCT</span>
                                 </li>
                             </ul>
                         </div>
@@ -134,12 +134,12 @@ export default function ImpactSection() {
                             
                             <ul className="space-y-4">
                                 <li className="flex items-start">
-                                    <span className="text-xl mr-3 flex-shrink-0">🌍</span>
-                                    <span className="text-gray-200">Trained <span className="font-semibold text-white">climate fellows</span> to lead justice-focused environmental projects</span>
+                                    <span className="text-xl mr-3 flex-shrink-0">🌱</span>
+                                    <span className="text-gray-200">Empowered <span className="font-semibold text-white">150 Climate Educators</span> driving environmental literacy and sustainability initiatives in schools and communities</span>
                                 </li>
-                                <li className="flex items-start opacity-0">
-                                    <span className="text-xl mr-3">📚</span>
-                                    <span>Placeholder</span>
+                                <li className="flex items-start">
+                                    <span className="text-xl mr-3 flex-shrink-0">🌍</span>
+                                    <span className="text-gray-200">Building <span className="font-semibold text-white">20 climate fellows'</span> capacity to lead justice-focused environmental projects</span>
                                 </li>
                             </ul>
                         </div>
@@ -148,10 +148,14 @@ export default function ImpactSection() {
                 
                 {/* Impact Counter - Professional Style */}
                 <RevealOnScroll animation="fadeUp" delay={0.3}>
-                    <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                         <div className="bg-[#1a2747]/80 rounded-lg p-6 text-center">
                             <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">8,000+</span>
                             <span className="text-gray-300 text-sm uppercase tracking-wider font-medium">Youth Engaged</span>
+                        </div>
+                        <div className="bg-[#1a2747]/80 rounded-lg p-6 text-center">
+                            <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">50+</span>
+                            <span className="text-gray-300 text-sm uppercase tracking-wider font-medium">Visible Outcome</span>
                         </div>
                         <div className="bg-[#1a2747]/80 rounded-lg p-6 text-center">
                             <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">30+</span>
