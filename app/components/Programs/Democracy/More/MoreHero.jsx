@@ -30,7 +30,7 @@ export default function MoreHero() {
       animate="visible"
       variants={containerVariants}
       style={{
-        backgroundImage: "url('/more/hero.jpg')",
+        backgroundImage: "url('/moredemo/hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

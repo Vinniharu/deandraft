@@ -55,7 +55,7 @@ export default function PBP() {
               className="relative rounded-xl overflow-hidden shadow-lg mb-12"
             >
               <Image 
-                src="/more/pbp.jpg" 
+                src="/moredemo/citizen.jpg" 
                 alt="Citizens' Open Dialogue on Participatory Budgeting and Planning"
                 width={1200}
                 height={600}

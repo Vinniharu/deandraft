@@ -105,9 +105,9 @@ export default function MissionVision() {
                 Vision
               </h3>
               <p className="text-lg font-semibold text-[var(--dean-red)]">
-                A world where empowered youth lead transformative change to
-                achieve inclusive, sustainable, and participatory societies for
-                all.
+                We envisioned a world empowered youth lead transformative change
+                to achieve inclusive, sustainable, and participatory societies
+                for all.
               </p>
               <p className="text-gray-700">
                 This vision reflects our belief in the power of young people to
