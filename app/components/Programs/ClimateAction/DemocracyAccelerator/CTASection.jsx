@@ -80,13 +80,13 @@ export default function CTASection() {
                         
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link 
-                                href="mailto:info@deaninitiative.org" 
+                                href="mailto:info@dean.com.ng" 
                                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block"
                             >
                                 Contact Us
                             </Link>
                             <Link 
-                                href="mailto:info@deaninitiative.org" 
+                                href="mailto:info@dean.com.ng" 
                                 className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block"
                             >
                                 Apply for Next Cohort

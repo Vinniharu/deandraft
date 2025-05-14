@@ -333,7 +333,7 @@ export default function ClimateEducationPage() {
                                     transition={{ duration: 0.6, delay: 0.4 }}
                                 >
                                     <ExternalLink
-                                        href="mailto:info@deaninitiative.org"
+                                        href="mailto:info@dean.com.ng"
                                         className="inline-block px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
                                         ariaLabel="Contact us to get involved"
                                     >

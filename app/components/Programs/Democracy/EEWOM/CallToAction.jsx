@@ -33,13 +33,13 @@ export default function CallToAction() {
             
             <div className="flex flex-wrap justify-center gap-6">
               <Link 
-                href="mailto:info@deaninitiative.org" 
+                href="mailto:info@dean.com.ng" 
                 className="px-8 py-4 bg-[var(--dean-blue)] text-white rounded-full font-semibold hover:bg-[var(--dean-blue)]/90 transition-colors shadow-lg hover:shadow-xl"
               >
                 Become an Observer
               </Link>
               <Link 
-                href="/programs/democracy" 
+                href="/programs/democracy/more" 
                 className="px-8 py-4 bg-white text-[var(--dean-blue)] border border-[var(--dean-blue)] rounded-full font-semibold hover:bg-gray-50 transition-colors shadow-md hover:shadow-lg"
               >
                 Explore Democracy Programs

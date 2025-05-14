@@ -1,0 +1,108 @@
+"use client";
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+
+export default function AboutBudgetWatch() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6 } 
+    }
+  };
+
+  return (
+    <section id="about" className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-background/80">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
+        <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[var(--dean-blue)]/5 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-[var(--dean-red)]/5 blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left column: Image */}
+          <motion.div 
+            className="relative h-[400px] md:h-[500px] overflow-hidden rounded-xl"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              src="/budgetwatch/about.jpg"
+              alt="Budget Watch Initiative in action"
+              fill
+              className="object-cover"
+            />
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            
+            {/* Floating label */}
+            <div className="absolute bottom-6 left-6 px-4 py-2 bg-black/30 backdrop-blur-md rounded-lg border border-white/10 text-white">
+              <p className="text-sm font-medium">Community Budget Engagement</p>
+            </div>
+          </motion.div>
+
+          {/* Right column: Content */}
+          <div ref={ref}>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="space-y-6"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold">
+                The <span className="text-[var(--dean-blue)]">#BudgetWatch</span> Project
+              </h2>
+              
+              <div className="w-20 h-1.5 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)]" />
+              
+              <div className="prose prose-lg max-w-none">
+                <p>
+                  With the #BudgetWatch project, DEAN Initiative and its partners seek to encourage citizens'
+                  participation and inclusion in governance processes through active engagement in budget creation,
+                  monitoring and tracking approved budgets and holding elected representatives accountable to render
+                  stewardship on budget implementation.
+                </p>
+                
+                <p className="mt-4">
+                  The project builds on the Open Government Partnership mechanism to monitor and track the 
+                  National Development Plan (2021-2025), focusing on Education, Health, and Poverty Alleviation. 
+                  We work to strengthen the capacity of communities to understand budget creation, equip them 
+                  with tools to monitor and track the budget and, as a sustainability approach, become advocates 
+                  for the co-creation of budget between the government and the citizens.
+                </p>
+                
+                <p className="mt-4">
+                  Our belief is that for the Nigerian government to deliver on the National Development Plan 2021-2025, 
+                  there is a serious need to equip the citizens with the knowledge and tools needed to demand 
+                  for accountability from the government and participate adequately in the implementation and 
+                  monitoring of the plan.
+                </p>
+              </div>
+              
+              <div className="pt-6">
+                <a href="#objectives" className="inline-flex items-center text-[var(--dean-blue)] hover:text-[var(--dean-red)] transition-colors">
+                  <span>Learn about our objectives</span>
+                  <svg className="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 

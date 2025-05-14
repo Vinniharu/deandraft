@@ -91,7 +91,7 @@ export default function ImpactSection() {
                                         {/* Featured large image */}
                                         <div className="col-span-2 row-span-2 rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
                                             <img 
-                                                src="/lakechad/1.JPG" 
+                                                src="/lakechad/1.jpg" 
                                                 alt="Lake Chad Fellowship Main Event" 
                                                 className="object-cover w-full h-full"
                                             />
@@ -100,7 +100,7 @@ export default function ImpactSection() {
                                         {/* Smaller gallery images */}
                                         <div className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
                                             <img 
-                                                src="/lakechad/2.JPG" 
+                                                src="/lakechad/2.jpg" 
                                                 alt="Fellowship workshop" 
                                                 className="object-cover w-full h-full"
                                             />
@@ -108,7 +108,7 @@ export default function ImpactSection() {
                                         
                                         <div className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
                                             <img 
-                                                src="/lakechad/3.JPG" 
+                                                src="/lakechad/3.jpg" 
                                                 alt="Community engagement" 
                                                 className="object-cover w-full h-full"
                                             />
@@ -116,7 +116,7 @@ export default function ImpactSection() {
                                         
                                         <div className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
                                             <img 
-                                                src="/lakechad/4.JPG" 
+                                                src="/lakechad/4.jpg" 
                                                 alt="Field research" 
                                                 className="object-cover w-full h-full"
                                             />
@@ -124,7 +124,7 @@ export default function ImpactSection() {
                                         
                                         <div className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
                                             <img 
-                                                src="/lakechad/5.JPG" 
+                                                src="/lakechad/5.jpg" 
                                                 alt="Team collaboration" 
                                                 className="object-cover w-full h-full"
                                             />
@@ -132,7 +132,7 @@ export default function ImpactSection() {
                                         
                                         <div className="rounded-lg overflow-hidden shadow-md transform transition-transform duration-300 hover:scale-105">
                                             <img 
-                                                src="/lakechad/6.JPG" 
+                                                src="/lakechad/6.jpg" 
                                                 alt="Project presentation" 
                                                 className="object-cover w-full h-full"
                                             />

@@ -105,9 +105,9 @@ export default function MissionVision() {
                 Vision
               </h3>
               <p className="text-lg font-semibold text-[var(--dean-red)]">
-                We envisioned a world empowered youth lead transformative change
-                to achieve inclusive, sustainable, and participatory societies
-                for all.
+                We envision a world where empowered youth lead transformative
+                change to achieve inclusive, sustainable, and participatory
+                societies for all.
               </p>
               <p className="text-gray-700">
                 This vision reflects our belief in the power of young people to
@@ -217,7 +217,7 @@ export default function MissionVision() {
               className="inline-block"
             >
               <a
-                href="mailto:info@deaninitiative.org"
+                href="mailto:info@dean.com.ng"
                 className="px-8 py-4 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
               >
                 Join Our Movement

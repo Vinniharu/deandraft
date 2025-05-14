@@ -12,12 +12,12 @@ export default function GallerySection() {
   ];
 
   const a = [
-    "/transforming/a1.JPG",
-    "/transforming/a2.JPG",
-    "/transforming/a3.JPG",
-    "/transforming/a4.JPG",
-    "/transforming/a5.JPG",
-    "/transforming/a6.JPG",
+    "/transforming/a1.jpg",
+    "/transforming/a2.jpg",
+    "/transforming/a3.jpg",
+    "/transforming/a4.jpg",
+    "/transforming/a5.jpg",
+    "/transforming/a6.jpg",
   ];
 
   return (

@@ -62,7 +62,7 @@ const navLinks = [
       { name: "#OpenLGAs", path: "/programs/governance/openlgas" },
       { name: "#BudgetWatch", path: "/programs/governance/budgetwatch" },
       { name: "Student Open-Gov Fellowship", path: "/programs/governance/student-fellowship" },
-      { name: "More Governance Projects", path: "/programs/governance/more" }
+      // { name: "More Governance Projects", path: "/programs/governance/more" }
     ]
   },
   {

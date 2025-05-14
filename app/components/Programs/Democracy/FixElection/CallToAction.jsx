@@ -36,7 +36,7 @@ export default function CallToAction() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
               <Link 
-                href="mailto:info@deaninitiative.org" 
+                href="mailto:info@dean.com.ng" 
                 className="px-8 py-3 bg-[var(--dean-blue)] text-white rounded-full font-medium hover:bg-[var(--dean-blue)]/90 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +46,7 @@ export default function CallToAction() {
               </Link>
               
               <Link 
-                href="/programs/democracy" 
+                href="/programs/democracy/more" 
                 className="px-8 py-3 bg-white text-[var(--dean-blue)] border border-[var(--dean-blue)]/20 rounded-full font-medium hover:bg-gray-50 transition-colors shadow-md hover:shadow-lg flex items-center justify-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -25,7 +25,7 @@ export default function CallToAction() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="mailto:info@deaninitiative.org" className="px-8 py-3 bg-white text-[var(--dean-blue)] font-semibold rounded-full hover:bg-blue-50 transition-colors duration-300 shadow-xl">
+            <Link href="mailto:info@dean.com.ng" className="px-8 py-3 bg-white text-[var(--dean-blue)] font-semibold rounded-full hover:bg-blue-50 transition-colors duration-300 shadow-xl">
               Get Involved
             </Link>
             <Link href="/programs/democracy/more" className="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors duration-300">

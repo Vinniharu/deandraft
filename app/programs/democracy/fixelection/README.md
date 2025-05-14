@@ -54,4 +54,4 @@ The page consists of the following sections:
 
 ## Contact
 
-For any questions or issues regarding this page implementation, please contact the development team or email info@deaninitiative.org. 
+For any questions or issues regarding this page implementation, please contact the development team or email info@dean.com.ng. 

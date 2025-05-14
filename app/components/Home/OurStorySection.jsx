@@ -69,16 +69,18 @@ export default function OurStorySection() {
                   non-state actors to build a future where young and vulnerable
                   people are at the forefront of development and change.
                 </p>
-                <p className="text-foreground/90 leading-relaxed mt-4">
-                  <p className="text-2xl font-bold">
+                <div className="mt-4">
+                  <h3 className="text-2xl font-bold mb-2">
                     Why We Are Driven By YOUTH Power
+                  </h3>
+                  <p className="text-foreground/90 leading-relaxed">
+                    Youths are the heartbeat of innovation and transformation. At
+                    DEAN Initiative, we invest in young people by equipping them
+                    with training, resources, and opportunities to lead change.
+                    Their leadership drives the impact we envision in governance,
+                    education, climate action, and democracy.
                   </p>
-                  Youths are the heartbeat of innovation and transformation. At
-                  DEAN Initiative, we invest in young people by equipping them
-                  with training, resources, and opportunities to lead change.
-                  Their leadership drives the impact we envision in governance,
-                  education, climate action, and democracy.
-                </p>
+                </div>
               </div>
             </RevealOnScroll>
 

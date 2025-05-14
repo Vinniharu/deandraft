@@ -197,7 +197,7 @@ export default function CTASection() {
                                 
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                                     <ExternalLink 
-                                        href="mailto:info@deaninitiative.org"
+                                        href="mailto:info@dean.com.ng"
                                         className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg inline-block text-center"
                                         ariaLabel="Contact Us about National Action Day"
                                     >
@@ -215,7 +215,7 @@ export default function CTASection() {
                         transition={{ delay: 0.6, duration: 0.5 }}
                     >
                         <p className="text-white/80 text-sm">
-                            For more information, follow us on social media or email <ExternalLink href="mailto:info@deaninitiative.org" className="underline hover:text-white">info@deaninitiative.org</ExternalLink>
+                            For more information, follow us on social media or email <ExternalLink href="mailto:info@dean.com.ng" className="underline hover:text-white">info@dean.com.ng</ExternalLink>
                         </p>
                         <p className="text-white/80 text-sm mt-2">
                             Headquarters: 5 Awolowo Road, Ikoyi, Lagos | Regional offices in Abuja, Kano, and Port Harcourt

@@ -81,7 +81,7 @@ export default function SDGsGallery() {
             >
               <div className="relative aspect-w-4 aspect-h-3 h-64">
                 <Image
-                  src={`/sdgs/${index}.jpg`}
+                  src={`/sdgs/${index}.JPG`}
                   alt={`Gallery Image ${index}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"

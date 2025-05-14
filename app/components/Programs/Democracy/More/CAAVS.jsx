@@ -86,7 +86,7 @@ export default function CAAVS() {
                 <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
                   <div className="relative">
                     <Image
-                      src="/moredemo/abaji.jpg"
+                      src="/moredemo/abaji.JPG"
                       alt="Abaji Town Hall Meeting"
                       width={400}
                       height={300}
