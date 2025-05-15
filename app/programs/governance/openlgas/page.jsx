@@ -18,10 +18,12 @@ export default function OpenLGAsPage() {
     const imageList = [
       "/openlgas/hero.JPG",
       "/openlgas/about.JPEG",
-      "/openlgas/townhall1.JPEG",
-      "/openlgas/townhall2.JPEG",
-      "/openlgas/award.JPEG",
-      "/openlgas/capacity.JPEG"
+      "/openlgas/1.jpg",
+      "/openlgas/2.jpeg",
+      "/openlgas/3.jpeg",
+      "/openlgas/4.jpeg",
+      "/openlgas/5.jpeg",
+      "/openlgas/6.jpeg"
     ];
     
     imageList.forEach((src) => {
