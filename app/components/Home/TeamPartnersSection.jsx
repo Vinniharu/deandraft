@@ -205,7 +205,6 @@ export default function TeamPartnersSection() {
                         fill
                         className="object-cover object-center transition-transform duration-500 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
                     </div>
                     <div className="p-4 sm:p-6">
                       <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">

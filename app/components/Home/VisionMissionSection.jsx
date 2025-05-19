@@ -50,7 +50,7 @@ export default function VisionMissionSection() {
                                 <h3 className="text-2xl font-bold">Our Vision</h3>
                             </div>
                             <p className="text-gray-300 leading-relaxed text-lg">
-                                A world where empowered youth lead transformative change to achieve inclusive, sustainable, and participatory societies for all.
+                            We envision a world where empowered youth lead transformative change to achieve inclusive, sustainable, and participatory societies for all.
                             </p>
                         </div>
                     </RevealOnScroll>

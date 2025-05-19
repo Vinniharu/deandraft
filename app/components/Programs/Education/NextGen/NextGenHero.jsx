@@ -34,7 +34,7 @@ export default function NextGenHero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-blue)]/50">
+      <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-[var(--dean-red)]/20">
         <div className="max-w-4xl mx-auto text-center">
           <FramerMotion.motion.h1
             className="text-4xl md:text-5xl font-bold mb-4"
