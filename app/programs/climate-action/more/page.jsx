@@ -7,6 +7,13 @@ import Image from 'next/image';
 import PageTransition from '@/app/components/PageTransition';
 import ErrorBoundary from '@/app/components/ErrorBoundary';
 import ExternalLink from '@/app/components/ExternalLink';
+import JoinUs from "@/app/components/JoinUs";
+import { 
+  MoreHero, 
+  CAAVS, 
+  PBP, 
+  CallToAction 
+} from "@/app/components/Programs/Democracy/More";
 
 export default function ClimateEducationPage() {
     // Scroll to top on page load
@@ -120,6 +127,21 @@ export default function ClimateEducationPage() {
         { number: "5", label: "Climate Champions" }
     ];
 
+    useEffect(() => {
+        const imageList = [
+            "/more/hero.jpg",
+            "/more/abaji.jpg",
+            "/more/kwali.jpg",
+            "/more/dobi.jpg",
+            "/more/pbp.jpg"
+        ];
+        
+        imageList.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []);
+
     return (
         <ErrorBoundary>
             <Head>
@@ -134,215 +156,12 @@ export default function ClimateEducationPage() {
                 />
             </Head>
             <PageTransition>
-                <main className="overflow-hidden">
-                    {/* Hero Section */}
-                    <section className="relative py-20 md:py-28 bg-gradient-to-r from-blue-900 to-red-800 text-white overflow-hidden">
-                        <div className="absolute inset-0 z-0 opacity-20">
-                            <div className="absolute top-[10%] left-[5%] w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-                            <div className="absolute top-[20%] right-[10%] w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-                            <div className="absolute bottom-[10%] left-[20%] w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
-                        </div>
-                        
-                        <div className="container mx-auto px-4 relative z-10">
-                            <div className="max-w-5xl mx-auto text-center">
-                                <motion.h1 
-                                    className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6 }}
-                                >
-                                    Climate Education Initiatives
-                                </motion.h1>
-                                <motion.div 
-                                    className="w-24 h-1 bg-red-400 mx-auto mb-8"
-                                    initial={{ width: 0 }}
-                                    animate={{ width: 96 }}
-                                    transition={{ duration: 0.8, delay: 0.4 }}
-                                />
-                                <motion.p 
-                                    className="text-xl text-white/90 max-w-3xl mx-auto"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.6, delay: 0.6 }}
-                                >
-                                    Empowering communities through climate education, awareness, and action
-                                </motion.p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Stats Section */}
-                    <section className="py-16 bg-white">
-                        <div className="container mx-auto px-4">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                                {stats.map((stat, index) => (
-                                    <motion.div 
-                                        key={index}
-                                        className="text-center"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
-                                    >
-                                        <div className="text-4xl md:text-5xl font-bold text-red-700 mb-2">{stat.number}</div>
-                                        <div className="text-gray-600 font-medium">{stat.label}</div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Add this section after the Stats Section */}
-                    <section className="py-10 bg-gray-50">
-                        <div className="container mx-auto px-4">
-                            <div className="max-w-5xl mx-auto">
-                                <motion.div
-                                    className="text-center mb-8"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <h2 className="text-2xl font-bold text-gray-800">Quick Navigation</h2>
-                                    <p className="text-gray-600 mt-2">Jump to an initiative</p>
-                                </motion.div>
-                                
-                                <div className="flex flex-wrap justify-center gap-4">
-                                    {initiatives.map((initiative, index) => (
-                                        <motion.a
-                                            key={initiative.id}
-                                            href={`#${initiative.id}`}
-                                            className={`px-4 py-2 bg-white shadow-md rounded-full hover:shadow-lg transition-shadow duration-300 ${index % 2 === 0 ? 'text-blue-700 hover:text-blue-900' : 'text-red-700 hover:text-red-900'} font-medium`}
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.2 + (index * 0.1), duration: 0.5 }}
-                                        >
-                                            {initiative.title}
-                                        </motion.a>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Initiatives Sections */}
-                    {initiatives.map((initiative, index) => (
-                        <section 
-                            key={initiative.id} 
-                            id={initiative.id}
-                            className={`py-20 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-                        >
-                            <div className="container mx-auto px-4">
-                                <div className="max-w-6xl mx-auto">
-                                    <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                                        <motion.div
-                                            className="relative"
-                                            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 0.6 }}
-                                        >
-                                            <div className="relative rounded-xl overflow-hidden shadow-xl">
-                                                <div style={{ height: '350px' }} className="relative">
-                                                    <Image
-                                                        src={initiative.imageSrc}
-                                                        alt={initiative.imageAlt}
-                                                        fill
-                                                        style={{ objectFit: 'cover' }}
-                                                        className="transition-transform duration-500 hover:scale-105"
-                                                        onError={() => handleImageError(initiative.id)}
-                                                        onLoad={() => {
-                                                            // Clear error state if image loads successfully
-                                                            if (imageErrors[initiative.id]) {
-                                                                setImageErrors(prev => ({
-                                                                    ...prev,
-                                                                    [initiative.id]: false
-                                                                }));
-                                                            }
-                                                        }}
-                                                    />
-                                                    
-                                                    {/* Show fallback content if there's an error */}
-                                                    {imageErrors[initiative.id] && (
-                                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-red-700 flex items-center justify-center">
-                                                            <p className="text-white text-xl font-bold px-4 text-center">
-                                                                {initiative.fallbackText || initiative.title}
-                                                            </p>
-                                                        </div>
-                                                    )}
-                                                </div>
-                                                {initiative.galleryLink && (
-                                                    <div className="absolute bottom-0 right-0 left-0 bg-black/50 p-3 text-center">
-                                                        <ExternalLink
-                                                            href={initiative.galleryLink}
-                                                            className="text-white hover:text-red-300 transition-colors text-sm flex items-center justify-center"
-                                                            ariaLabel={`View ${initiative.title} gallery`}
-                                                        >
-                                                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                                            View Gallery
-                                                        </ExternalLink>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </motion.div>
-                                        
-                                        <motion.div
-                                            initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 0.6, delay: 0.2 }}
-                                        >
-                                            <h2 className="text-3xl font-bold text-gray-800 mb-4">{initiative.title}</h2>
-                                            <div className={`w-20 h-1 ${index % 2 === 0 ? 'bg-blue-600' : 'bg-red-600'} mb-6`}></div>
-                                            <div className="text-gray-600 space-y-4 whitespace-pre-line">
-                                                {initiative.description.split('\n\n').map((paragraph, idx) => (
-                                                    <p key={idx}>{paragraph}</p>
-                                                ))}
-                                            </div>
-                                        </motion.div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    ))}
-
-                    {/* Call to Action Section */}
-                    <section className="py-16 bg-gradient-to-r from-blue-900 to-red-800 text-white">
-                        <div className="container mx-auto px-4">
-                            <div className="max-w-4xl mx-auto text-center">
-                                <motion.h2
-                                    className="text-3xl md:text-4xl font-bold mb-6"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6 }}
-                                >
-                                    Join the Climate Education Movement
-                                </motion.h2>
-                                <motion.p
-                                    className="text-xl mb-8"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: 0.2 }}
-                                >
-                                    Help us empower more communities with climate knowledge and action
-                                </motion.p>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: 0.4 }}
-                                >
-                                    <ExternalLink
-                                        href="mailto:info@dean.com.ng"
-                                        className="inline-block px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
-                                        ariaLabel="Contact us to get involved"
-                                    >
-                                        Get Involved
-                                    </ExternalLink>
-                                </motion.div>
-                            </div>
-                        </div>
-                    </section>
+                <main className="min-h-screen">
+                    <MoreHero />
+                    <CAAVS />
+                    <PBP />
+                    <CallToAction />
+                    <JoinUs />
                 </main>
             </PageTransition>
         </ErrorBoundary>

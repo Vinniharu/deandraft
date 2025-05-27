@@ -1,4 +1,6 @@
-import { Metadata } from "next";
+"use client";
+
+import { useEffect, useLayoutEffect } from "react";
 import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import SDGsHero from "@/app/components/Programs/Education/SDGs/SDGsHero";
@@ -8,20 +10,28 @@ import SDGsImpact from "@/app/components/Programs/Education/SDGs/SDGsImpact";
 import SDGsGallery from "@/app/components/Programs/Education/SDGs/SDGsGallery";
 import JoinUs from "@/app/components/JoinUs";
 
-export const metadata = {
-  title: "SDGs Activation Program | Dean Foundation",
-  description: "Taking Sustainable Development Goals to classrooms across Nigeria through education and community engagement.",
-  keywords: ["SDGs", "sustainable development goals", "education", "World's Largest Lesson", "Dean Foundation", "Nigeria"],
-};
+// Create a safe version of useLayoutEffect that falls back to useEffect on the server
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 export default function SDGsActivationPage() {
+  useIsomorphicLayoutEffect(() => {
+    // Use requestAnimationFrame to ensure the scroll happens after hydration
+    const raf = requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
+    });
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
   return (
     <ErrorBoundary>
       <PageTransition>
         <main className="min-h-screen">
           <SDGsHero />
           <SDGsMain />
-          {/* <SDGsObjectives /> */}
+          <SDGsObjectives />
           <SDGsImpact />
           <SDGsGallery />
           <JoinUs />

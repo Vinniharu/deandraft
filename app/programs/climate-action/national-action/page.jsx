@@ -10,6 +10,7 @@ import HowItWorksSection from '@/app/components/Programs/ClimateAction/NationalA
 import HighlightsSection from '@/app/components/Programs/ClimateAction/NationalAction/HighlightsSection';
 import ImpactSection from '@/app/components/Programs/ClimateAction/NationalAction/ImpactSection';
 import CTASection from '@/app/components/Programs/ClimateAction/NationalAction/CTASection';
+import JoinUs from "@/app/components/JoinUs";
 
 export default function NationalActionPage() {
     // Scroll to top on page load
@@ -31,13 +32,14 @@ export default function NationalActionPage() {
                 />
             </Head>
             <PageTransition>
-                <main className="overflow-hidden">
+                <main className="min-h-screen">
                     <HeroSection />
                     <IntroSection />
                     <HowItWorksSection />
                     <HighlightsSection />
                     <ImpactSection />
                     <CTASection />
+                    <JoinUs />
                 </main>
             </PageTransition>
         </ErrorBoundary>

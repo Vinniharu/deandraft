@@ -95,108 +95,53 @@ export default function SDGsMain() {
 
     return (
         <motion.section
-            id="about"
             ref={sectionRef}
-            className="py-20 md:py-28 relative overflow-hidden bg-gray-50"
+            className="py-20 bg-white relative overflow-hidden"
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
             variants={sectionVariants}
         >
-            {/* Background decoration */}
-            <div className="absolute -left-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/10 blur-[100px]"></div>
-            <div className="absolute -right-32 bottom-20 w-64 h-64 rounded-full bg-[var(--dean-red)]/10 blur-[100px]"></div>
+            {/* Background decorations */}
+            <div className="absolute -right-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/5 blur-[100px]"></div>
+            <div className="absolute -left-32 bottom-20 w-64 h-64 rounded-full bg-[var(--dean-red)]/5 blur-[100px]"></div>
             <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
 
-            <div className="container mx-auto px-4 lg:px-8">
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-                    {/* Left column: Image */}
-                    <div className="w-full lg:w-1/2 relative">
-                        <motion.div
-                            className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl"
-                            variants={paragraphVariants}
-                        >
-                            <Image
-                                src="/sdgs/main-image.JPG"
-                                alt="SDGs Activation Program"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[var(--dean-blue)]/40 to-transparent"></div>
-                        </motion.div>
-                    </div>
+            <div className="container mx-auto px-4">
+                <div className="max-w-6xl mx-auto">
+                    <motion.div
+                        ref={contentRef}
+                        className="text-center mb-12"
+                        variants={headingVariants}
+                    >
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent inline-block mb-6">
+                            About the Program
+                        </h2>
+                        <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-8"></div>
+                    </motion.div>
 
-                    {/* Right column: Content */}
-                    <div className="w-full lg:w-1/2" ref={contentRef}>
-                        <motion.div 
-                            className="mb-6"
-                            variants={headingVariants}
-                        >
-                            <h2 className="text-3xl md:text-4xl font-bold text-[var(--dean-blue)] mb-2">SDG Activation Week Summit</h2>
-                            <motion.div className="h-1 bg-[var(--dean-red)] rounded-full" variants={decorationVariants}></motion.div>
-                        </motion.div>
-
-                        <motion.p 
-                            className="text-gray-700 text-lg mb-6 leading-relaxed"
-                            variants={paragraphVariants}
-                        >
-                            With support from the World's Largest Lesson (WLL), whose vision is to take Sustainable Development Goals (SDGs) to classrooms all over the world, we have implemented the SDGs Activation with remarkable achievements across Nigeria.
-                        </motion.p>
-
-                        <motion.p 
-                            className="text-gray-700 text-lg mb-8 leading-relaxed"
-                            variants={paragraphVariants}
-                        >
-                            Building on this overarching goal, DEAN Initiative, through a partnership with World's Largest Lesson UK, proceeds on a 5-year project plan, the single largest local action mobilization for sustainable development education.
-                        </motion.p>
-
-                        {/* Key achievements */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                            {info.map((achievement, index) => (
-                                <motion.div 
-                                    key={index}
-                                    className="flex gap-4 p-4 rounded-lg bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover:border-[var(--dean-blue)]/20"
-                                    variants={featureVariants}
-                                >
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white rounded-full flex items-center justify-center">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={achievement.iconPath}></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-semibold text-[var(--dean-blue)] mb-1">{achievement.title}</h3>
-                                        <p className="text-gray-600 text-sm">{achievement.description}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
+                    <motion.div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+                        variants={paragraphVariants}
+                    >
+                        <div className="space-y-6 text-gray-700">
+                            <p>
+                                The SDGs Activation Program is a transformative initiative that brings the United Nations Sustainable Development Goals (SDGs) directly into Nigerian classrooms, making global sustainability accessible and actionable for students.
+                            </p>
+                            <p>
+                                Through interactive workshops, hands-on activities, and community engagement projects, we empower students to become active participants in achieving the Global Goals while developing critical thinking and problem-solving skills.
+                            </p>
                         </div>
-                    </div>
+
+                        <div className="space-y-6 text-gray-700">
+                            <p>
+                                Our program integrates SDG education into the existing curriculum, making it relevant and engaging for students while supporting teachers with resources and training to effectively deliver sustainability education.
+                            </p>
+                            <p>
+                                By fostering a deep understanding of global challenges and local solutions, we're nurturing the next generation of sustainability leaders who will drive positive change in their communities and beyond.
+                            </p>
+                        </div>
+                    </motion.div>
                 </div>
-                
-                {/* Partnership section */}
-                <motion.div 
-                    className="mt-16 pt-12 text-center border-t border-gray-200"
-                    variants={paragraphVariants}
-                >
-                    <h3 className="text-2xl font-bold text-[var(--dean-blue)] mb-4">Partnership with World's Largest Lesson</h3>
-                    <div className="h-1 w-24 bg-[var(--dean-red)] mx-auto mb-6"></div>
-                    <p className="text-gray-700 max-w-3xl mx-auto">
-                        Our collaboration with World's Largest Lesson (WLL) has enabled us to bring global sustainability education to local classrooms, 
-                        empowering students and teachers to become active participants in achieving the Sustainable Development Goals.
-                    </p>
-                    {/* <div className="mt-8">
-                        <a 
-                            href="#objectives" 
-                            className="inline-flex items-center px-6 py-3 rounded-md bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white font-medium transition-transform hover:scale-105"
-                        >
-                            Learn More About Our Objectives
-                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </a>
-                    </div> */}
-                </motion.div>
             </div>
         </motion.section>
     );

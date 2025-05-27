@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import PageTransition from "../../../components/PageTransition";
-import ErrorBoundary from "../../../components/ErrorBoundary";
-import JoinUs from "../../../components/JoinUs";
+import PageTransition from "@/app/components/PageTransition";
+import ErrorBoundary from "@/app/components/ErrorBoundary";
+import JoinUs from "@/app/components/JoinUs";
 
 // Import all components from the index file
 import {
@@ -13,7 +13,7 @@ import {
   ImpactReport,
   PhotoGallery,
   CallToAction
-} from "../../../components/Programs/Democracy/CEEP";
+} from "@/app/components/Programs/Democracy/CEEP";
 
 export default function Ceep() {
   // Preload images when the component mounts

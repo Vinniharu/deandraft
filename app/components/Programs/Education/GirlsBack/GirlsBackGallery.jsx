@@ -89,6 +89,21 @@ export default function GirlsBackGallery() {
             </motion.div>
           ))}
         </div>
+
+        {/* View More Button */}
+        <motion.div 
+          className="text-center mt-12"
+          variants={imageVariants}
+        >
+          <a
+            href="https://drive.google.com/drive/folders/1tbmJjnzXgpU9ItY82gdPXNc_arR_8Tzd?usp=sharing" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition-colors duration-300 shadow-md hover:shadow-lg"
+          >
+            View More Photos
+          </a>
+        </motion.div>
       </div>
     </motion.section>
   );

@@ -10,6 +10,7 @@ import ImpactSection from '@/app/components/Programs/ClimateAction/DemocracyAcce
 import BenefitsSection from '@/app/components/Programs/ClimateAction/DemocracyAccelerator/BenefitsSection';
 import WhyItMattersSection from '@/app/components/Programs/ClimateAction/DemocracyAccelerator/WhyItMattersSection';
 import CTASection from '@/app/components/Programs/ClimateAction/DemocracyAccelerator/CTASection';
+import JoinUs from '@/app/components/JoinUs';
 
 export default function DemocracyAccelerator() {
     // Scroll to top on page load
@@ -20,7 +21,7 @@ export default function DemocracyAccelerator() {
     return (
         <ErrorBoundary>
             <PageTransition>
-                <main className="overflow-hidden">
+                <main className="min-h-screen">
                     {/* Hero Section */}
                     <HeroSection />
                     
@@ -41,6 +42,7 @@ export default function DemocracyAccelerator() {
                     
                     {/* CTA Section */}
                     <CTASection />
+                    <JoinUs />
                 </main>
             </PageTransition>
         </ErrorBoundary>
