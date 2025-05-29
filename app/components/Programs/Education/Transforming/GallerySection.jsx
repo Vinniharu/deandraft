@@ -119,23 +119,11 @@ export default function GallerySection() {
             ))}
           </div>
           <ExternalLink
-            href="https://drive.google.com/drive/folders/11e8sV5TjvaT1CDkLI1-i1mGdRhsMmRfb"
-            className="text-center mt-16 mx-auto w-fit block"
-          >
-            <button className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-lg font-medium">
+              href="https://drive.google.com/drive/folders/11e8sV5TjvaT1CDkLI1-i1mGdRhsMmRfb"
+               className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
+            >
                 View More Photos
-            </button>
-          </ExternalLink>
-          {/* <motion.div
-                        className="text-center mt-16"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 0.5 }}
-                    >
-                        <button className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition text-lg font-medium">
-                            Register for the Next Summit
-                        </button>
-                    </motion.div> */}
+            </ExternalLink>
         </motion.div>
       </div>
     </motion.section>

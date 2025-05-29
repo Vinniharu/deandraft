@@ -127,6 +127,7 @@ export default function ClimateEducationPage() {
         { number: "5", label: "Climate Champions" }
     ];
 
+    // Preload images
     useEffect(() => {
         const imageList = [
             "/more/hero.jpg",
@@ -137,7 +138,7 @@ export default function ClimateEducationPage() {
         ];
         
         imageList.forEach((src) => {
-            const img = new Image();
+            const img = document.createElement('img');
             img.src = src;
         });
     }, []);

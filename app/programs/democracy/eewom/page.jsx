@@ -13,6 +13,7 @@ import {
   Recommendations,
   CallToAction 
 } from "@/app/components/Programs/Democracy/EEWOM";
+import Gallery from "@/app/components/Programs/Democracy/EEWOM/Gallery";
 
 export default function EEWOMPage() {
   // Preload images for better performance
@@ -40,6 +41,7 @@ export default function EEWOMPage() {
           <AboutEEWOM />
           <Objectives />
           <Implementation />
+          <Gallery />
           <ImpactReport />
           <Recommendations />
           <CallToAction />

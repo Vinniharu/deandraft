@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/80 mix-blend-multiply"></div>
                 <img 
-                    src="/images/msc-kenya-workshop.jpg" 
+                    src="/msc/bg.jpg" 
                     alt="MSC Kenya Climate Workshop" 
                     className="w-full h-full object-cover"
                     onError={(e) => {

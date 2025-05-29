@@ -50,8 +50,6 @@ export default function GirlsBackGallery() {
       animate={sectionInView ? "visible" : "hidden"}
       variants={sectionVariants}
     >
-      {/* Background decorations */}
-      <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5"></div>
 
       <div className="container mx-auto px-4">
         {/* Section Header */}

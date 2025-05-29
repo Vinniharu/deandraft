@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useState } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import ExternalLink from "@/app/components/ExternalLink";
 
 export default function GallerySection() {
   const [ref, inView] = useInView({
@@ -64,15 +65,20 @@ export default function GallerySection() {
 
   // Navigate to next image
   const nextImage = () => {
-    const currentIndex = galleryImages.findIndex(img => img.id === selectedImage.id);
+    const currentIndex = galleryImages.findIndex(
+      (img) => img.id === selectedImage.id
+    );
     const nextIndex = (currentIndex + 1) % galleryImages.length;
     setSelectedImage(galleryImages[nextIndex]);
   };
 
   // Navigate to previous image
   const prevImage = () => {
-    const currentIndex = galleryImages.findIndex(img => img.id === selectedImage.id);
-    const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    const currentIndex = galleryImages.findIndex(
+      (img) => img.id === selectedImage.id
+    );
+    const prevIndex =
+      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     setSelectedImage(galleryImages[prevIndex]);
   };
 
@@ -84,7 +90,7 @@ export default function GallerySection() {
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[var(--dean-blue)]/5 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[var(--dean-red)]/5 blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16" ref={ref}>
           <motion.div
@@ -97,12 +103,12 @@ export default function GallerySection() {
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-6" />
             <p className="max-w-2xl mx-auto text-lg text-foreground/80">
-              Explore our #OpenLGAs initiative through these impactful moments of 
-              collaboration, engagement, and transformation.
+              Explore our #OpenLGAs initiative through these impactful moments
+              of collaboration, engagement, and transformation.
             </p>
           </motion.div>
         </div>
-        
+
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0, y: 20 }}
@@ -127,17 +133,36 @@ export default function GallerySection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
-                
+
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
                     </svg>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
+        </motion.div>
+        <motion.div className="flex justify-center mt-12">
+          <ExternalLink
+            href="https://drive.google.com/drive/folders/1THq96sho5JVl9vtCf1lRqcjdh80bAf4w"
+            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300"
+          >
+            View More Photos
+          </ExternalLink>
         </motion.div>
       </div>
 
@@ -180,8 +205,19 @@ export default function GallerySection() {
                     prevImage();
                   }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
                   </svg>
                 </button>
                 <button
@@ -191,8 +227,19 @@ export default function GallerySection() {
                     nextImage();
                   }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </button>
 
@@ -204,8 +251,19 @@ export default function GallerySection() {
                     closeModal();
                   }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </motion.div>
@@ -215,4 +273,4 @@ export default function GallerySection() {
       </AnimatePresence>
     </section>
   );
-} 
+}

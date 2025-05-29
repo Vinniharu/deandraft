@@ -56,13 +56,7 @@ export default function OurStorySection() {
                   creating sustainable impact through youth-driven solutions. We
                   collaborate with both state and non-state actors to build a
                   future where young and vulnerable people are at the forefront
-                  of development and change.Founded in 2010 and officially
-                  registered with the Corporate Affairs Commission in 2015, DEAN
-                  is a non-governmental, non-profit, and non-partisan
-                  organisation committed to creating sustainable impact through
-                  youth-driven solutions. We collaborate with both state and
-                  non-state actors to build a future where young and vulnerable
-                  people are at the forefront of development and change.
+                  of development and change.
                 </p>
                 <div className="mt-4">
                   <h3 className="text-2xl font-bold mb-2">
@@ -101,25 +95,27 @@ export default function OurStorySection() {
           <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
             <RevealOnScroll animation="fadeLeft" delay={0.3}>
               <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
-                <img
-                  src="/hero/img1.jpg"
-                  alt="DEAN Initiative in action"
-                  fill
-                  className="object-cover"
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/hero/img1.jpg"
+                    alt="DEAN Initiative in action"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll animation="fadeRight" delay={0.5}>
               <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
-                <img
-                  src="/hero/img2.JPG"
-                  alt="DEAN Initiative community"
-                  fill
-                  className="object-cover"
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/hero/img2.JPG"
+                    alt="DEAN Initiative community"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
             </RevealOnScroll>
 

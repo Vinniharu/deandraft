@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ExternalLink from "@/app/components/ExternalLink";
 
 export default function PhotoGallery() {
   const photos = [
@@ -15,10 +16,6 @@ export default function PhotoGallery() {
 
   return (
     <section className="py-16 md:py-24 bg-white relative">
-      {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[var(--dean-blue)]/5 blur-[80px]"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[var(--dean-red)]/5 blur-[80px]"></div>
-      <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
@@ -56,6 +53,14 @@ export default function PhotoGallery() {
             </motion.div>
           ))}
         </div>
+        <motion.div className="flex justify-center mt-12 ">
+          <ExternalLink
+            href="https://drive.google.com/drive/folders/1IKsTTTh1qcW1ASRdfiZtdOg2qRIJQyz5"
+            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300"
+          >
+            View More Photos
+          </ExternalLink>
+        </motion.div>
       </div>
     </section>
   );

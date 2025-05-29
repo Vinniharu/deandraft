@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import ExternalLink from "@/app/components/ExternalLink";
 
 export default function SDGsGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -94,7 +95,7 @@ export default function SDGsGallery() {
 
   // Handle keyboard events for modal
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') {
+    if (e.key === "Escape") {
       setSelectedImage(null);
     }
   };
@@ -102,14 +103,14 @@ export default function SDGsGallery() {
   // Effect to add/remove keyboard listener
   useEffect(() => {
     if (selectedImage !== null) {
-      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener("keydown", handleKeyDown);
       // Prevent scrolling when modal is open
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     }
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
       // Restore scrolling when modal is closed
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [selectedImage]);
 
@@ -123,10 +124,6 @@ export default function SDGsGallery() {
         animate={sectionInView ? "visible" : "hidden"}
         variants={sectionVariants}
       >
-        {/* Background decorations */}
-        <div className="absolute -right-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/5 blur-[100px]"></div>
-        <div className="absolute -left-32 bottom-20 w-64 h-64 rounded-full bg-[var(--dean-red)]/5 blur-[100px]"></div>
-        <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
 
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -137,7 +134,8 @@ export default function SDGsGallery() {
               </h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mt-4"></div>
               <p className="text-gray-600 mt-6 max-w-3xl mx-auto">
-                Explore our transformative SDGs education experiences across Nigeria
+                Explore our transformative SDGs education experiences across
+                Nigeria
               </p>
             </motion.div>
 
@@ -166,21 +164,12 @@ export default function SDGsGallery() {
                 </motion.div>
               ))}
             </div>
-
-            {/* View More Button */}
-            <motion.div 
-              className="text-center mt-12"
-              variants={galleryItemVariants}
+            <ExternalLink
+              href="https://drive.google.com/drive/folders/1t3o9WSqKpwHoSAooFw8aFLauGXMUXWq0"
+               className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
             >
-              <a
-                href="https://drive.google.com/drive/folders/1t3o9WSqKpwHoSAooFw8aFLauGXMUXWq0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white rounded-full font-medium hover:opacity-90 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
                 View More Photos
-              </a>
-            </motion.div>
+            </ExternalLink>
           </div>
         </div>
       </motion.section>
@@ -217,8 +206,19 @@ export default function SDGsGallery() {
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </motion.div>

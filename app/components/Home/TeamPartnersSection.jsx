@@ -159,10 +159,6 @@ export default function TeamPartnersSection() {
 
   return (
     <section className="bg-gray-50 relative overflow-hidden" id="team-partners">
-      {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-[var(--dean-blue)]/5 blur-[100px] -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[var(--dean-red)]/5 blur-[100px] translate-y-1/2"></div>
-      <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
 
       <div className="container mx-auto px-4">
         {/* Team Section */}
