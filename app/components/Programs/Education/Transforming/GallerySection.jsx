@@ -1,3 +1,4 @@
+import ExternalLink from "@/app/components/ExternalLink";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -117,7 +118,14 @@ export default function GallerySection() {
               </motion.div>
             ))}
           </div>
-
+          <ExternalLink
+            href="https://drive.google.com/drive/folders/11e8sV5TjvaT1CDkLI1-i1mGdRhsMmRfb"
+            className="text-center mt-16 mx-auto w-fit block"
+          >
+            <button className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-lg font-medium">
+                View More Photos
+            </button>
+          </ExternalLink>
           {/* <motion.div
                         className="text-center mt-16"
                         initial={{ opacity: 0 }}

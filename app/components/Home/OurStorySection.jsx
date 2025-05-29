@@ -108,7 +108,7 @@ export default function OurStorySection() {
               <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
                 <Image
-                  src="/hero/hero-2.jpeg"
+                  src="/hero/image1.jpg"
                   alt="DEAN Initiative in action"
                   fill
                   className="object-cover"
@@ -120,7 +120,7 @@ export default function OurStorySection() {
               <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
                 <Image
-                  src="/hero/image2.jpg"
+                  src="/hero/image2.JPG"
                   alt="DEAN Initiative community"
                   fill
                   className="object-cover"

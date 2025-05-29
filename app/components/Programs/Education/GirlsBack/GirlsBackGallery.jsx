@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import ExternalLink from "@/app/components/ExternalLink";
 
 export default function GirlsBackGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -84,25 +85,20 @@ export default function GirlsBackGallery() {
                   priority={index < 3}
                   quality={85}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+               
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* View More Button */}
-        <motion.div 
-          className="text-center mt-12"
-          variants={imageVariants}
-        >
-          <a
-            href="https://drive.google.com/drive/folders/1tbmJjnzXgpU9ItY82gdPXNc_arR_8Tzd?usp=sharing" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition-colors duration-300 shadow-md hover:shadow-lg"
+        <motion.div className="flex justify-center mt-12" variants={headerVariants}>
+          <ExternalLink
+            href="https://drive.google.com/drive/folders/1tbmJjnzXgpU9ItY82gdPXNc_arR_8Tzd"
+            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300"
           >
             View More Photos
-          </a>
+          </ExternalLink>
         </motion.div>
       </div>
     </motion.section>

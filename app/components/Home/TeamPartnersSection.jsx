@@ -203,7 +203,7 @@ export default function TeamPartnersSection() {
                         src={member.image || "/images/placeholder-person.jpg"}
                         alt={member.name || member.fullName || "Team Member"}
                         fill
-                        className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                        className="object-cover object-top transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div className="p-4 sm:p-6">
@@ -224,7 +224,7 @@ export default function TeamPartnersSection() {
             </div>
 
             {/* View All Team Button */}
-            <div className="text-center mt-10">
+            <button className="text-center mt-10 block mx-auto">
               <Link
                 href="/about#team"
                 className="inline-flex items-center text-white bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] hover:opacity-90 py-3 px-6 rounded-full text-sm sm:text-base transition-colors duration-200 shadow-md hover:shadow-lg"
@@ -243,7 +243,7 @@ export default function TeamPartnersSection() {
                   />
                 </svg>
               </Link>
-            </div>
+            </button>
           </motion.div>
         </div>
 

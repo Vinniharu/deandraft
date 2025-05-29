@@ -1,14 +1,17 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 export default function BlogPostsSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const controls = useAnimation();
 
   const blogPosts = [
     {
@@ -23,7 +26,7 @@ export default function BlogPostsSection() {
     {
       date: "March 4, 2025",
       title: "DEAN INITIATIVE JOINS THE ELITE 2024-2025 CLIMATE DEMOCRACY ACCELERATOR PROGRAM",
-      author: "Dorcas Mokikan",
+      author: "Dorcas Mokikan", 
       categories: ["News", "Press Release"],
       postedBy: "Dorcas Mokikan",
       slug: "dean-initiative-climate-democracy-accelerator-2024",
@@ -34,7 +37,7 @@ export default function BlogPostsSection() {
       title: "Reclaiming the Future: Education's Power in the Age of AI",
       author: "Dorcas Mokikan",
       categories: ["News"],
-      postedBy: "Dorcas Mokikan",
+      postedBy: "Dorcas Mokikan", 
       slug: "reclaiming-future-education-ai",
       content: "As we commemorate the International Day of Education 2025 under the theme 'AI and Education: Preserving Human Agency in a World of Automation,'..."
     },
@@ -44,7 +47,7 @@ export default function BlogPostsSection() {
       slug: "ogp-peer-learning-session-report-2024"
     },
     {
-      date: "December 21, 2024",
+      date: "December 21, 2024", 
       title: "Advancing Local Governance Reforms: OGP-Local's Impact in Abuja FCT",
       slug: "advancing-local-governance-reforms-ogp-local"
     }
@@ -60,16 +63,25 @@ export default function BlogPostsSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
+  const carouselVariants = {
+    animate: {
+      x: [0, -2000],
       transition: {
-        duration: 0.5,
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 30,
+          ease: "linear",
+        },
       },
     },
   };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("animate");
+    }
+  }, [controls, inView]);
 
   return (
     <section className="py-20 bg-gray-50 relative overflow-hidden">
@@ -84,56 +96,61 @@ export default function BlogPostsSection() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="max-w-4xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <motion.div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent mb-4">
               Latest Updates
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto"></div>
           </motion.div>
 
-          {/* Blog Posts List */}
-          <div className="space-y-8">
-            {blogPosts.map((post, index) => (
-              <motion.div
-                key={post.slug}
-                variants={itemVariants}
-                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <Link href={`/media/blog/${post.slug}`} className="block group">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.categories && post.categories.map(category => (
-                      <span
-                        key={category}
-                        className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full"
-                      >
-                        {category}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 group-hover:text-[var(--dean-blue)] transition-colors duration-300 mb-3">
-                    {post.title || 'Untitled Post'}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {post.content || 'No content available'}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <span>By {post.author || 'Anonymous'}</span>
-                      <span>•</span>
-                      <span>Posted by {post.postedBy || 'Anonymous'}</span>
+          {/* Blog Posts Carousel */}
+          <div className="overflow-hidden">
+            <motion.div 
+              className="flex gap-8"
+              variants={carouselVariants}
+              animate="animate"
+              style={{ width: "fit-content" }}
+            >
+              {/* Double the posts for seamless loop */}
+              {[...blogPosts, ...blogPosts].map((post, index) => (
+                <div
+                  key={`${post.slug}-${index}`}
+                  className="w-[400px] flex-shrink-0 bg-white rounded-xl p-8 shadow-sm"
+                >
+                  <Link href={`/media/blog/${post.slug}`} className="block group">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.categories && post.categories.map(category => (
+                        <span
+                          key={category}
+                          className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full"
+                        >
+                          {category}
+                        </span>
+                      ))}
                     </div>
-                    <time>{post.date || 'No date'}</time>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-[var(--dean-blue)] transition-colors duration-300 mb-3 line-clamp-2">
+                      {post.title || 'Untitled Post'}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-2">
+                      {post.content || 'No content available'}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <div className="flex items-center gap-2">
+                        <span>By {post.author || 'Anonymous'}</span>
+                      </div>
+                      <time>{post.date || 'No date'}</time>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
           {/* View All Button */}
-          <motion.div variants={itemVariants} className="text-center mt-10">
+          <motion.div className="text-center mt-10">
             <Link
               href="/media/blog"
               className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white rounded-full font-medium hover:opacity-90 transition-opacity duration-300 shadow-md hover:shadow-lg"
@@ -145,4 +162,4 @@ export default function BlogPostsSection() {
       </div>
     </section>
   );
-} 
+}

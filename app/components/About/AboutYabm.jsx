@@ -149,7 +149,7 @@ export default function AboutYabm() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                    className="object-cover object-top transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-4 sm:p-6" onClick={() => openModal(member)}>

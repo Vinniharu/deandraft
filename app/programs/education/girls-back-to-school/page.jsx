@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import GirlsBackHero from "@/app/components/Programs/Education/GirlsBack/GirlsBackHero";

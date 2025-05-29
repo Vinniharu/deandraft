@@ -28,7 +28,7 @@ export default function SDGsHero() {
       animate="visible"
       variants={containerVariants}
       style={{
-        backgroundImage: "url('/sdgs/hero-bg.jpg')",
+        backgroundImage: "url('/sdgs/hero-bg.JPG')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
