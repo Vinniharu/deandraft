@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DEAN Initiative Website
+
+## Overview
+The DEAN Initiative (Development of Educational Action Network) website is a modern web platform built with Next.js, showcasing our organization's work in education, climate action, and community development. The platform serves as a central hub for news, press releases, and updates about our various initiatives and achievements.
+
+## Features
+
+### 🌟 Key Features
+- **Dynamic Blog System**: Engaging blog platform with category filtering and smooth animations
+- **Press Release Center**: Dedicated section for official announcements and news
+- **Modern UI/UX**: Responsive design with beautiful gradients and transitions
+- **Category Management**: Easy filtering of content by categories
+- **SEO Optimized**: Built with best practices for search engine visibility
+
+### 💻 Technical Stack
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **State Management**: React Hooks
+- **Deployment**: [Your deployment platform]
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
+### Installation
+1. Clone the repository
+```bash
+git clone [repository-url]
+cd deandraft
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
+```
+deandraft/
+├── app/
+│   ├── media/
+│   │   ├── blog/
+│   │   │   ├── [slug]/
+│   │   │   └── page.jsx
+│   │   └── press/
+│   │       ├── [id]/
+│   │       └── page.jsx
+│   └── ...
+├── public/
+├── components/
+└── ...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content Management
+- Blog posts are managed through the `blogPosts` array in `app/media/blog/page.jsx`
+- Press releases are managed through `pressReleases.js` in the root directory
 
-## Learn More
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+## License
+[Your chosen license]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
+- Website: [Your website URL]
+- Email: [Contact email]
+- Twitter: [@YourTwitterHandle]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Framer Motion for smooth animations
+- All contributors and supporters of DEAN Initiative
