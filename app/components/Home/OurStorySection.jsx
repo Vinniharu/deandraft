@@ -13,11 +13,6 @@ export default function OurStorySection() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacityProgress = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.8, 1],
-    [0, 1, 1, 0]
-  );
 
   return (
     <section
@@ -107,7 +102,7 @@ export default function OurStorySection() {
             <RevealOnScroll animation="fadeLeft" delay={0.3}>
               <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
-                <Image
+                <img
                   src="/hero/image1.jpg"
                   alt="DEAN Initiative in action"
                   fill
@@ -119,7 +114,7 @@ export default function OurStorySection() {
             <RevealOnScroll animation="fadeRight" delay={0.5}>
               <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--dean-blue)]/20 to-[var(--dean-red)]/20 z-10" />
-                <Image
+                <img
                   src="/hero/image2.JPG"
                   alt="DEAN Initiative community"
                   fill
