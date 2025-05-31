@@ -23,7 +23,7 @@ export default function GallerySection() {
     },
     {
       id: 2,
-      src: "/openlgas/2.jpeg",
+      src: "/openlgas/2.jpg",
       alt: "Citizen engagement session",
       caption: "Citizens engaging with local government representatives",
     },

@@ -90,7 +90,7 @@ export default function ImpactSection() {
                                 <div className="relative bg-gradient-to-br from-blue-500 to-red-500 rounded-lg p-1">
                                     <div className="bg-white rounded-lg overflow-hidden">
                                         <img 
-                                            src="/cda/1.JPG" 
+                                            src="/cda/1.jpg" 
                                             alt="CDA Impact"
                                             className="w-full h-auto object-cover"
                                             onError={(e) => {

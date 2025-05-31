@@ -39,7 +39,7 @@ export default function AboutStudentFellowship() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/studentfellowship/about.jpg"
+              src="/studentfellowship/about.jpeg"
               alt="Student Open-Gov Fellowship in action"
               fill
               className="object-cover"

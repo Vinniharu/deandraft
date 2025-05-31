@@ -10,7 +10,6 @@ import VisionMissionSection from './components/Home/VisionMissionSection';
 import TeamPartnersSection from './components/Home/TeamPartnersSection';
 import GetInvolvedSection from './components/Home/GetInvolvedSection';
 import SpecialInterventionProjects from './components/Home/SpecialInterventionProjects';
-import BlogPostsSection from './components/Home/BlogPostsSection';
 
 // Page transition variants
 const pageVariants = {
@@ -50,7 +49,6 @@ export default function Home() {
       <SpecialInterventionProjects/>
       <ImpactSection />
       <VisionMissionSection />
-      <BlogPostsSection />
       <TeamPartnersSection />
       <GetInvolvedSection />
     </motion.main>

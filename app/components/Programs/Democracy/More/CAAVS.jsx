@@ -113,7 +113,7 @@ export default function CAAVS() {
                 <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
                   <div className="relative">
                     <Image
-                      src="/moredemo/kwali.jpg"
+                      src="/moredemo/1.jpg"
                       alt="Kwali outreach"
                       width={400}
                       height={300}

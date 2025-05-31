@@ -13,7 +13,7 @@ export default function ObjectivesSection() {
 
     return (
         <motion.section
-        style={{ backgroundImage: "url('/lakechad/nextbg.JPG')" }}
+        style={{ backgroundImage: "url('/lakechad/nextbg.jpg')" }}
             className="py-20 md:py-24 bg-gray-50 relative overflow-hidden bg-center bg-fixed bg-cover "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

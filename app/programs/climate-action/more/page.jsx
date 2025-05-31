@@ -1,12 +1,9 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Head from 'next/head';
-import Image from 'next/image';
 import PageTransition from '@/app/components/PageTransition';
 import ErrorBoundary from '@/app/components/ErrorBoundary';
-import ExternalLink from '@/app/components/ExternalLink';
 import JoinUs from "@/app/components/JoinUs";
 import { 
   MoreHero, 
@@ -20,26 +17,7 @@ export default function ClimateEducationPage() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    // Track image errors by initiative ID
-    const [imageErrors, setImageErrors] = useState({});
-
-    // Handle image error for a specific initiative
-    const handleImageError = (initiativeId) => {
-        setImageErrors(prev => ({
-            ...prev,
-            [initiativeId]: true
-        }));
-    };
-
     
-    const stats = [
-        { number: "300+", label: "Students Reached" },
-        { number: "100+", label: "Stakeholders Engaged" },
-        { number: "20", label: "Young Climate Activists Trained" },
-        { number: "5", label: "Climate Champions" }
-    ];
-
     // Preload images
     useEffect(() => {
         const imageList = [

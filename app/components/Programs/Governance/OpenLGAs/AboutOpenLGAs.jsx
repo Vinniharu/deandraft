@@ -39,7 +39,7 @@ export default function AboutOpenLGAs() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/openlgas/about.JPEG"
+              src="/openlgas/about.jpeg"
               alt="OpenLGAs Initiative in action"
               fill
               className="object-cover"

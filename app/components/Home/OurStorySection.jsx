@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RevealOnScroll from "../RevealOnScroll";
 import Image from "next/image";
+import BlogPostsSection from "./BlogPostsSection";
 
 export default function OurStorySection() {
   const sectionRef = useRef(null);
@@ -32,7 +33,7 @@ export default function OurStorySection() {
       </motion.div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
           {/* Left column: Content */}
           <div className="space-y-8">
             <RevealOnScroll animation="fadeUp">
@@ -123,7 +124,9 @@ export default function OurStorySection() {
             <div className="absolute -bottom-8 -right-8 w-16 h-16 rounded-full border-2 border-[var(--dean-blue)] opacity-20" />
             <div className="absolute -top-8 -left-8 w-24 h-24 rounded-full border-2 border-[var(--dean-red)] opacity-20" />
           </div>
+          
         </div>
+        <BlogPostsSection />
       </div>
     </section>
   );
