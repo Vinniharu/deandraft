@@ -35,7 +35,7 @@ export default function MainContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-l-4 border-blue-600 relative backdrop-blur-sm bg-white/90">
+              <div className="rounded-2xl p-6 md:p-8 shadow-xl border-l-4 border-blue-600 relative backdrop-blur-sm bg-white/90">
                 <div className="absolute -bottom-6 -right-6 w-16 h-16 rounded-full border-2 border-blue-500 opacity-20" />
                 <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full border-2 border-purple-500 opacity-20" />
                 
@@ -63,16 +63,6 @@ export default function MainContent() {
                   </li>
                 </ul>
                 
-                <motion.button 
-                  className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300 flex items-center"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </motion.button>
               </div>
             </motion.div>
 

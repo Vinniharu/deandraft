@@ -53,15 +53,6 @@ export default function BudgetWatchHero() {
                         Encouraging citizens' participation in governance through active engagement in budget creation, 
                         monitoring approved budgets, and holding elected representatives accountable.
                     </p>
-                    
-                    <div className="flex flex-wrap gap-4 justify-center mt-8">
-                        <a href="#about" className="px-6 py-3 bg-[var(--dean-blue)] text-white rounded-lg hover:bg-[var(--dean-blue)]/90 transition shadow-lg">
-                            Learn More
-                        </a>
-                        <a href="#objectives" className="px-6 py-3 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 transition backdrop-blur-sm">
-                            Our Objectives
-                        </a>
-                    </div>
                 </motion.div>
             </div>
         </motion.div>

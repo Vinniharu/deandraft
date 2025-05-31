@@ -85,22 +85,6 @@ export default function OpportunitiesSection() {
                         ))}
                     </div>
                     
-                    <motion.div
-                        className="mt-16 text-center bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.5 }}
-                    >
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Apply?</h3>
-                        <p className="text-gray-600 mb-6">
-                            Applications for the next cohort of the Lake Chad Climate Justice Youth Fellowship will open in January 2024.
-                            Sign up to receive notifications when applications open.
-                        </p>
-                        <button className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">
-                            <span className="mr-2">✉️</span>
-                            <span>Join Our Mailing List</span>
-                        </button>
-                    </motion.div>
                 </div>
             </div>
         </motion.section>

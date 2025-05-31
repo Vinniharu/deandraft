@@ -53,15 +53,6 @@ export default function StudentFellowshipHero() {
                         Reforming youths to demand accountability and enable good governance at the local level 
                         through education, training, and active participation in governance processes.
                     </p>
-                    
-                    <div className="flex flex-wrap gap-4 justify-center mt-8">
-                        <a href="#about" className="px-6 py-3 bg-[var(--dean-blue)] text-white rounded-lg hover:bg-[var(--dean-blue)]/90 transition shadow-lg">
-                            Learn More
-                        </a>
-                        <a href="#impact" className="px-6 py-3 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 transition backdrop-blur-sm">
-                            See Our Impact
-                        </a>
-                    </div>
                 </motion.div>
             </div>
         </motion.div>

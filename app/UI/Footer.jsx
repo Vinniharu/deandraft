@@ -40,10 +40,10 @@ export default function Footer() {
       { name: "Gallery", path: "https://drive.google.com/drive/folders/1xFFNZSe-vDQnXwYTWJ090JvhS89Ysns9" },
     ],
     "Get Involved": [
-      { name: "Volunteer", path: "/volunteer" },
-      { name: "Donate", path: "/donate" },
-      { name: "Partner With Us", path: "/partner" },
-      { name: "Contact Us", path: "/contact" },
+      { name: "Volunteer", path: "mailto:info@dean.com.ng", },
+      { name: "Donate", path: "mailto:info@dean.com.ng", },
+      { name: "Partner With Us", path: "mailto:info@dean.com.ng", },
+      { name: "Contact Us", path: "mailto:info@dean.com.ng", },
     ],
   };
 

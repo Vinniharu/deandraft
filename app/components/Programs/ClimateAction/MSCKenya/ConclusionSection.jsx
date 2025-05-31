@@ -151,7 +151,7 @@ export default function ConclusionSection() {
                                 Contact Us
                             </Link>
                             <Link 
-                                href="/programs/climate-action" 
+                                href="/programs/climate-action/more" 
                                 className="bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-3 rounded-full transition-colors duration-300 inline-block font-medium"
                             >
                                 Explore Climate Programs

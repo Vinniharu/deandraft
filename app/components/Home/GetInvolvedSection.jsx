@@ -19,28 +19,28 @@ export default function GetInvolvedSection() {
             title: "Donate",
             icon: "💰",
             description: "Support our initiatives with a donation",
-            link: "#donate",
+            link: "mailto:info@dean.com.ng",
             color: "blue"
         },
         {
             title: "Join Us",
             icon: "👥",
             description: "Become a part of our community",
-            link: "#join",
+            link: "mailto:info@dean.com.ng",
             color: "red"
         },
         {
             title: "Volunteer",
             icon: "🙋",
             description: "Contribute your skills and time",
-            link: "#volunteer",
+            link: "mailto:info@dean.com.ng",
             color: "blue"
         },
         {
             title: "Contact",
             icon: "✉️",
             description: "Reach out to discuss collaboration",
-            link: "#contact",
+            link: "mailto:info@dean.com.ng",
             color: "red"
         }
     ];

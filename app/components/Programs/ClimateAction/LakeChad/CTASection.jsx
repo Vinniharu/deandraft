@@ -23,21 +23,21 @@ export default function CTASection() {
             title: "Apply for Fellowship",
             description: "Become part of our next cohort and receive training, mentorship, and support.",
             icon: "👩‍🎓",
-            link: "#",
+            link: "mailto:info@dean.com.ng",
             color: "bg-blue-600 hover:bg-blue-700"
         },
         {
             title: "Sponsor a Fellow",
             description: "Support young climate leaders through financial sponsorship and mentorship.",
             icon: "🤝",
-            link: "#",
+            link: "mailto:info@dean.com.ng",
             color: "bg-red-600 hover:bg-red-700"
         },
         {
             title: "Partner with Us",
             description: "Organizations can join our network as implementation or knowledge partners.",
             icon: "🏢",
-            link: "#",
+            link: "mailto:info@dean.com.ng",
             color: "bg-blue-600 hover:bg-blue-700"
         }
     ];

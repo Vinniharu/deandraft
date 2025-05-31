@@ -37,7 +37,7 @@ export default function CallToAction() {
                 Join Our Programs
               </Link>
               <Link 
-                href="/programs/democracy" 
+                href="/programs/democracy/more" 
                 className="px-8 py-4 bg-white text-[var(--dean-blue)] border border-[var(--dean-blue)] rounded-full font-semibold hover:bg-gray-50 transition-colors shadow-md hover:shadow-lg"
               >
                 Explore More Initiatives

@@ -68,11 +68,6 @@ const navLinks = [
   {
     name: "Publications",
     path: "/publications",
-    sublinks: [
-      { name: "Financial Report", path: "/publications/financial-report" },
-      { name: "Annual Reports", path: "/publications/annual-reports" },
-      { name: "Project Reports", path: "/publications/project-reports" }
-    ]
   },
   {
     name: "Media",
@@ -85,7 +80,7 @@ const navLinks = [
   },
   {
     name: "Donate",
-    path: "/donate"
+    path: "mailto:info@dean.com.ng",
   },
   // {
   //   name: "Special Intervention Projects",

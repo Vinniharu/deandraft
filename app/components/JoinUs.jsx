@@ -57,7 +57,7 @@ export default function JoinUs() {
       icon: "🙋‍♀️",
       description:
         "Join our volunteer network and contribute your skills and time to our impactful initiatives across Africa.",
-      link: "/volunteer",
+      link: "mailto:info@dean.com.ng",
       color: "blue",
     },
     {
@@ -65,7 +65,7 @@ export default function JoinUs() {
       icon: "❤️",
       description:
         "Support our youth-driven programs with a donation that helps create sustainable futures and empower communities.",
-      link: "/donate",
+      link: "mailto:info@dean.com.ng",
       color: "red",
     },
     {
@@ -73,7 +73,7 @@ export default function JoinUs() {
       icon: "🤝",
       description:
         "Collaborate with DEAN Initiative to create meaningful impact through strategic partnerships and joint initiatives.",
-      link: "/partner",
+      link: "mailto:info@dean.com.ng",
       color: "blue",
     },
   ];

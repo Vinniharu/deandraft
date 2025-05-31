@@ -39,9 +39,6 @@ export default function CallToAction() {
                 href="mailto:info@dean.com.ng" 
                 className="px-8 py-3 bg-[var(--dean-blue)] text-white rounded-full font-medium hover:bg-[var(--dean-blue)]/90 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
                 Get Involved
               </Link>
               
@@ -49,9 +46,6 @@ export default function CallToAction() {
                 href="/programs/democracy/more" 
                 className="px-8 py-3 bg-white text-[var(--dean-blue)] border border-[var(--dean-blue)]/20 rounded-full font-medium hover:bg-gray-50 transition-colors shadow-md hover:shadow-lg flex items-center justify-center"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
                 Explore Democracy Programs
               </Link>
             </div>

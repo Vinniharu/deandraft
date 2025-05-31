@@ -68,9 +68,6 @@ export default function IPledgeHero() {
           </motion.p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="#about" scroll={false} className="px-8 py-3 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-50 transition-colors duration-300 shadow-xl">
-              Learn More
-            </Link>
             <Link href="mailto:info@dean.com.ng" className="px-8 py-3 bg-[var(--dean-blue)] text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-xl">
               Get Involved
             </Link>

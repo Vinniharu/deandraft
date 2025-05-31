@@ -197,7 +197,7 @@ export default function GirlsBackImpact() {
                         Together, we can ensure that every girl has the opportunity to receive an education, 
                         fulfilling their potential and contributing to the development of their communities and country.
                     </p>
-                    <a href="/donate" className="inline-block bg-[var(--dean-red)] hover:bg-[var(--dean-red)]/90 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300">
+                    <a href="mailto:info@dean.com.ng" className="inline-block bg-[var(--dean-red)] hover:bg-[var(--dean-red)]/90 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300">
                         Support Our Work
                     </a>
                 </motion.div>

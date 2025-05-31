@@ -6,11 +6,6 @@ import { motion } from "framer-motion";
 export default function CallToAction() {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white relative">
-      {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 blur-[80px]"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 blur-[80px]"></div>
-      <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-10"></div>
-      
       <div className="container mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

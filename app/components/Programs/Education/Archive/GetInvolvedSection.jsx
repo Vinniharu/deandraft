@@ -84,7 +84,7 @@ export default function GetInvolvedSection() {
                             animate="show"
                         >
                             <motion.div variants={itemVariants}>
-                                <Link href="#" className="block">
+                                <Link href="mailto:info@dean.com.ng" className="block">
                                     <motion.div
                                         className="bg-white hover:bg-blue-50 text-blue-600 rounded-xl py-5 px-6 shadow-lg transition-all duration-300 h-full flex flex-col items-center justify-center"
                                         variants={buttonVariants}
@@ -98,7 +98,7 @@ export default function GetInvolvedSection() {
                             </motion.div>
                             
                             <motion.div variants={itemVariants}>
-                                <Link href="#" className="block">
+                                <Link href="mailto:info@dean.com.ng" className="block">
                                     <motion.div
                                         className="bg-white hover:bg-red-50 text-red-600 rounded-xl py-5 px-6 shadow-lg transition-all duration-300 h-full flex flex-col items-center justify-center"
                                         variants={buttonVariants}
@@ -112,7 +112,7 @@ export default function GetInvolvedSection() {
                             </motion.div>
                             
                             <motion.div variants={itemVariants}>
-                                <Link href="#" className="block">
+                                <Link href="mailto:info@dean.com.ng" className="block">
                                     <motion.div
                                         className="bg-white hover:bg-blue-50 text-blue-600 rounded-xl py-5 px-6 shadow-lg transition-all duration-300 h-full flex flex-col items-center justify-center"
                                         variants={buttonVariants}
@@ -126,7 +126,7 @@ export default function GetInvolvedSection() {
                             </motion.div>
                             
                             <motion.div variants={itemVariants}>
-                                <Link href="#" className="block">
+                                <Link href="mailto:info@dean.com.ng" className="block">
                                     <motion.div
                                         className="bg-white hover:bg-red-50 text-red-600 rounded-xl py-5 px-6 shadow-lg transition-all duration-300 h-full flex flex-col items-center justify-center"
                                         variants={buttonVariants}
