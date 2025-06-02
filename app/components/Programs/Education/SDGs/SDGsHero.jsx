@@ -23,7 +23,7 @@ export default function SDGsHero() {
 
   return (
     <FramerMotion.motion.div
-      className="text-white"
+      className="text-white h-1/2"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -32,19 +32,20 @@ export default function SDGsHero() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        height: "50vh",
       }}
     >
-      <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-green)]/50">
+      <div className="w-full h-full mx-auto px-4 flex items-center justify-center bg-[var(--dean-red)]/50">
         <div className="max-w-4xl mx-auto text-center">
           <FramerMotion.motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             variants={textVariants}
           >
             SDGs Activation Program
           </FramerMotion.motion.h1>
 
           <FramerMotion.motion.p
-            className="text-lg text-white/90 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
             variants={textVariants}
           >
             Taking Sustainable Development Goals to classrooms across Nigeria

@@ -57,115 +57,152 @@ export default function GirlsBackMain() {
         }
     };
 
-    const featureVariants = {
-        hidden: { opacity: 0, y: 30 },
+    const iconVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
         visible: { 
             opacity: 1, 
-            y: 0,
-            transition: { duration: 0.5, ease: "easeOut" }
+            scale: 1,
+            transition: { duration: 0.4, ease: "easeOut" }
         }
     };
 
     return (
         <motion.section
-            id="about"
             ref={sectionRef}
-            className="py-20 md:py-28 relative overflow-hidden"
+            className="py-16 md:py-24 bg-white relative overflow-hidden"
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
             variants={sectionVariants}
         >
-            {/* Background decoration */}
-            <div className="absolute -left-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/5 blur-[100px]"></div>
-            <div className="absolute -right-32 bottom-20 w-64 h-64 rounded-full bg-[var(--dean-red)]/5 blur-[100px]"></div>
-            <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
-
-            <div className="container mx-auto px-4 lg:px-8">
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-                    {/* Left column: Image */}
-                    <div className="w-full lg:w-1/2 relative">
+            {/* Background decoration elements */}
+            <div className="absolute right-0 top-0 w-1/3 h-1/3 bg-[var(--dean-blue)]/3 blur-[150px] rounded-full" />
+            <div className="absolute left-0 bottom-0 w-1/3 h-1/3 bg-[var(--dean-red)]/3 blur-[150px] rounded-full" />
+            
+            <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto">
+                    
+                    {/* Main content */}
                         <motion.div
-                            className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl"
-                            variants={paragraphVariants}
-                        >
-                            <Image
-                                src="/girlback/main-image.jpg"
-                                alt="Girls Back to School Program"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        ref={contentRef}
+                        className="space-y-10"
+                        initial="hidden"
+                        animate={contentInView ? "visible" : "hidden"}
+                        variants={sectionVariants}
+                    >
+                        {/* Introduction */}
+                        <motion.div className="text-center space-y-6" variants={paragraphVariants}>
+                            <motion.h2 variants={headingVariants} className="text-3xl md:text-4xl font-bold text-[var(--dean-blue)]">
+                                About the Program
+                            </motion.h2>
+                            <motion.div variants={decorationVariants} className="h-1 w-24 bg-[var(--dean-red)] mx-auto"></motion.div>
                         </motion.div>
+
+                        <motion.div variants={paragraphVariants}>
+                            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                The Girls Back to School Program is a transformative initiative designed to address the critical 
+                                challenges that prevent girls from continuing their education in vulnerable communities across Nigeria. 
+                                Through comprehensive support and community engagement, we work to eliminate barriers and create 
+                                sustainable pathways for girls' education.
+                            </p>
+                            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                Our program tackles multiple barriers including poverty, early marriage, gender-based discrimination, 
+                                and inadequate school facilities through a holistic approach that combines direct support, advocacy, 
+                                and community mobilization. We believe that when girls are educated, entire communities benefit.
+                            </p>
+                        </motion.div>
+
+                        {/* Vision Statement */}
+                        <motion.div variants={paragraphVariants}>
+                            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[var(--dean-blue)] shadow-sm">
+                                <h3 className="text-xl font-semibold text-[var(--dean-blue)] mb-3">Our Vision</h3>
+                                <p className="text-gray-600 italic">
+                                    "We envision a Nigeria where every girl has unhindered access to quality education, 
+                                    empowering them to reach their full potential and contribute meaningfully to society."
+                                </p>
                     </div>
-
-                    {/* Right column: Content */}
-                    <div className="w-full lg:w-1/2" ref={contentRef}>
-                        <motion.div 
-                            className="mb-6"
-                            variants={headingVariants}
-                        >
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">About the Program</h2>
-                            <motion.div className="h-1 bg-[var(--dean-red)] rounded-full" variants={decorationVariants}></motion.div>
                         </motion.div>
 
-                        <motion.p 
-                            className="text-gray-700 text-lg mb-6 leading-relaxed"
-                            variants={paragraphVariants}
-                        >
-                            The Girls Back to School Program is a transformative initiative designed to address the critical challenges that prevent girls from continuing their education in vulnerable communities across Nigeria.
-                        </motion.p>
-
-                        <motion.p 
-                            className="text-gray-700 text-lg mb-8 leading-relaxed"
-                            variants={paragraphVariants}
-                        >
-                            Our program tackles barriers such as poverty, early marriage, gender-based discrimination, and inadequate school facilities through comprehensive support, advocacy, and community engagement. We believe that when girls are educated, entire communities benefit.
-                        </motion.p>
-
-                        {/* Key features */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                            {[
-                                {
-                                    title: "Scholarships",
-                                    description: "Financial support to cover education costs for vulnerable girls",
-                                    iconPath: "M12 6v12m-8-6h16"
-                                },
-                                {
-                                    title: "Mentorship",
-                                    description: "Pairing girls with role models who guide their educational journey",
-                                    iconPath: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                                },
-                                {
-                                    title: "Community Engagement",
-                                    description: "Working with parents and community leaders to support girls' education",
-                                    iconPath: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                },
-                                {
-                                    title: "Advocacy",
-                                    description: "Influencing policies to create girl-friendly educational environments",
-                                    iconPath: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
-                                }
-                            ].map((feature, index) => (
-                                <motion.div 
-                                    key={index}
-                                    className="flex gap-4 p-4 rounded-lg bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                                    variants={featureVariants}
-                                >
-                                    <div className="flex-shrink-0 w-12 h-12 bg-[var(--dean-red)] text-white rounded-full flex items-center justify-center">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.iconPath}></path>
+                        {/* Key Features */}
+                        <motion.div variants={paragraphVariants} className="mt-12">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6">Key Features</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                    <motion.div variants={iconVariants} className="w-12 h-12 bg-[var(--dean-blue)]/10 rounded-full flex items-center justify-center mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
+                                    </motion.div>
+                                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Financial Support</h4>
+                                    <p className="text-gray-600">
+                                        Comprehensive financial assistance covering tuition, books, uniforms, and other educational necessities.
+                                    </p>
+                                </div>
+                                
+                                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                    <motion.div variants={iconVariants} className="w-12 h-12 bg-[var(--dean-red)]/10 rounded-full flex items-center justify-center mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                    </motion.div>
+                                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Community Engagement</h4>
+                                    <p className="text-gray-600">
+                                        Working with community leaders and families to address cultural barriers and promote girls' education.
+                                    </p>
+                                </div>
+                                
+                                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                    <motion.div variants={iconVariants} className="w-12 h-12 bg-[var(--dean-blue)]/10 rounded-full flex items-center justify-center mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                        </svg>
+                                    </motion.div>
+                                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Mentorship Program</h4>
+                                    <p className="text-gray-600">
+                                        Connecting girls with successful female role models who provide guidance and inspiration.
+                                    </p>
+                                </div>
+                                
+                                <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                    <motion.div variants={iconVariants} className="w-12 h-12 bg-[var(--dean-red)]/10 rounded-full flex items-center justify-center mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                    </motion.div>
+                                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Safe Learning Environment</h4>
+                                    <p className="text-gray-600">
+                                        Creating and maintaining safe, girl-friendly learning spaces that promote inclusive education.
+                                    </p>
                                     </div>
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                                        <p className="text-gray-600 text-sm">{feature.description}</p>
                                     </div>
                                 </motion.div>
-                            ))}
+
+                        {/* Target Audience */}
+                        <motion.div variants={paragraphVariants} className="mt-12">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6">Target Beneficiaries</h3>
+                            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[var(--dean-red)] shadow-sm">
+                                <ul className="space-y-3 text-gray-700">
+                                    <li className="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-red)] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Out-of-school girls in vulnerable communities</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-red)] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Girls at risk of dropping out due to financial constraints</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--dean-red)] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Communities with high rates of early marriage and gender inequality</span>
+                                    </li>
+                                </ul>
                         </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
         </motion.section>

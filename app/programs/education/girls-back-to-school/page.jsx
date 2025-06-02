@@ -2,7 +2,7 @@ import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import GirlsBackHero from "@/app/components/Programs/Education/GirlsBack/GirlsBackHero";
 import GirlsBackMain from "@/app/components/Programs/Education/GirlsBack/GirlsBackMain";
-import GirlsBackApproach from "@/app/components/Programs/Education/GirlsBack/GirlsBackApproach";
+import GirlsBackObjectives from "@/app/components/Programs/Education/GirlsBack/GirlsBackObjectives";
 import GirlsBackImpact from "@/app/components/Programs/Education/GirlsBack/GirlsBackImpact";
 import GirlsBackGallery from "@/app/components/Programs/Education/GirlsBack/GirlsBackGallery";
 import JoinUs from "@/app/components/JoinUs";
@@ -20,7 +20,7 @@ export default function GirlsBackToSchoolPage() {
         <main className="min-h-screen">
           <GirlsBackHero />
           <GirlsBackMain />
-          <GirlsBackApproach />
+          <GirlsBackObjectives />
           <GirlsBackImpact />
           <GirlsBackGallery />
           <JoinUs />

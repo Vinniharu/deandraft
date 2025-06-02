@@ -6,37 +6,37 @@ import { motion } from "framer-motion";
 const documents = [
   {
     id: "hygiene-education",
-    title: "ACCESS TO HYGIENE EDUCATION",
+    title: "Youth Health Access Survey Report",
     path: "https://drive.google.com/file/d/1h6pEkn08ZebUV8eYaMFnwmVuGF6yzP-R/view?usp=drive_link",
   },
   {
     id: "impact-2024",
-    title: "2024 Annual Impact Report",
+    title: "Youth Health Insurance Awareness Survey Report",
     path: "https://drive.google.com/file/d/1RsZWRoTj5neNWaykSbNZPtwcHj9y8sor/view?usp=drive_link",
   },
   {
     id: "activities",
-    title: "Activities Report",
+    title: "National SDGs Summit in the sustainable Development Goals",
     path: "https://drive.google.com/file/d/1fRFKI_PbklTbd3H9UjM2ygOiCUK_hBC0/view?usp=drive_link",
   },
   {
     id: "eew-mag",
-    title: "EEW Magazine-1",
+    title: "SDGsStories Project",
     path: "https://drive.google.com/file/d/1PqepUF8Odnegts3dhtWc6LkB35_x0tVU/view?usp=drive_link",
   },
   {
     id: "election-doc",
-    title: "ELECTION PROJECT DOCUMENTARY (1)",
+    title: "2nd Annual SDGsStories Summit",
     path: "https://drive.google.com/file/d/1btN1PnJmf_wOW9h5j8KbjjymKb_DmkNA/view?usp=drive_link",
   },
   {
     id: "dean-notes",
-    title: "NOTES 4 DEAN I.",
+    title: "The Missing Link: How Nigeria's Health Policies is Failing Unemployed and Vulnerable Youth",
     path: "https://drive.google.com/file/d/1DPBMdKCveideBjPKo1FTpO7XJ5lcoiJR/view?usp=drive_link",
   },
   {
     id: "research-brief",
-    title: "Research Brief I",
+    title: "The impact of Covid 19 on education in Nigeria",
     path: "https://drive.google.com/file/d/1npxtmSyWMgi6o0ZBrY3h3OIc1An1OhQ7/view?usp=drive_link",
   },
   {
@@ -46,7 +46,7 @@ const documents = [
   },
   {
     id: "sdgs-brochure",
-    title: "SDGS BROCHURE new",
+    title: "EEW magazine 1",
     path: "https://drive.google.com/file/d/1Hvit5-RI3jOCyed5efFBb3sIKzTuaCEG/view?usp=drive_link",
   },
   {
@@ -56,22 +56,22 @@ const documents = [
   },
   {
     id: "dean-project",
-    title: "DEAN PROJECT",
+    title: "ACTIVITIES REPORT ON GBV, HYGIENE EDUCATION AND CLIMATE CHANGE",
     path: "https://drive.google.com/file/d/1EFWN9MdDvVOMjoc99LvZVTaop1Y3wbp-/view?usp=drive_link",
   },
-  {
-    id: "sdgs-summit",
-    title: "SDGsStory Summit Report",
-    path: "https://drive.google.com/file/d/1UEvSUxKzhvnDahm3XrAUnoluj5aFBbv2/view?usp=drive_link",
-  },
+  // {
+  //   id: "sdgs-summit",
+  //   title: "SDGsStory Summit Report",
+  //   path: "https://drive.google.com/file/d/1UEvSUxKzhvnDahm3XrAUnoluj5aFBbv2/view?usp=drive_link",
+  // },
   {
     id: "survey",
-    title: "Survey Report",
+    title: "Leading Change in a Difficult Time",
     path: "https://drive.google.com/file/d/1n_OTijckXSbafwiIzYtsR-kRVmTlWDNe/view?usp=drive_link",
   },
   {
     id: "youth-health",
-    title: "SURVEY REPORT_ Youth Health Financing (1) (1)",
+    title: "DEAN INITIATIVE ANNUAL REPORT FOR THE YEAR 2021",
     path: "https://drive.google.com/file/d/1OxMBhY3ZeJ5vSJdAKFmQ9rWy3aDiRZNi/view?usp=drive_link",
   },
 ];
@@ -83,6 +83,12 @@ const DocumentCard = ({ doc }) => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Convert Google Drive view URL to embed URL
+  const getEmbedUrl = (url) => {
+    const fileId = url.match(/\/d\/(.*?)\/view/)?.[1];
+    return fileId ? `https://drive.google.com/file/d/${fileId}/preview` : url;
+  };
 
   return (
     <motion.div
@@ -99,6 +105,14 @@ const DocumentCard = ({ doc }) => {
           <p className="mt-1 text-xs text-gray-500">Click to open PDF</p>
         </div>
       </div>
+      <div className="w-full aspect-[16/9] relative">
+        <iframe 
+          src={getEmbedUrl(doc.path)}
+          className="w-full h-full absolute top-0 left-0"
+          allow="autoplay"
+          loading="lazy"
+        />
+      </div>
     </motion.div>
   );
 };
@@ -111,15 +125,6 @@ export default function DocumentsList() {
       transition: {
         staggerChildren: 0.1,
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
     },
   };
 

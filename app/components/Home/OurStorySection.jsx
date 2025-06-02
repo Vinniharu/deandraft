@@ -64,11 +64,11 @@ export default function OurStorySection() {
                     Why We Are Driven By YOUTH Power
                   </h3>
                   <p className="text-foreground/90 leading-relaxed">
-                    Youths are the heartbeat of innovation and transformation. At
-                    DEAN Initiative, we invest in young people by equipping them
-                    with training, resources, and opportunities to lead change.
-                    Their leadership drives the impact we envision in governance,
-                    education, climate action, and democracy.
+                    Youths are the heartbeat of innovation and transformation.
+                    At DEAN Initiative, we invest in young people by equipping
+                    them with training, resources, and opportunities to lead
+                    change. Their leadership drives the impact we envision in
+                    governance, education, climate action, and democracy.
                   </p>
                 </div>
               </div>
@@ -93,38 +93,22 @@ export default function OurStorySection() {
           </div>
 
           {/* Right column: Visual elements */}
-          <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
-            <RevealOnScroll animation="fadeLeft" delay={0.3}>
-              <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/hero/img1.jpg"
-                    alt="DEAN Initiative in action"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
+          <div className=" h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center w-full">
+            <div className="w-[90%] h-[90%] rounded-2xl overflow-hidden border border-white/10 shadow-lg z-40">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/hero/img2.JPG"
+                  alt="DEAN Initiative community"
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll animation="fadeRight" delay={0.5}>
-              <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/hero/img2.JPG"
-                    alt="DEAN Initiative community"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
-            </RevealOnScroll>
+            </div>
 
             {/* Decorative elements */}
             <div className="absolute -bottom-8 -right-8 w-16 h-16 rounded-full border-2 border-[var(--dean-blue)] opacity-20" />
             <div className="absolute -top-8 -left-8 w-24 h-24 rounded-full border-2 border-[var(--dean-red)] opacity-20" />
           </div>
-          
         </div>
         <BlogPostsSection />
       </div>

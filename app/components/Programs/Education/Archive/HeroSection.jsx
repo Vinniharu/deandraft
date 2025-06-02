@@ -20,7 +20,7 @@ export default function HeroSection() {
             />
             
             {/* Gradient overlay - updated to red and blue theme */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/80 z-10" />
+            <div className="absolute inset-0 bg-[var(--dean-red)]/50 z-10" />
             
             {/* Animated patterns - updated to red and blue theme */}
             <div className="absolute inset-0 z-20 opacity-20">
