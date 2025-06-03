@@ -3,8 +3,15 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function FellowshipProcess() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+      setIsClient(true);
+  }, []);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -67,6 +74,97 @@ export default function FellowshipProcess() {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 }
   };
+
+  if (!isClient) {
+    return (
+      <section id="process" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Static version of Background decorations */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[var(--dean-blue)]/5 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[var(--dean-red)]/5 blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              The Fellowship <span className="text-[var(--dean-blue)]">Process</span>
+            </h2>
+            
+            <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-6" />
+            
+            <p className="text-gray-600">
+              From selection to impact, our fellowship program transforms students into effective advocates for transparency and accountability.
+            </p>
+          </div>
+          
+          <div className="mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+              {steps.map((step) => (
+                <div key={step.id} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 bg-gradient-to-br from-[var(--dean-blue)]/10 to-[var(--dean-red)]/10 p-3 rounded-lg text-[var(--dean-blue)]">
+                    {step.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="p-8 md:p-10">
+                <h3 className="text-2xl font-bold mb-4">Overcoming Challenges</h3>
+                <p className="text-gray-600 mb-6">
+                  The fellows encountered significant obstacles during their advocacy work, including:
+                </p>
+                
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-[var(--dean-red)] mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span>Bureaucratic delays and administrative hurdles</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-[var(--dean-red)] mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span>Initial refusals from council officials</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-[var(--dean-red)] mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span>Lack of established transparency mechanisms</span>
+                  </li>
+                </ul>
+                
+                <div className="mt-6">
+                  <p className="text-gray-600">
+                    Despite these challenges, through persistence, professionalism, and strategic engagement, 
+                    the fellows successfully secured budget documents from four major councils in the FCT.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="relative h-[300px] md:h-auto">
+                <Image
+                  src="/studentfellowship/process.jpg"
+                  alt="Fellows engaging with local officials"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="process" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">

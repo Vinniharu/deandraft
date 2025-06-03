@@ -3,8 +3,15 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function FellowshipImpact() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+      setIsClient(true);
+  }, []);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -74,6 +81,99 @@ export default function FellowshipImpact() {
       }
     }
   };
+
+  if (!isClient) {
+    return (
+      <section className="py-24 bg-[var(--dean-blue)] text-white relative overflow-hidden">
+        {/* Static version of Background decorations */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[var(--dean-red)]/20 blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Fellowship <span className="text-white">Impact</span>
+            </h2>
+            
+            <div className="h-1 w-24 bg-white mx-auto mb-6" />
+            
+            <p className="text-white/90">
+              The Student Open-Gov Fellowship has made significant strides in promoting transparency and accountability at the local government level.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {impacts.map((impact) => (
+              <div key={impact.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-white mb-4">
+                  {impact.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2">{impact.title}</h3>
+                <p className="text-white/80">{impact.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-white/20">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="p-8 md:p-10">
+                <h3 className="text-2xl font-bold mb-6">Success Story: Budget Transparency</h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--dean-red)]/20 mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <p>Obtained budget documents from 4 out of 6 Area Councils in the FCT</p>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--dean-red)]/20 mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <p>Created a precedent for future budget transparency initiatives</p>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--dean-red)]/20 mr-4 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p>Fostered a culture of accountability in local governance</p>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <p className="text-white/90">
+                    This achievement demonstrates that youth-led advocacy can effectively drive transparency 
+                    and accountability in governance processes, creating a model for future engagement.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="relative h-[300px] md:h-auto">
+                <Image
+                  src="/studentfellowship/impact.jpg"
+                  alt="Fellows celebrating their achievements"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="impact" className="py-24 bg-gradient-to-b from-[var(--dean-blue)] to-[var(--dean-red)] text-white relative overflow-hidden">

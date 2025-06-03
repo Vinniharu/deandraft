@@ -1,60 +1,89 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import * as React from "react";
+import * as FramerMotion from "framer-motion";
+import { useState, useEffect } from 'react';
 
 export default function StudentFellowshipHero() {
-    return (
-        <motion.div
-            className="relative text-white overflow-hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-            {/* Background with gradient overlay */}
-            <div 
-                className="absolute inset-0 bg-cover bg-center z-0"
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: -50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" },
+        },
+    };
+
+    const textVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { delay: 0.3, duration: 0.5, ease: "easeOut" },
+        },
+    };
+
+    if (!isClient) {
+        return (
+            <div
+                className="text-white"
                 style={{
                     backgroundImage: "url('/studentfellowship/hero.jpg')",
-                    filter: "brightness(0.5)"
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    backgroundRepeat: "no-repeat",
                 }}
-            />
-            
-            {/* Gradient overlay with DEAN colors theme */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--dean-blue)]/80 to-[var(--dean-red)]/80 z-10" />
-            
-            {/* Animated patterns with DEAN colors */}
-            <div className="absolute inset-0 z-20 opacity-20">
-                <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="absolute top-[10%] left-[5%] w-72 h-72 bg-[var(--dean-blue)] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-                    <div className="absolute top-[20%] right-[10%] w-80 h-80 bg-[var(--dean-red)] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-                    <div className="absolute bottom-[10%] left-[20%] w-64 h-64 bg-[var(--dean-blue)]/70 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
+            >
+                <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-[var(--dean-red)]/20">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                            Student Open-Gov Fellowship
+                        </h1>
+
+                        <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                            Empowering students to drive transparency and accountability in local governance
+                        </p>
+                    </div>
                 </div>
             </div>
-            
-            {/* Content */}
-            <div className="relative h-[60vh] flex flex-col items-center justify-center px-4 z-30">
-                <motion.div
-                    className="text-center max-w-5xl mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.7 }}
-                >
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
-                        Student <span className="text-[var(--dean-blue)]">Open-Gov</span> Fellowship
-                    </h1>
-                    
-                    <div className="flex justify-center gap-2 items-center mb-6">
-                        <div className="w-10 h-1 bg-[var(--dean-blue)]"></div>
-                        <div className="w-4 h-4 rounded-full bg-[var(--dean-red)]"></div>
-                        <div className="w-10 h-1 bg-[var(--dean-blue)]"></div>
-                    </div>
-                    
-                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed">
-                        Reforming youths to demand accountability and enable good governance at the local level 
-                        through education, training, and active participation in governance processes.
-                    </p>
-                </motion.div>
+        );
+    }
+
+    return (
+        <FramerMotion.motion.div
+            className="text-white"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            style={{
+                backgroundImage: "url('/studentfellowship/hero.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
+            <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-[var(--dean-red)]/50">
+                <div className="max-w-4xl mx-auto text-center">
+                    <FramerMotion.motion.h1
+                        className="text-4xl md:text-5xl font-bold mb-4"
+                        variants={textVariants}
+                    >
+                        Student Open-Gov Fellowship
+                    </FramerMotion.motion.h1>
+
+                    <FramerMotion.motion.p
+                        className="text-lg text-white/90 max-w-2xl mx-auto"
+                        variants={textVariants}
+                    >
+                        Empowering students to drive transparency and accountability in local governance
+                    </FramerMotion.motion.p>
+                </div>
             </div>
-        </motion.div>
+        </FramerMotion.motion.div>
     );
 } 

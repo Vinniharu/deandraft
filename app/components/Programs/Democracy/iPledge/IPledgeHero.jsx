@@ -1,11 +1,15 @@
 "use client";
 
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function IPledgeHero() {
-  // Animation variants
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: {
@@ -23,6 +27,32 @@ export default function IPledgeHero() {
     },
   };
 
+  if (!isClient) {
+    return (
+      <div
+        className="text-white"
+        style={{
+          backgroundImage: "url('/ipledge/mainbg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "50vh",
+        }}
+      >
+        <div className="w-full h-full mx-auto px-4 flex items-center justify-center bg-[var(--dean-red)]/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              iPledge2Vote
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+              Empowering citizens to participate in the democratic process through voter education
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <motion.div
       className="text-white"
@@ -34,44 +64,24 @@ export default function IPledgeHero() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        height: "50vh",
       }}
     >
-      <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-red)]/70">
+      <div className="w-full h-full mx-auto px-4 flex items-center justify-center bg-[var(--dean-red)]/50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-400"></span>
-              Voters' Activation Project
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
-              Civic Engagement
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-              Democratic Participation
-            </span>
-          </div>
-          
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             variants={textVariants}
           >
             iPledge2Vote
           </motion.h1>
 
           <motion.p
-            className="text-lg text-white/90 max-w-2xl mx-auto mb-8"
+            className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
             variants={textVariants}
           >
-            Building citizens' political power through quality voting participation, using their commitment to advocate for their rights and hold elected officials accountable.
+            Empowering citizens to participate in the democratic process through voter education
           </motion.p>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="mailto:info@dean.com.ng" className="px-8 py-3 bg-[var(--dean-blue)] text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-xl">
-              Get Involved
-            </Link>
-          </div>
         </div>
       </div>
     </motion.div>

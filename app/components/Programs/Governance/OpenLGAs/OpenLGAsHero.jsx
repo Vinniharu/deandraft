@@ -20,7 +20,7 @@ export default function OpenLGAsHero() {
             />
             
             {/* Gradient overlay with DEAN colors theme */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--dean-blue)]/80 to-[var(--dean-red)]/80 z-10" />
+            <div className="absolute inset-0 bg-[var(--dean-red)]/50 z-10" />
             
             {/* Animated patterns with DEAN colors */}
             <div className="absolute inset-0 z-20 opacity-20">
@@ -42,12 +42,6 @@ export default function OpenLGAsHero() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
                         <span className="text-[var(--dean-blue)]">#</span>OpenLGAs
                     </h1>
-                    
-                    <div className="flex justify-center gap-2 items-center mb-6">
-                        <div className="w-10 h-1 bg-[var(--dean-blue)]"></div>
-                        <div className="w-4 h-4 rounded-full bg-[var(--dean-red)]"></div>
-                        <div className="w-10 h-1 bg-[var(--dean-blue)]"></div>
-                    </div>
                     
                     <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed">
                         Driving accountability, transparency, and openness at the third tier of government -

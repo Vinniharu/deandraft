@@ -6,10 +6,10 @@ import ErrorBoundary from "@/app/components/ErrorBoundary";
 import JoinUs from "@/app/components/JoinUs";
 import { 
   BudgetWatchHero, 
-  AboutBudgetWatch, 
-  Objectives,
-  PreviousWork,
-  CallToAction 
+  BudgetWatchMain,
+  BudgetWatchObjectives,
+  BudgetWatchImpact,
+  GallerySection,
 } from "@/app/components/Programs/Governance/BudgetWatch";
 
 export default function BudgetWatch() {
@@ -18,7 +18,12 @@ export default function BudgetWatch() {
     const imageList = [
       "/budgetwatch/hero.jpg",
       "/budgetwatch/about.jpg",
-      "/budgetwatch/previous.jpg"
+      "/budgetwatch/1.jpg",
+      "/budgetwatch/2.jpg",
+      "/budgetwatch/3.jpg",
+      "/budgetwatch/4.jpg",
+      "/budgetwatch/5.jpg",
+      "/budgetwatch/6.jpg"
     ];
     
     imageList.forEach((src) => {
@@ -32,10 +37,10 @@ export default function BudgetWatch() {
       <PageTransition>
         <main className="min-h-screen">
           <BudgetWatchHero />
-          <AboutBudgetWatch />
-          <Objectives />
-          <PreviousWork />
-          <CallToAction />
+          <BudgetWatchMain />
+          <BudgetWatchObjectives />
+          <BudgetWatchImpact />
+          <GallerySection />
           <JoinUs />
         </main>
       </PageTransition>

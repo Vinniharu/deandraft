@@ -1,17 +1,23 @@
 "use client";
 
 import { useEffect } from 'react';
-import PageTransition from '@/app/components/PageTransition';
 import ErrorBoundary from '@/app/components/ErrorBoundary';
-import HeroSection from '@/app/components/Programs/ClimateAction/MSCKenya/HeroSection';
-import ChallengeSection from '@/app/components/Programs/ClimateAction/MSCKenya/ChallengeSection';
-import WorkshopDetailsSection from '@/app/components/Programs/ClimateAction/MSCKenya/WorkshopDetailsSection';
-import OutcomeSection from '@/app/components/Programs/ClimateAction/MSCKenya/OutcomeSection';
-import KeyDataSection from '@/app/components/Programs/ClimateAction/MSCKenya/KeyDataSection';
-import GallerySection from '@/app/components/Programs/ClimateAction/MSCKenya/GallerySection';
-import ConclusionSection from '@/app/components/Programs/ClimateAction/MSCKenya/ConclusionSection';
+import PageTransition from '@/app/components/PageTransition';
+import MSCKenyaHero from '@/app/components/Programs/ClimateAction/MSCKenya/MSCKenyaHero';
+import MSCKenyaMain from '@/app/components/Programs/ClimateAction/MSCKenya/MSCKenyaMain';
+import MSCKenyaObjectives from '@/app/components/Programs/ClimateAction/MSCKenya/MSCKenyaObjectives';
+import MSCKenyaImpact from '@/app/components/Programs/ClimateAction/MSCKenya/MSCKenyaImpact';
+import MSCKenyaGallery from '@/app/components/Programs/ClimateAction/MSCKenya/MSCKenyaGallery';
+import JoinUs from "@/app/components/JoinUs";
 
-export default function MSCKenya() {
+export default function MSCKenyaPage() {
+    // Metadata for the page
+    const metadata = {
+        title: "MSC Kenya Climate Workshop | DEAN Initiative",
+        description: "The MSC Kenya Climate Workshop is a collaborative initiative to empower Nigerian farmers and youth with climate finance knowledge and post-harvest loss solutions.",
+        keywords: "climate finance, MSC Kenya, workshop, post-harvest loss, youth empowerment, climate action, DEAN Initiative"
+    };
+
     // Scroll to top on page load
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,27 +26,13 @@ export default function MSCKenya() {
     return (
         <ErrorBoundary>
             <PageTransition>
-                <main className="overflow-hidden">
-                    {/* Hero Section */}
-                    <HeroSection />
-                    
-                    {/* Challenge Section */}
-                    <ChallengeSection />
-                    
-                    {/* Workshop Details Section */}
-                    <WorkshopDetailsSection />
-                    
-                    {/* Outcome Section */}
-                    <OutcomeSection />
-                    
-                    {/* Key Data Section */}
-                    <KeyDataSection />
-                    
-                    {/* Gallery Section */}
-                    <GallerySection />
-                    
-                    {/* Conclusion Section */}
-                    <ConclusionSection />
+                <main className="min-h-screen">
+                    <MSCKenyaHero />
+                    <MSCKenyaMain />
+                    <MSCKenyaObjectives />
+                    <MSCKenyaImpact />
+                    <MSCKenyaGallery />
+                    <JoinUs />
                 </main>
             </PageTransition>
         </ErrorBoundary>

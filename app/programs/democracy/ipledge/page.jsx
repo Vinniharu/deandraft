@@ -3,38 +3,24 @@
 import { useEffect } from "react";
 import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
+import IPledgeHero from "@/app/components/Programs/Democracy/iPledge/IPledgeHero";
+import IPledgeMain from "@/app/components/Programs/Democracy/iPledge/IPledgeMain";
+import IPledgeObjectives from "@/app/components/Programs/Democracy/iPledge/IPledgeObjectives";
+import IPledgeImpact from "@/app/components/Programs/Democracy/iPledge/IPledgeImpact";
+import IPledgeGallery from "@/app/components/Programs/Democracy/iPledge/IPledgeGallery";
 import JoinUs from "@/app/components/JoinUs";
 
-// Import all components from the index file
-import {
-  IPledgeHero,
-  AboutProject,
-  ProjectObjectives,
-  ImpactReport,
-  PhotoGallery,
-  CallToAction
-} from "@/app/components/Programs/Democracy/iPledge";
+export default function IPledgePage() {
+  // Metadata for the page
+  const metadata = {
+    title: "iPledge2Vote | DEAN Initiative",
+    description: "The iPledge2Vote Project addresses voting barriers and aims to make elections more accessible and democratic through stakeholder engagement and community-level dialogue.",
+    keywords: "iPledge2Vote, voter education, democratic participation, electoral reform, civic engagement, DEAN Initiative"
+  };
 
-export default function IPledge() {
-  // Load image assets and preload them
+  // Scroll to top on page load
   useEffect(() => {
-    const preloadImages = [
-      "/ipledge/mainbg.jpg",
-      "/ipledge/vote1.jpg",
-      "/ipledge/vote2.jpg",
-      "/ipledge/objectives.jpg",
-      "/ipledge/gallery1.jpg",
-      "/ipledge/gallery2.jpg",
-      "/ipledge/gallery3.jpg",
-      "/ipledge/gallery4.jpg",
-      "/ipledge/gallery5.jpg",
-      "/ipledge/gallery6.jpg",
-    ];
-    
-    preloadImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -42,11 +28,10 @@ export default function IPledge() {
       <PageTransition>
         <main className="min-h-screen">
           <IPledgeHero />
-          <AboutProject />
-          <ProjectObjectives />
-          <ImpactReport />
-          <PhotoGallery />
-          <CallToAction />
+          <IPledgeMain />
+          <IPledgeObjectives />
+          <IPledgeImpact />
+          <IPledgeGallery />
           <JoinUs />
         </main>
       </PageTransition>

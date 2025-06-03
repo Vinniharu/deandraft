@@ -6,18 +6,18 @@ import ErrorBoundary from "@/app/components/ErrorBoundary";
 import JoinUs from "@/app/components/JoinUs";
 import { 
   OpenLGAsHero, 
-  AboutOpenLGAs, 
-  Achievements, 
+  OpenLGAsMain,
+  OpenLGAsObjectives,
+  OpenLGAsImpact,
   GallerySection,
-  CallToAction 
 } from "@/app/components/Programs/Governance/OpenLGAs";
 
 export default function OpenLGAsPage() {
   // Preload images for better performance
   useEffect(() => {
     const imageList = [
-      "/openlgas/hero.JPG",
-      "/openlgas/about.JPEG",
+      "/openlgas/hero.jpg",
+      "/openlgas/about.jpeg",
       "/openlgas/1.jpg",
       "/openlgas/2.jpeg",
       "/openlgas/3.jpeg",
@@ -37,10 +37,10 @@ export default function OpenLGAsPage() {
       <PageTransition>
         <main className="min-h-screen">
           <OpenLGAsHero />
-          <AboutOpenLGAs />
-          <Achievements />
+          <OpenLGAsMain />
+          <OpenLGAsObjectives />
+          <OpenLGAsImpact />
           <GallerySection />
-          <CallToAction />
           <JoinUs />
         </main>
       </PageTransition>

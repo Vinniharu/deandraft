@@ -1,10 +1,16 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function FixElectionHero() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -15,65 +21,43 @@ export default function FixElectionHero() {
     },
   };
 
-  const textVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { delay: 0.3, duration: 0.5, ease: "easeOut" },
-    },
-  };
-
-  return (
-    <motion.div
+  const content = (
+    <div
       className="text-white"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
       style={{
         backgroundImage: "url('/fixelection/hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        height: "50vh",
       }}
     >
-      <div className="w-full mx-auto px-4 h-[50vh] flex items-center justify-center bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-red)]/70">
+      <div className="w-full h-full mx-auto px-4 flex items-center justify-center bg-[var(--dean-red)]/50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-400"></span>
-              Youth Assembly
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
-              Electoral Reform
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-              Civic Engagement
-            </span>
-          </div>
-          
-          <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4"
-            variants={textVariants}
-          >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             #FixElection Youth Assembly
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            className="text-lg text-white/90 max-w-2xl mx-auto mb-8"
-            variants={textVariants}
-          >
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8">
             Empowering young Nigerians to champion electoral reform and strengthen our democracy through active participation, innovation, and advocacy.
-          </motion.p>
+          </p>
           
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="mailto:info@dean.com.ng" className="px-8 py-3 bg-[var(--dean-blue)] text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-xl">
-              Get Involved
-            </Link>
-          </div>
         </div>
       </div>
+    </div>
+  );
+
+  if (!isClient) {
+    return content;
+  }
+
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {content}
     </motion.div>
   );
 } 

@@ -149,7 +149,7 @@ export default function PhotoGallery() {
               href="https://drive.google.com/drive/folders/1YqK2JH8V9Z4X7mN3Q5L6X8Y9Q2N3Z4X7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] text-white rounded-full font-medium hover:opacity-90 transition-opacity duration-300 shadow-md hover:shadow-lg"
+              className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:opacity-90 transition-opacity duration-300 shadow-md hover:shadow-lg"
             >
               View More Photos
             </a>

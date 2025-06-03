@@ -1,4 +1,8 @@
 export { default as BudgetWatchHero } from './BudgetWatchHero';
+export { default as BudgetWatchMain } from './BudgetWatchMain';
+export { default as BudgetWatchObjectives } from './BudgetWatchObjectives';
+export { default as BudgetWatchImpact } from './BudgetWatchImpact';
+export { default as GallerySection } from './GallerySection';
 export { default as AboutBudgetWatch } from './AboutBudgetWatch';
 export { default as Objectives } from './Objectives';
 export { default as PreviousWork } from './PreviousWork';

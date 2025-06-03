@@ -6,10 +6,10 @@ import ErrorBoundary from "@/app/components/ErrorBoundary";
 import JoinUs from "@/app/components/JoinUs";
 import { 
   StudentFellowshipHero, 
-  AboutStudentFellowship, 
-  FellowshipProcess,
-  FellowshipImpact,
-  CallToAction 
+  StudentFellowshipMain,
+  StudentFellowshipObjectives,
+  StudentFellowshipImpact,
+  StudentFellowshipGallery,
 } from "@/app/components/Programs/Governance/StudentFellowship";
 
 export default function StudentFellowship() {
@@ -17,9 +17,13 @@ export default function StudentFellowship() {
   useEffect(() => {
     const imageList = [
       "/studentfellowship/hero.jpg",
-      "/studentfellowship/about.jpg",
-      "/studentfellowship/process.jpg",
-      "/studentfellowship/impact.jpg"
+      "/studentfellowship/about.jpeg",
+      "/studentfellowship/1.jpg",
+      "/studentfellowship/2.jpg",
+      "/studentfellowship/3.jpg",
+      "/studentfellowship/4.jpg",
+      "/studentfellowship/5.jpg",
+      "/studentfellowship/6.jpg"
     ];
     
     imageList.forEach((src) => {
@@ -33,10 +37,10 @@ export default function StudentFellowship() {
       <PageTransition>
         <main className="min-h-screen">
           <StudentFellowshipHero />
-          <AboutStudentFellowship />
-          <FellowshipProcess />
-          <FellowshipImpact />
-          <CallToAction />
+          <StudentFellowshipMain />
+          <StudentFellowshipObjectives />
+          <StudentFellowshipImpact />
+          <StudentFellowshipGallery />
           <JoinUs />
         </main>
       </PageTransition>
