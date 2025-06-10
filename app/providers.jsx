@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence } from 'framer-motion';
-import CustomCursor from './components/CustomCursor';
 import React from 'react';
 
 export function Providers({ children }) {
@@ -15,7 +14,6 @@ export function Providers({ children }) {
             : child;
         })}
       </AnimatePresence>
-      <CustomCursor />
     </>
   );
 } 
