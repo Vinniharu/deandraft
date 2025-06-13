@@ -488,13 +488,9 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute -right-32 top-20 w-64 h-64 rounded-full bg-[var(--dean-blue)]/10 blur-[100px]"></div>
-        <div className="absolute -left-32 bottom-20 w-64 h-64 rounded-full bg-[var(--dean-red)]/10 blur-[100px]"></div>
-        <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5"></div>
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-red)]/70">
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -507,7 +503,7 @@ export default function GalleryPage() {
               </span>
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-white leading-relaxed">
               Explore our comprehensive visual journey through all our programs, team members, 
               partnerships, and impactful initiatives across Africa.
             </p>
