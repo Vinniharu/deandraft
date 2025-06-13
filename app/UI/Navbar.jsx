@@ -75,7 +75,7 @@ const navLinks = [
     sublinks: [
       { name: "Press", path: "/media/press" },
       { name: "Blog", path: "/media/blog" },
-      { name: "Gallery", path: "https://drive.google.com/drive/folders/1xFFNZSe-vDQnXwYTWJ090JvhS89Ysns9" }
+      { name: "Gallery", path: "/gallery" }
     ]
   },
   {
