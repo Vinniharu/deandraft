@@ -3,21 +3,22 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   
   const galleryImages = [
     {
-      src: "/fixelection/gallery1.jpg",
+      src: "/fixelection/gallery1.jpeg",
       alt: "Youth assembly participants in group discussion"
     },
     {
-      src: "/fixelection/gallery2.jpg",
+      src: "/fixelection/gallery2.jpeg",
       alt: "Panel session at the Youth Assembly"
     },
     {
-      src: "/fixelection/gallery3.jpg",
+      src: "/fixelection/gallery3.jpeg",
       alt: "Workshop activity with assembly participants"
     },
     {
@@ -138,21 +139,18 @@ export default function PhotoGallery() {
           </div>
 
           {/* View More Button */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center mt-12"
           >
-            <a
-              href="https://drive.google.com/drive/folders/1YqK2JH8V9Z4X7mN3Q5L6X8Y9Q2N3Z4X7"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/gallery"
               className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:opacity-90 transition-opacity duration-300 shadow-md hover:shadow-lg"
             >
               View More Photos
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

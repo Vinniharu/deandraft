@@ -1,10 +1,10 @@
 "use client";
 
-import ExternalLink from "@/app/components/ExternalLink";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { useState, useEffect } from 'react';
+import Link from "next/link";
 
 export default function GallerySection() {
     const [isClient, setIsClient] = useState(false);
@@ -120,12 +120,12 @@ export default function GallerySection() {
                             </motion.div>
                         ))}
                     </div>
-                    <ExternalLink
-                        href="https://drive.google.com/drive/folders/12JX8RvDBHsms8nJ4Duaa8sYkGVeh6RAL?usp=drive_link"
-                        className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
+                    <Link
+                        href="/gallery"
+                        className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
                     >
                         View More Photos
-                    </ExternalLink>
+                    </Link>
                 </div>
             </div>
         </motion.section>

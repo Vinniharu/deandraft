@@ -41,7 +41,7 @@ export default function NationalActionHero() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             variants={textVariants}
           >
-            National Action Day on SDGs
+            National Action Day on Climate Education
           </motion.h1>
 
           <motion.p

@@ -1,8 +1,9 @@
 "use client";
 
-import ExternalLink from "@/app/components/ExternalLink";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function IPledgeGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -119,12 +120,12 @@ export default function IPledgeGallery() {
               </motion.div>
             ))}
           </div>
-          <ExternalLink
-            href="https://drive.google.com/drive/folders/1ZT9fJq0-9kwcJIomv--uz5kpwvrdq-eW?usp=drive_link"
-            className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
+          <Link
+            href="/gallery"
+            className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
           >
             View More Photos
-          </ExternalLink>
+          </Link>
         </div>
       </div>
     </motion.section>

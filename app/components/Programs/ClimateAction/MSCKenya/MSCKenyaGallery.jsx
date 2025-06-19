@@ -1,8 +1,9 @@
 "use client";
 
-import ExternalLink from "@/app/components/ExternalLink";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function MSCKenyaGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -42,37 +43,37 @@ export default function MSCKenyaGallery() {
 
   const galleryImages = [
     {
-      src: "/ipledge/1.jpg",
+      src: "/msc/img1.jpg",
       alt: "Experts from MicroSave Consulting",
       caption: "MSC Experts",
       location: "DEAN Initiative HQ",
     },
     {
-      src: "/ipledge/2.jpg",
+      src: "/msc/img2.jpg",
       alt: "Climate Finance Workshop",
       caption: "Workshop Session",
       location: "Abuja",
     },
     {
-      src: "/ipledge/3.jpg",
+      src: "/msc/img3.jpg",
       alt: "Farmer Focus Group",
       caption: "Farmer Discussion",
       location: "Kaduna State",
     },
     {
-      src: "/ipledge/4.jpg",
+      src: "/msc/img4.jpg",
       alt: "Youth Climate Activists",
       caption: "Youth Engagement",
       location: "Workshop Session",
     },
     {
-      src: "/ipledge/5.jpg",
+      src: "/msc/img5.jpg",
       alt: "Post-Harvest Loss Discussion",
       caption: "Technical Session",
       location: "Nasarawa State",
     },
     {
-      src: "/ipledge/6.jpg",
+      src: "/msc/img6.jpg",
       alt: "Local Government Representatives",
       caption: "Policy Discussion",
       location: "Panel Session",
@@ -119,12 +120,12 @@ export default function MSCKenyaGallery() {
               </motion.div>
             ))}
           </div>
-          <ExternalLink
-            href="https://drive.google.com/drive/folders/1o-kfP1RIo1QfOLIf7prtTfJbUnOOeu3C"
-            className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
+          <Link
+            href="/gallery"
+            className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
           >
             View More Photos
-          </ExternalLink>
+          </Link>
         </div>
       </div>
     </motion.section>

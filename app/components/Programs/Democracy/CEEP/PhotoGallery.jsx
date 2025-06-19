@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ExternalLink from "@/app/components/ExternalLink";
+import Link from "next/link";
 
 export default function PhotoGallery() {
   const [isClient, setIsClient] = useState(false);
@@ -159,12 +159,12 @@ export default function PhotoGallery() {
             </div>
           ))}
         </motion.div>
-        <ExternalLink
-          href="https://drive.google.com/drive/folders/1I9XWQPTCshVPHLPkED03tXzwE8jxe4ic"
-          className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
+        <Link
+          href="/gallery"
+          className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
         >
           View More Photos
-        </ExternalLink>
+        </Link>
       </div>
     </motion.section>
   );

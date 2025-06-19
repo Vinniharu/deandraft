@@ -30,7 +30,7 @@ export default function SDGsHero() {
       style={{
         backgroundImage: "url('/sdgs/hero-bg.JPG')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
         height: "50vh",
       }}

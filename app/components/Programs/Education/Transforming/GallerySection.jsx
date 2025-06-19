@@ -1,6 +1,6 @@
-import ExternalLink from "@/app/components/ExternalLink";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GallerySection() {
   const t = [
@@ -118,12 +118,12 @@ export default function GallerySection() {
               </motion.div>
             ))}
           </div>
-          <ExternalLink
-              href="https://drive.google.com/drive/folders/11e8sV5TjvaT1CDkLI1-i1mGdRhsMmRfb"
+          <Link
+              href="/gallery"
                className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
             >
                 View More Photos
-            </ExternalLink>
+            </Link>
         </motion.div>
       </div>
     </motion.section>

@@ -54,13 +54,13 @@ export const teamMembers = [
       "Uche Arinze is a development strategist and educator who shapes impactful narratives. As Communications Manager, she amplifies DEAN Initiative's mission and inspires action through storytelling.",
     image: "/team/Uchechukwu Arinze.jpg",
   },
-  {
-    name: "Raphael Linus",
-    title: "Operation Manager",
-    description:
-      "Raphael Linus is a strategic problem-solver, data analytics expert, and tech enthusiast dedicated to leveraging smart systems for global progress. As the Operations Manager at DEAN Initiative, he turns innovation into action by optimizing processes and scaling impact. A graduate of Agriculture from the University of Abuja, Raphael is also an agripreneur and mycologist, passionate about sustainable agricultural practices.",
-    image: "/team/Raphael.jpg",
-  },
+  // {
+  //   name: "Raphael Linus",
+  //   title: "Operation Manager",
+  //   description:
+  //     "Raphael Linus is a strategic problem-solver, data analytics expert, and tech enthusiast dedicated to leveraging smart systems for global progress. As the Operations Manager at DEAN Initiative, he turns innovation into action by optimizing processes and scaling impact. A graduate of Agriculture from the University of Abuja, Raphael is also an agripreneur and mycologist, passionate about sustainable agricultural practices.",
+  //   image: "/team/Raphael.jpg",
+  // },
   {
     name: "Johnson Ajayi",
     title: "Finance Officer",
@@ -154,6 +154,7 @@ export const boardMembers = [
   {
     name: "monday",
     fullName: "Monday Osasah",
+    title: "Chairman",
     image: "/board/monday.jpg",
     bio: "Monday Osasah is a capacity building professional, advocate of good governance and open society. His career of over 15 years traverses various fields including manufacturing, journalism, and the nonprofit. He trained as an economist and holds a master's degree in public administration from Delta State University but has a strong flair for journalism. He is a member and fellow of two institutes: Institute of Management Consultant of Nigeria and Institute of Strategic Management Nigeria (ISMN). He works at the African Centre for Leadership, Strategy & Development (Centre LSD) as Executive Director. He is married and the marriage is blessed. He loves reading and takes delight in supporting others.",
   },

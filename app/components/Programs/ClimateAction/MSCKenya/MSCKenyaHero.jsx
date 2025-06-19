@@ -48,7 +48,7 @@ export default function MSCKenyaHero() {
             className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
             variants={textVariants}
           >
-            Empowering Nigerian farmers and youth with climate finance knowledge and post-harvest loss solutions
+            Catalyzing Youth Leadership for Climate Resilience
           </motion.p>
 
         </div>

@@ -34,7 +34,7 @@ export default function MorePage() {
         <main className="min-h-screen">
           <MoreHero />
           <CAAVS />
-          <PBP />
+          {/* <PBP /> */}
           <CallToAction />
           <JoinUs />
         </main>

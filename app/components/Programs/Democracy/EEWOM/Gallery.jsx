@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import ExternalLink from "@/app/components/ExternalLink";
+import Link from "next/link";
 
 export default function Gallery() {
   const galleryImages = [
@@ -112,12 +113,12 @@ export default function Gallery() {
         <motion.div
           className="flex justify-center mt-12"
         >
-          <ExternalLink
-            href="https://drive.google.com/drive/folders/1cZ4KRlHhj1ZzhsoopxTmJPhFrthXDplw"
-            className="inline-block px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300"
+          <Link
+            href="/gallery"
+            className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
           >
             View More Photos
-          </ExternalLink>
+          </Link>
         </motion.div>
       </div>
     </section>

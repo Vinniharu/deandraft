@@ -116,7 +116,7 @@ export default function AboutBoard() {
             <div className="absolute inset-0 bg-[url('/hero/pattern.svg')] bg-repeat opacity-5" />
 
             <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-8xl mx-auto">
                     {/* Section Header */}
                     <motion.div
                         className="text-center mb-16"
@@ -132,7 +132,7 @@ export default function AboutBoard() {
                     </motion.div>
 
                     {/* Board Members Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                         {boardMembers.map((member, index) => (
                             <motion.div
                                 key={index}

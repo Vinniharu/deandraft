@@ -14,7 +14,7 @@ export default function HeroSection() {
             <div 
                 className="absolute inset-0 bg-cover bg-center z-0"
                 style={{
-                    backgroundImage: "url('/archive/mainbg.JPG')", // Replace with actual image path
+                    backgroundImage: "url('/archive/mainbg.jpg')", // Replace with actual image path
                     filter: "brightness(0.6)"
                 }}
             />

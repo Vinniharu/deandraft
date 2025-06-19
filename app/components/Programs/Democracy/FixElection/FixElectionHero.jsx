@@ -25,7 +25,7 @@ export default function FixElectionHero() {
     <div
       className="text-white"
       style={{
-        backgroundImage: "url('/fixelection/hero.jpg')",
+        backgroundImage: "url('/fixelection/hero.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

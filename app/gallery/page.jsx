@@ -242,15 +242,19 @@ export default function GalleryPage() {
       thumbnail: "/sdgs/hero-bg.JPG",
       color: "red",
       images: [
-        { src: "/sdgs/hero-bg.JPG", alt: "SDGs Hero Background" },
-        { src: "/sdgs/main-image.JPG", alt: "SDGs Main Image" },
-        { src: "/sdgs/summit.jpeg", alt: "SDGs Summit" },
-        { src: "/sdgs/1.JPG", alt: "SDGs Activity 1" },
-        { src: "/sdgs/2.JPG", alt: "SDGs Activity 2" },
-        { src: "/sdgs/3.JPG", alt: "SDGs Activity 3" },
-        { src: "/sdgs/4.JPG", alt: "SDGs Activity 4" },
+        { src: "/sdgs/hero-bg.jpg", alt: "SDGs Hero Background" },
+        { src: "/sdgs/main-image.jpg", alt: "SDGs Main Image" },
+        { src: "/sdgs/summit.jpg", alt: "SDGs Summit" },
+        { src: "/sdgs/1.jpg", alt: "SDGs Activity 1" },
+        { src: "/sdgs/2.jpg", alt: "SDGs Activity 2" },
+        { src: "/sdgs/3.jpg", alt: "SDGs Activity 3" },
+        { src: "/sdgs/4.jpg", alt: "SDGs Activity 4" },
         { src: "/sdgs/5.jpg", alt: "SDGs Activity 5" },
-        { src: "/sdgs/6.jpg", alt: "SDGs Activity 6" }
+        { src: "/sdgs/6.jpg", alt: "SDGs Activity 6" },
+        { src: "/sdgs/7.jpg", alt: "SDGs Activity 7" },
+        { src: "/sdgs/8.jpg", alt: "SDGs Activity 8" },
+        { src: "/sdgs/9.jpg", alt: "SDGs Activity 9" },
+        { src: "/sdgs/10.jpg", alt: "SDGs Activity 10" },
       ]
     },
     {
@@ -271,7 +275,7 @@ export default function GalleryPage() {
     },
     {
       id: "msc",
-      title: "Multi-Stakeholder Coalition",
+      title: "MSC Kenya Climate Workshop",
       description: "Building collaborative partnerships for impact",
       thumbnail: "/msc/bg.jpg",
       color: "red",

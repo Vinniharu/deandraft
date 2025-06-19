@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import ExternalLink from "@/app/components/ExternalLink";
+import Link from "next/link";
 
 export default function SDGsGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -45,42 +45,22 @@ export default function SDGsGallery() {
     },
   };
 
-  const modalVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.3, ease: "easeOut" },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      transition: { duration: 0.2, ease: "easeIn" },
-    },
-  };
-
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.3 } },
-    exit: { opacity: 0, transition: { duration: 0.3 } },
-  };
-
   // Gallery images data
   const galleryImages = [
     {
-      src: "/sdgs/1.JPG",
+      src: "/sdgs/1.jpg",
       alt: "SDGs Workshop Session",
     },
     {
-      src: "/sdgs/2.JPG",
+      src: "/sdgs/2.jpg",
       alt: "Community Outreach Program",
     },
     {
-      src: "/sdgs/3.JPG",
+      src: "/sdgs/3.jpg",
       alt: "Student Projects Exhibition",
     },
     {
-      src: "/sdgs/4.JPG",
+      src: "/sdgs/4.jpg",
       alt: "Teacher Training Session",
     },
     {
@@ -147,7 +127,6 @@ export default function SDGsGallery() {
                   className="group relative overflow-hidden rounded-lg shadow-md h-64 cursor-pointer hover:shadow-xl transition-shadow duration-300"
                   variants={galleryItemVariants}
                   whileHover={{ y: -5 }}
-                  onClick={() => setSelectedImage(image)}
                 >
                   <div className="relative w-full h-full">
                     <Image
@@ -164,67 +143,15 @@ export default function SDGsGallery() {
                 </motion.div>
               ))}
             </div>
-            <ExternalLink
-              href="https://drive.google.com/drive/folders/1t3o9WSqKpwHoSAooFw8aFLauGXMUXWq0"
-               className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
+            <Link
+              href="/gallery"
+              className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto mt-20 block"
             >
-                View More Photos
-            </ExternalLink>
+              View More Photos
+            </Link>
           </div>
         </div>
       </motion.section>
-
-      {/* Fullscreen Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={overlayVariants}
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8"
-            onClick={() => setSelectedImage(null)}
-          >
-            <motion.div
-              variants={modalVariants}
-              className="relative max-w-7xl w-full h-full max-h-[90vh] flex flex-col items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  fill
-                  style={{
-                    objectFit: "contain",
-                  }}
-                  priority
-                  quality={95}
-                />
-              </div>
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 }

@@ -1,37 +1,5 @@
 const pressReleases = [
   {
-    id: 1,
-    title:
-      "DEAN Initiative Selected as One of Four Global Recipients of the Climate Justice Resilience Fund (CJRF) 2024 Grant",
-    date: "March 26, 2025",
-    author: "Doreen Mennom Oho",
-    categories: ["Climate ACTION", "News", "Press Release"],
-    summary:
-      "DEAN Initiative selected as one of 4 global recipients of CJRF 2024 grant out of 513 expressions of interest, receiving the highest number of votes. The only Nigerian and West African organization among winners from Bangladesh, Indonesia, and Kenya.",
-    content: `Development of Educational Action Network (DEAN Initiative) is proud to announce its selection as one of the 4 recipients of the Climate Justice Resilience Fund (CJRF) 2024 Global Open Call grant. DEAN Initiative joins a group of 4 prestigious organisations worldwide as the only Nigerian Organization and West African Entity to be shortlisted as a winner. The three other organisations are from Bangladesh, Indonesia, and Kenya. The Climate Justice Resilience Fund (CJRF) received 513 expressions of interest, which led to 274 groups submitting applications. It is more exciting to announce that DEAN Initiative received the highest number of votes, emerging as one of the 4 winners. 
-
-The CJRF grant aligns with DEAN Initiative’s mission to promote climate justice and resilience reforms through capacity building and youth leadership. The funded project: The Lake Chad Climate Justice Fellowship will empower 20 young climate activists from the Lake Chad region with the knowledge, skills, and opportunities required to advocate for climate justice, address gender-based violence, and mitigate the insecurity caused by climate change in their communities. Participants will gain the skills and knowledge to advocate for climate justice through advocacy, capacity building, and network development. DEAN Initiative will work closely with local, regional and global partners to implement the project, leveraging the expertise of climate experts and governance specialists.
-
-“We are thrilled to be selected for this grant and excited about the possibilities it brings for young people in the Lake Chad region,” said Doreen Oho, Technical Programs Lead at DEAN Initiative. “Recognizing the disproportionate impact of climate change on the region, the fellowship addresses critical challenges such as gender-based violence (GBV), regional insecurity, and shrinking livelihoods caused by the impacts of climate change.  Hence, this funding will allow us to provide marginalised youth in the Lake Chad Region with the knowledge and skills they need to become agents of change in their communities, ensuring that they play a central role in the region’s sustainable development and climate resilience efforts,” she said.
-
-Ngozi Edum, DEAN’s Partnership and Innovation Manager, mentioned that the fellowship will challenge colonial narratives and promote social justice by centring on indigenous knowledge systems and prioritising locally led solutions. “This initiative recognises that true climate justice cannot be achieved without addressing the structural inequities that have historically excluded marginalised communities. By amplifying the voices of young leaders in the Lake Chad region, our goal is to develop context-specific responses to climate resilience and governance challenges,” she said.
-
-DEAN Initiative is committed to supporting youth empowerment and advancing the rights of marginalised communities through sustainable development and climate action. This grant is a significant step towards realising those goals and further reinforces DEAN Initiative’s commitment to improving the livelihoods of vulnerable populations across the region.`,
-  },
-  {
-    id: 2,
-    title:
-      "DEAN Initiative Joins the Elite 2024-2025 Climate Democracy Accelerator Program",
-    date: "March 4, 2025",
-    author: "Dorcas Mokikan",
-    categories: ["News", "Press Release"],
-    summary:
-      "DEAN Initiative's Technical Programs Lead Doreen Mennom Oho selected for the competitive Climate Democracy Accelerator Program, one of only 15 participants from 12 countries. Program includes $10,000 grant for implementation.",
-    content: `DEAN Initiative is excited to announce that our Technical Programs Lead Doreen Mennom Oho has been selected for the 2024/2025 Climate Democracy Accelerator Program, following an extremely competitive application process that attracted hundreds of applications from across the globe, only 15 participants were selected, representing 12 countries. The Climate Democracy Accelerator program is a six-month practice-oriented training designed by People Powered a global hub for participatory democracy to equip young people with the capacity to plan and execute inclusive and participatory processes that will expand public participation and bring marginalized voices into decision-making, in order to create climate-focused policies that are equitable and responsive to community needs. The Climate Democracy Accelerator program also focuses on building the capacity of organizations and leaders to build equitable public participatory programs to shape climate policies around the world through participatory budgeting, participatory planning, and participatory policymaking.  During the program, participants will develop an action plan with the support of the program resources and engage government stakeholders to implement a climate-focused participatory project at the grassroots level. The program also includes access to one-on-one mentorship to help participants refine their action plans and projects, as well as access to various resources including the Participation Playbook, and practice-oriented live training sessions.  
-
-In addition to these invaluable resources, Doreen through our Organisation (DEAN Initiative) will receive a $10,000 grant to implement a participatory program upon completion of the six-month training. This funding will empower DEAN Initiative to engage grassroots communities by advocating for a climate resilience economy, further building on our successful work on participatory and inclusive governance. We are super elated, as this great achievement aligns perfectly with our organization’s goals of empowering Youth with knowledge, skills and opportunities to lead developmental changes at the grassroots.`,
-  },
-  {
     id: 3,
     title:
       "Dissatisfaction Statement: The Federal Government and Ministry of Education Must Prioritize Transformative Skills in Education",
