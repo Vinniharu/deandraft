@@ -13,9 +13,9 @@ import JoinUs from "@/app/components/JoinUs";
 export default function MSCKenyaPage() {
     // Metadata for the page
     const metadata = {
-        title: "MSC Kenya Climate Workshop | DEAN Initiative",
-        description: "The MSC Kenya Climate Workshop is a collaborative initiative to empower Nigerian farmers and youth with climate finance knowledge and post-harvest loss solutions.",
-        keywords: "climate finance, MSC Kenya, workshop, post-harvest loss, youth empowerment, climate action, DEAN Initiative"
+        title: "Catalyzing Youth Leadership for Climate Resilience | DEAN Initiative",
+        description: "Catalyzing Youth Leadership for Climate Resilience is a collaborative initiative to empower Nigerian farmers and youth with climate finance knowledge and post-harvest loss solutions.",
+        keywords: "climate finance, Catalyzing Youth Leadership for Climate Resilience, workshop, post-harvest loss, youth empowerment, climate action, DEAN Initiative"
     };
 
     // Scroll to top on page load

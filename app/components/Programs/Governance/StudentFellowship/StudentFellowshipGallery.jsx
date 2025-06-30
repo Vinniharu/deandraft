@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import ExternalLink from "@/app/components/ExternalLink";
+import Link from "next/link";
 
 export default function StudentFellowshipGallery() {
   const [sectionRef, sectionInView] = useInView({
@@ -117,12 +118,12 @@ export default function StudentFellowshipGallery() {
               </motion.div>
             ))}
           </div>
-          <ExternalLink
-            href="https://drive.google.com/drive/folders/1THq96sho5JVl9vtCf1lRqcjdh80bAf4w"
+          <Link
+            href="/gallery"
             className="w-fit px-8 py-3 bg-[var(--dean-red)] text-white rounded-full font-medium hover:bg-[var(--dean-red)]/90 transition duration-300 m-auto my-20 block"
           >
             View All Images
-          </ExternalLink>
+          </Link>
         </div>
       </div>
     </motion.section>

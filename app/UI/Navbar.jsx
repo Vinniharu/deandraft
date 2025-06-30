@@ -40,7 +40,7 @@ const navLinks = [
       { name: "Lake Chad Fellowship", path: "/programs/climate-action/lake-chad" },
       { name: "Climate Democracy Accelerator", path: "/programs/climate-action/democracy-accelerator" },
       { name: "National Action Day", path: "/programs/climate-action/national-action" },
-      { name: "MSC Kenya Workshop", path: "/programs/climate-action/msc-kenya" },
+      { name: "CYLCR", path: "/programs/climate-action/cylcr" },
       { name: "More Climate Projects", path: "/programs/climate-action/more" }
     ]
   },

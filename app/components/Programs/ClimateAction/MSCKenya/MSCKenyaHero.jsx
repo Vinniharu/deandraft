@@ -41,15 +41,8 @@ export default function MSCKenyaHero() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             variants={textVariants}
           >
-            MSC Kenya Climate Workshop
+            Catalyzing Youth Leadership for Climate Resilience
           </motion.h1>
-
-          <motion.p
-            className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
-            variants={textVariants}
-          >
-            Catalyzing Youth Leadership for Climate Resilience
-          </motion.p>
 
         </div>
       </div>
