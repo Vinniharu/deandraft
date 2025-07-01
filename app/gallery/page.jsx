@@ -13,28 +13,6 @@ export default function GalleryPage() {
   // Gallery categories with their respective images - ALL FOLDERS FROM PUBLIC
   const galleryCategories = [
     {
-      id: "team",
-      title: "Our Team",
-      description: "Meet the dedicated professionals driving our mission forward",
-      thumbnail: "/team/semiye.JPG",
-      color: "blue",
-      images: [
-        { src: "/team/semiye.JPG", alt: "Semiye - Team Member" },
-        { src: "/team/Uchechukwu Arinze.jpg", alt: "Uchechukwu Arinze" },
-        { src: "/team/Theophilus Olugbade.jpg", alt: "Theophilus Olugbade" },
-        { src: "/team/Samuel Opeyemi.jpg", alt: "Samuel Opeyemi" },
-        { src: "/team/Raphael.jpg", alt: "Raphael" },
-        { src: "/team/Ojo Taiye John.jpg", alt: "Ojo Taiye John" },
-        { src: "/team/Ngozi Edum.jpg", alt: "Ngozi Edum" },
-        { src: "/team/Mokikan Dorcas.png", alt: "Mokikan Dorcas" },
-        { src: "/team/Johnson Ajayi.jpg", alt: "Johnson Ajayi" },
-        { src: "/team/Flourish Oamen.jpg", alt: "Flourish Oamen" },
-        { src: "/team/Doreen Mennom Oho.jpg", alt: "Doreen Mennom Oho" },
-        { src: "/team/Blessing Agu.jpg", alt: "Blessing Agu" },
-        { src: "/team/Ayodeji Bayere.jpg", alt: "Ayodeji Bayere" }
-      ]
-    },
-    {
       id: "hero",
       title: "Hero Gallery",
       description: "Inspiring moments and key highlights from our initiatives",
@@ -49,47 +27,6 @@ export default function GalleryPage() {
         { src: "/hero/hero-4.jpeg", alt: "Hero Image 4" },
         { src: "/hero/hero-5.jpeg", alt: "Hero Image 5" },
         { src: "/hero/hero-2.jpeg", alt: "Hero Image Alternative" }
-      ]
-    },
-    {
-      id: "partners",
-      title: "Our Partners",
-      description: "Collaborative relationships that amplify our impact",
-      thumbnail: "/partners/1.png",
-      color: "blue",
-      images: [
-        { src: "/partners/1.png", alt: "Partner Organization 1" },
-        { src: "/partners/2.png", alt: "Partner Organization 2" },
-        { src: "/partners/3.jpeg", alt: "Partner Organization 3" },
-        { src: "/partners/4.png", alt: "Partner Organization 4" },
-        { src: "/partners/5.png", alt: "Partner Organization 5" },
-        { src: "/partners/6.png", alt: "Partner Organization 6" },
-        { src: "/partners/7.png", alt: "Partner Organization 7" },
-        { src: "/partners/8.jpeg", alt: "Partner Organization 8" },
-        { src: "/partners/9.jpg", alt: "Partner Organization 9" },
-        { src: "/partners/10.png", alt: "Partner Organization 10" },
-        { src: "/partners/11.jpg", alt: "Partner Organization 11" },
-        { src: "/partners/12.jpg", alt: "Partner Organization 12" },
-        { src: "/partners/13.webp", alt: "Partner Organization 13" },
-        { src: "/partners/14.jpeg", alt: "Partner Organization 14" },
-        { src: "/partners/15.jpg", alt: "Partner Organization 15" },
-        { src: "/partners/16.png", alt: "Partner Organization 16" },
-        { src: "/partners/17.jpg", alt: "Partner Organization 17" },
-        { src: "/partners/18.jpg", alt: "Partner Organization 18" },
-        { src: "/partners/19.jpg", alt: "Partner Organization 19" },
-        { src: "/partners/20.jpg", alt: "Partner Organization 20" },
-        { src: "/partners/21.jpg", alt: "Partner Organization 21" },
-        { src: "/partners/22.png", alt: "Partner Organization 22" },
-        { src: "/partners/23.png", alt: "Partner Organization 23" },
-        { src: "/partners/24.png", alt: "Partner Organization 24" },
-        { src: "/partners/25.png", alt: "Partner Organization 25" },
-        { src: "/partners/26.png", alt: "Partner Organization 26" },
-        { src: "/partners/27.jpeg", alt: "Partner Organization 27" },
-        { src: "/partners/28.jpeg", alt: "Partner Organization 28" },
-        { src: "/partners/29.jpg", alt: "Partner Organization 29" },
-        { src: "/partners/30.jpg", alt: "Partner Organization 30" },
-        { src: "/partners/31.jpeg", alt: "Partner Organization 31" },
-        { src: "/partners/32.png", alt: "Partner Organization 32" }
       ]
     },
     {
@@ -193,22 +130,6 @@ export default function GalleryPage() {
         { src: "/moredemo/caavs.jpg", alt: "CAAVS Initiative" },
         { src: "/moredemo/abaji.JPG", alt: "Abaji Project" },
         { src: "/moredemo/1.jpg", alt: "More Democracy Activity 1" }
-      ]
-    },
-    {
-      id: "yabm",
-      title: "YABM",
-      description: "Young African Budget Monitors network",
-      thumbnail: "/yabm/yazid.jpeg",
-      color: "red",
-      images: [
-        { src: "/yabm/yazid.jpeg", alt: "Yazid - YABM Member" },
-        { src: "/yabm/seyifunmi.jpg", alt: "Seyifunmi - YABM Member" },
-        { src: "/yabm/salome.jpg", alt: "Salome - YABM Member" },
-        { src: "/yabm/noreen.png", alt: "Noreen - YABM Member" },
-        { src: "/yabm/elona.jpg", alt: "Elona - YABM Member" },
-        { src: "/yabm/deborah.jpeg", alt: "Deborah - YABM Member" },
-        { src: "/yabm/agber.jpeg", alt: "Agber - YABM Member" }
       ]
     },
     {
@@ -385,22 +306,7 @@ export default function GalleryPage() {
         { src: "/ceep/gallery6.jpeg", alt: "CEEP Gallery 6" }
       ]
     },
-    {
-      id: "board",
-      title: "Board Members",
-      description: "Leadership and governance structure",
-      thumbnail: "/board/rebecca.jpg",
-      color: "red",
-      images: [
-        { src: "/board/rebecca.jpg", alt: "Rebecca - Board Member" },
-        { src: "/board/ruth.jpg", alt: "Ruth - Board Member" },
-        { src: "/board/naomi.jpg", alt: "Naomi - Board Member" },
-        { src: "/board/monday.jpg", alt: "Monday - Board Member" },
-        { src: "/board/james.jpg", alt: "James - Board Member" },
-        { src: "/board/chibuzo.jpg", alt: "Chibuzo - Board Member" },
-        { src: "/board/adebusola.png", alt: "Adebusola - Board Member" }
-      ]
-    },
+   
     {
       id: "cda",
       title: "CDA",
