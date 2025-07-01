@@ -245,7 +245,7 @@ export default function GalleryPage() {
       id: "fixelection",
       title: "FixElection Youth Assembly",
       description: "Electoral integrity and democratic governance",
-      thumbnail: "/fixelection/hero.jpg",
+      thumbnail: "/fixelection/hero.jpeg",
       color: "blue",
       images: [
         { src: "/fixelection/hero.jpeg", alt: "Fix Election Hero" },
