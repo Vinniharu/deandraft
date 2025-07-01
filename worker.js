@@ -47,13 +47,13 @@ export const teamMembers = [
       facebook: "https://facebook.com/ayodeji.reuben",
     },
   },
-  {
-    name: "Uche Arinze",
-    title: "Communication Manager",
-    description:
-      "Uche Arinze is a development strategist and educator who shapes impactful narratives. As Communications Manager, she amplifies DEAN Initiative's mission and inspires action through storytelling.",
-    image: "/team/Uchechukwu Arinze.jpg",
-  },
+  // {
+  //   name: "Uche Arinze",
+  //   title: "Communication Manager",
+  //   description:
+  //     "Uche Arinze is a development strategist and educator who shapes impactful narratives. As Communications Manager, she amplifies DEAN Initiative's mission and inspires action through storytelling.",
+  //   image: "/team/Uchechukwu Arinze.jpg",
+  // },
   // {
   //   name: "Raphael Linus",
   //   title: "Operation Manager",

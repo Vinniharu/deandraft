@@ -3,7 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -14,7 +18,7 @@ export default function GalleryPage() {
   const galleryCategories = [
     {
       id: "hero",
-      title: "Hero Gallery",
+      title: "Everything DEAN",
       description: "Inspiring moments and key highlights from our initiatives",
       thumbnail: "/hero/hero-1.jpg",
       color: "red",
@@ -26,8 +30,8 @@ export default function GalleryPage() {
         { src: "/hero/hero-3.jpg", alt: "Hero Image 3" },
         { src: "/hero/hero-4.jpeg", alt: "Hero Image 4" },
         { src: "/hero/hero-5.jpeg", alt: "Hero Image 5" },
-        { src: "/hero/hero-2.jpeg", alt: "Hero Image Alternative" }
-      ]
+        { src: "/hero/hero-2.jpeg", alt: "Hero Image Alternative" },
+      ],
     },
     {
       id: "studentfellowship",
@@ -36,40 +40,44 @@ export default function GalleryPage() {
       thumbnail: "/studentfellowship/hero.jpg",
       color: "red",
       images: [
-        { src: "/studentfellowship/hero.jpg", alt: "Student Fellowship Hero" },
-        { src: "/studentfellowship/about.jpeg", alt: "About Student Fellowship" },
-        { src: "/studentfellowship/impact.jpg", alt: "Student Fellowship Impact" },
-        { src: "/studentfellowship/process.jpg", alt: "Fellowship Process" },
-        { src: "/studentfellowship/1.jpeg", alt: "Fellowship Activity 1" },
-        { src: "/studentfellowship/2.jpeg", alt: "Fellowship Activity 2" },
-        { src: "/studentfellowship/3.jpeg", alt: "Fellowship Activity 3" },
-        { src: "/studentfellowship/4.jpeg", alt: "Fellowship Activity 4" },
-        { src: "/studentfellowship/5.jpeg", alt: "Fellowship Activity 5" },
-        { src: "/studentfellowship/6.jpeg", alt: "Fellowship Activity 6" }
-      ]
+        { src: "/studentfellowship/s1.jpg", alt: "Student Fellowship Hero" },
+        { src: "/studentfellowship/s2.jpeg", alt: "About Student Fellowship" },
+        { src: "/studentfellowship/s3.jpg", alt: "Student Fellowship Impact" },
+        { src: "/studentfellowship/s4.jpg", alt: "Fellowship Process" },
+        { src: "/studentfellowship/s5.jpg", alt: "Fellowship Activity 1" },
+        { src: "/studentfellowship/s6.jpg", alt: "Fellowship Activity 2" },
+        { src: "/studentfellowship/s7.jpeg", alt: "Fellowship Activity 3" },
+        { src: "/studentfellowship/s8.jpg", alt: "Fellowship Activity 4" },
+        { src: "/studentfellowship/s9.jpg", alt: "Fellowship Activity 5" },
+        { src: "/studentfellowship/s10.jpg", alt: "Fellowship Activity 6" },
+      ],
     },
     {
       id: "budgetwatch",
-      title: "Budget Watch",
+      title: "#BudgetWatch",
       description: "Promoting fiscal transparency and accountability",
       thumbnail: "/budgetwatch/hero.jpg",
       color: "blue",
       images: [
         { src: "/budgetwatch/hero.jpg", alt: "Budget Watch Hero" },
         { src: "/budgetwatch/about.jpg", alt: "About Budget Watch" },
-        { src: "/budgetwatch/previous.jpg", alt: "Previous Budget Watch Activities" },
+        {
+          src: "/budgetwatch/previous.jpg",
+          alt: "Previous Budget Watch Activities",
+        },
         { src: "/budgetwatch/1.jpg", alt: "Budget Watch Activity 1" },
         { src: "/budgetwatch/2.jpg", alt: "Budget Watch Activity 2" },
         { src: "/budgetwatch/3.jpg", alt: "Budget Watch Activity 3" },
         { src: "/budgetwatch/4.jpg", alt: "Budget Watch Activity 4" },
         { src: "/budgetwatch/5.jpg", alt: "Budget Watch Activity 5" },
-        { src: "/budgetwatch/6.jpg", alt: "Budget Watch Activity 6" }
-      ]
+        { src: "/budgetwatch/6.jpg", alt: "Budget Watch Activity 6" },
+      ],
     },
     {
       id: "ipledge",
-      title: "iPledge Nigeria",
-      description: "Strengthening democratic participation and electoral integrity",
+      title: "#iPledge2vote",
+      description:
+        "Strengthening democratic participation and electoral integrity",
       thumbnail: "/ipledge/mainbg.jpg",
       color: "red",
       images: [
@@ -82,12 +90,12 @@ export default function GalleryPage() {
         { src: "/ipledge/3.jpg", alt: "iPledge Activity 3" },
         { src: "/ipledge/4.jpg", alt: "iPledge Activity 4" },
         { src: "/ipledge/5.jpg", alt: "iPledge Activity 5" },
-        { src: "/ipledge/6.jpg", alt: "iPledge Activity 6" }
-      ]
+        { src: "/ipledge/6.jpg", alt: "iPledge Activity 6" },
+      ],
     },
     {
       id: "national",
-      title: "National Action",
+      title: "National Action Day",
       description: "National SDG activation and youth engagement",
       thumbnail: "/national/mainbg.jpg",
       color: "blue",
@@ -98,12 +106,12 @@ export default function GalleryPage() {
         { src: "/national/3.jpeg", alt: "National Action Activity 3" },
         { src: "/national/4.jpeg", alt: "National Action Activity 4" },
         { src: "/national/5.jpeg", alt: "National Action Activity 5" },
-        { src: "/national/6.jpeg", alt: "National Action Activity 6" }
-      ]
+        { src: "/national/6.jpeg", alt: "National Action Activity 6" },
+      ],
     },
     {
       id: "openlgas",
-      title: "Open LGAs",
+      title: "#OpenLGAS",
       description: "Enhancing transparency in local government administration",
       thumbnail: "/openlgas/hero.jpg",
       color: "red",
@@ -115,22 +123,8 @@ export default function GalleryPage() {
         { src: "/openlgas/3.jpeg", alt: "Open LGAs Activity 3" },
         { src: "/openlgas/4.jpeg", alt: "Open LGAs Activity 4" },
         { src: "/openlgas/5.jpeg", alt: "Open LGAs Activity 5" },
-        { src: "/openlgas/6.jpeg", alt: "Open LGAs Activity 6" }
-      ]
-    },
-    {
-      id: "moredemo",
-      title: "More Democracy",
-      description: "Strengthening democratic institutions and practices",
-      thumbnail: "/moredemo/hero.JPG",
-      color: "blue",
-      images: [
-        { src: "/moredemo/hero.JPG", alt: "More Democracy Hero" },
-        { src: "/moredemo/citizen.jpg", alt: "Citizen Engagement" },
-        { src: "/moredemo/caavs.jpg", alt: "CAAVS Initiative" },
-        { src: "/moredemo/abaji.JPG", alt: "Abaji Project" },
-        { src: "/moredemo/1.jpg", alt: "More Democracy Activity 1" }
-      ]
+        { src: "/openlgas/6.jpeg", alt: "Open LGAs Activity 6" },
+      ],
     },
     {
       id: "transforming",
@@ -153,12 +147,12 @@ export default function GalleryPage() {
         { src: "/transforming/a3.jpg", alt: "Activity 3" },
         { src: "/transforming/a4.jpg", alt: "Activity 4" },
         { src: "/transforming/a5.jpg", alt: "Activity 5" },
-        { src: "/transforming/a6.jpg", alt: "Activity 6" }
-      ]
+        { src: "/transforming/a6.jpg", alt: "Activity 6" },
+      ],
     },
     {
       id: "sdgs",
-      title: "SDGs in Schools",
+      title: "SDGs Activation",
       description: "Integrating Sustainable Development Goals in education",
       thumbnail: "/sdgs/hero-bg.JPG",
       color: "red",
@@ -166,17 +160,17 @@ export default function GalleryPage() {
         { src: "/sdgs/hero-bg.jpg", alt: "SDGs Hero Background" },
         { src: "/sdgs/main-image.jpg", alt: "SDGs Main Image" },
         { src: "/sdgs/summit.jpg", alt: "SDGs Summit" },
-        { src: "/sdgs/1.jpg", alt: "SDGs Activity 1" },
-        { src: "/sdgs/2.jpg", alt: "SDGs Activity 2" },
-        { src: "/sdgs/3.jpg", alt: "SDGs Activity 3" },
-        { src: "/sdgs/4.jpg", alt: "SDGs Activity 4" },
-        { src: "/sdgs/5.jpg", alt: "SDGs Activity 5" },
-        { src: "/sdgs/6.jpg", alt: "SDGs Activity 6" },
-        { src: "/sdgs/7.jpg", alt: "SDGs Activity 7" },
-        { src: "/sdgs/8.jpg", alt: "SDGs Activity 8" },
-        { src: "/sdgs/9.jpg", alt: "SDGs Activity 9" },
-        { src: "/sdgs/10.jpg", alt: "SDGs Activity 10" },
-      ]
+        { src: "/sdgs/s1.jpg", alt: "SDGs Activity 1" },
+        { src: "/sdgs/s2.jpg", alt: "SDGs Activity 2" },
+        { src: "/sdgs/s3.jpg", alt: "SDGs Activity 3" },
+        { src: "/sdgs/s4.jpg", alt: "SDGs Activity 4" },
+        { src: "/sdgs/s5.jpg", alt: "SDGs Activity 5" },
+        { src: "/sdgs/s6.jpg", alt: "SDGs Activity 6" },
+        { src: "/sdgs/s7.jpg", alt: "SDGs Activity 7" },
+        { src: "/sdgs/s8.jpg", alt: "SDGs Activity 8" },
+        { src: "/sdgs/s9.jpg", alt: "SDGs Activity 9" },
+        { src: "/sdgs/s10.jpg", alt: "SDGs Activity 10" },
+      ],
     },
     {
       id: "nextgen",
@@ -191,12 +185,12 @@ export default function GalleryPage() {
         { src: "/nextgen/apd2.jpg", alt: "Professional Development 2" },
         { src: "/nextgen/hrc.jpg", alt: "Human Resource Capacity" },
         { src: "/nextgen/ld1.jpg", alt: "Leadership Development 1" },
-        { src: "/nextgen/ld2.jpg", alt: "Leadership Development 2" }
-      ]
+        { src: "/nextgen/ld2.jpg", alt: "Leadership Development 2" },
+      ],
     },
     {
       id: "msc",
-      title: "MSC Kenya Climate Workshop",
+      title: "CYLCR",
       description: "Building collaborative partnerships for impact",
       thumbnail: "/msc/bg.jpg",
       color: "red",
@@ -207,13 +201,14 @@ export default function GalleryPage() {
         { src: "/msc/img3.jpg", alt: "Coalition Meeting 3" },
         { src: "/msc/img4.jpg", alt: "Coalition Meeting 4" },
         { src: "/msc/img5.jpg", alt: "Coalition Meeting 5" },
-        { src: "/msc/img6.jpg", alt: "Coalition Meeting 6" }
-      ]
+        { src: "/msc/img6.jpg", alt: "Coalition Meeting 6" },
+      ],
     },
     {
       id: "lakechad",
       title: "Lake Chad Fellowship",
-      description: "Climate resilience and peace-building in the Lake Chad Basin",
+      description:
+        "Climate resilience and peace-building in the Lake Chad Basin",
       thumbnail: "/lakechad/mainbg.jpg",
       color: "blue",
       images: [
@@ -224,8 +219,8 @@ export default function GalleryPage() {
         { src: "/lakechad/3.jpg", alt: "Lake Chad Activity 3" },
         { src: "/lakechad/4.jpg", alt: "Lake Chad Activity 4" },
         { src: "/lakechad/5.jpg", alt: "Lake Chad Activity 5" },
-        { src: "/lakechad/6.jpg", alt: "Lake Chad Activity 6" }
-      ]
+        { src: "/lakechad/6.jpg", alt: "Lake Chad Activity 6" },
+      ],
     },
     {
       id: "girlback",
@@ -243,12 +238,12 @@ export default function GalleryPage() {
         { src: "/girlback/6.jpg", alt: "Girls Education 6" },
         { src: "/girlback/7.jpg", alt: "Girls Education 7" },
         { src: "/girlback/8.jpg", alt: "Girls Education 8" },
-        { src: "/girlback/9.jpg", alt: "Girls Education 9" }
-      ]
+        { src: "/girlback/9.jpg", alt: "Girls Education 9" },
+      ],
     },
     {
       id: "fixelection",
-      title: "Fix Election",
+      title: "FixElection Youth Assembly",
       description: "Electoral integrity and democratic governance",
       thumbnail: "/fixelection/hero.jpg",
       color: "blue",
@@ -263,8 +258,8 @@ export default function GalleryPage() {
         { src: "/fixelection/gallery3.jpg", alt: "Fix Election Gallery 3" },
         { src: "/fixelection/gallery4.jpeg", alt: "Fix Election Gallery 4" },
         { src: "/fixelection/gallery5.jpeg", alt: "Fix Election Gallery 5" },
-        { src: "/fixelection/gallery6.jpeg", alt: "Fix Election Gallery 6" }
-      ]
+        { src: "/fixelection/gallery6.jpeg", alt: "Fix Election Gallery 6" },
+      ],
     },
     {
       id: "eewom",
@@ -284,8 +279,8 @@ export default function GalleryPage() {
         { src: "/eewom/3.jpg", alt: "EEWOM Activity 3" },
         { src: "/eewom/4.jpg", alt: "EEWOM Activity 4" },
         { src: "/eewom/5.jpg", alt: "EEWOM Activity 5" },
-        { src: "/eewom/6.jpg", alt: "EEWOM Activity 6" }
-      ]
+        { src: "/eewom/6.jpg", alt: "EEWOM Activity 6" },
+      ],
     },
     {
       id: "ceep",
@@ -303,10 +298,10 @@ export default function GalleryPage() {
         { src: "/ceep/gallery3.jpg", alt: "CEEP Gallery 3" },
         { src: "/ceep/gallery4.jpg", alt: "CEEP Gallery 4" },
         { src: "/ceep/gallery5.jpg", alt: "CEEP Gallery 5" },
-        { src: "/ceep/gallery6.jpeg", alt: "CEEP Gallery 6" }
-      ]
+        { src: "/ceep/gallery6.jpeg", alt: "CEEP Gallery 6" },
+      ],
     },
-   
+
     {
       id: "cda",
       title: "CDA",
@@ -317,58 +312,28 @@ export default function GalleryPage() {
         { src: "/cda/mainbg.jpg", alt: "CDA Main Background" },
         { src: "/cda/1.jpg", alt: "CDA Activity 1" },
         { src: "/cda/2.jpg", alt: "CDA Activity 2" },
-        { src: "/cda/3.jpg", alt: "CDA Activity 3" }
-      ]
+        { src: "/cda/3.jpg", alt: "CDA Activity 3" },
+      ],
     },
-    {
-      id: "financial",
-      title: "Financial Literacy",
-      description: "Promoting financial education and inclusion",
-      thumbnail: "/financial/bg.jpg",
-      color: "red",
-      images: [
-        { src: "/financial/bg.jpg", alt: "Financial Literacy Background" }
-      ]
-    },
-    {
-      id: "archive",
-      title: "Program Archive",
-      description: "Historical documentation of our programs",
-      thumbnail: "/archive/mainbg.jpg",
-      color: "blue",
-      images: [
-        { src: "/archive/mainbg.jpg", alt: "Program Archive Background" }
-      ]
-    },
-    {
-      id: "annual",
-      title: "Annual Reports",
-      description: "Annual impact reports and documentation",
-      thumbnail: "/annual/bg.jpg",
-      color: "red",
-      images: [
-        { src: "/annual/bg.jpg", alt: "Annual Reports Background" }
-      ]
-    }
   ];
 
   const openModal = (category, imageIndex = 0) => {
     setSelectedCategory(category);
     setSelectedImageIndex(imageIndex);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedCategory(null);
     setSelectedImageIndex(0);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   const nextImage = () => {
     if (selectedCategory) {
-      setSelectedImageIndex((prev) => 
+      setSelectedImageIndex((prev) =>
         prev === selectedCategory.images.length - 1 ? 0 : prev + 1
       );
     }
@@ -376,7 +341,7 @@ export default function GalleryPage() {
 
   const prevImage = () => {
     if (selectedCategory) {
-      setSelectedImageIndex((prev) => 
+      setSelectedImageIndex((prev) =>
         prev === 0 ? selectedCategory.images.length - 1 : prev - 1
       );
     }
@@ -384,42 +349,44 @@ export default function GalleryPage() {
 
   const handleKeyPress = (e) => {
     if (isModalOpen) {
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'ArrowRight') nextImage();
-      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
     }
   };
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
   }, [isModalOpen, selectedCategory]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-red)]/70">
-
-        <div className="container mx-auto px-4 relative z-10 ">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent">
-                Gallery
-              </span>
-            </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-8"></div>
-            <p className="text-xl text-white leading-relaxed">
-              Explore our comprehensive visual journey through all our programs, team members, 
-              partnerships, and impactful initiatives across Africa.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <div className="bg-[url('/hero/hero-1.jpg')] bg-cover bg-top bg-no-repeat">
+        <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-r from-[var(--dean-blue)]/70 to-[var(--dean-red)]/70">
+          <div className="container mx-auto px-4 relative z-10 ">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] bg-clip-text text-transparent">
+                  Gallery
+                </span>
+              </h1>
+              <div className="h-1 w-24 bg-gradient-to-r from-[var(--dean-blue)] to-[var(--dean-red)] mx-auto mb-8"></div>
+              <p className="text-xl text-white leading-relaxed">
+                Explore our comprehensive visual journey through all our
+                programs, team members, partnerships, and impactful initiatives
+                across Africa.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      </div>
 
       {/* Gallery Categories */}
       <section className="py-16 relative">
@@ -443,19 +410,20 @@ export default function GalleryPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div className={`absolute inset-0 bg-[var(--dean-${category.color})]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                    <div
+                      className={`absolute inset-0 bg-[var(--dean-${category.color})]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    ></div>
                   </div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-bold">{category.title}</h3>
-                      <span className={`bg-[var(--dean-${category.color})] text-white px-2 py-1 rounded-full text-xs font-medium`}>
+                      <span
+                        className={`bg-[var(--dean-${category.color})] text-white px-2 py-1 rounded-full text-xs font-medium`}
+                      >
                         {category.images.length}
                       </span>
                     </div>
-                    <p className="text-gray-200 text-xs leading-relaxed mb-2">
-                      {category.description}
-                    </p>
                     <div className="flex items-center text-xs font-medium">
                       <span>Click to explore</span>
                       <ChevronRightIcon className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
@@ -486,12 +454,17 @@ export default function GalleryPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className={`bg-[var(--dean-${selectedCategory.color})] text-white p-6`}>
+              <div
+                className={`bg-[var(--dean-${selectedCategory.color})] text-white p-6`}
+              >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold">{selectedCategory.title}</h2>
+                    <h2 className="text-2xl font-bold">
+                      {selectedCategory.title}
+                    </h2>
                     <p className="text-white/80 mt-1">
-                      {selectedImageIndex + 1} of {selectedCategory.images.length}
+                      {selectedImageIndex + 1} of{" "}
+                      {selectedCategory.images.length}
                     </p>
                   </div>
                   <button
@@ -533,7 +506,6 @@ export default function GalleryPage() {
                 )}
               </div>
 
-
               {/* Thumbnail Navigation */}
               {selectedCategory.images.length > 1 && (
                 <div className="p-6 pt-0 bg-white">
@@ -543,9 +515,9 @@ export default function GalleryPage() {
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`relative flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden transition-all ${
-                          index === selectedImageIndex 
-                            ? `ring-2 ring-[var(--dean-${selectedCategory.color})] scale-110` 
-                            : 'hover:scale-105 opacity-70 hover:opacity-100'
+                          index === selectedImageIndex
+                            ? `ring-2 ring-[var(--dean-${selectedCategory.color})] scale-110`
+                            : "hover:scale-105 opacity-70 hover:opacity-100"
                         }`}
                       >
                         <Image

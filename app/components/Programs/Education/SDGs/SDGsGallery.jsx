@@ -48,27 +48,27 @@ export default function SDGsGallery() {
   // Gallery images data
   const galleryImages = [
     {
-      src: "/sdgs/1.jpg",
+      src: "/sdgs/s1.jpg",
       alt: "SDGs Workshop Session",
     },
     {
-      src: "/sdgs/2.jpg",
+      src: "/sdgs/s2.jpg",
       alt: "Community Outreach Program",
     },
     {
-      src: "/sdgs/3.jpg",
+      src: "/sdgs/s3.jpg",
       alt: "Student Projects Exhibition",
     },
     {
-      src: "/sdgs/4.jpg",
+      src: "/sdgs/s4.jpg",
       alt: "Teacher Training Session",
     },
     {
-      src: "/sdgs/5.jpg",
+      src: "/sdgs/s5.jpg",
       alt: "SDGs Summit",
     },
     {
-      src: "/sdgs/6.jpg",
+      src: "/sdgs/s6.jpg",
       alt: "School Implementation",
     },
   ];

@@ -2,17 +2,18 @@
 
 import { useEffect } from "react";
 import PublicationsHero from "@/app/components/Publications/PublicationsHero";
-import DocumentsList from "@/app/components/Publications/DocumentsList";
+import PublicationsMenu from "@/app/components/Publications/PublicationsMenu";
 import PageTransition from "@/app/components/PageTransition";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 
 export default function PublicationsPage() {
-  // Preload PDF thumbnails for better performance
+  // Preload both types of reports for better performance
   useEffect(() => {
     const pdfList = [
-      "/documents/annual-impact-report-2023.pdf",
-      "/documents/education-reform-brief.pdf",
-      "/documents/community-development-research.pdf"
+      "https://drive.google.com/file/d/1nanJ0Hdi_tdArLytwUygcLZV0NgXcWJU/view?usp=drive_link",
+      "https://drive.google.com/file/d/1OxMBhY3ZeJ5vSJdAKFmQ9rWy3aDiRZNi/view?usp=drive_link",
+      "https://drive.google.com/file/d/1h6pEkn08ZebUV8eYaMFnwmVuGF6yzP-R/view?usp=drive_link",
+      "https://drive.google.com/file/d/1RsZWRoTj5neNWaykSbNZPtwcHj9y8sor/view?usp=drive_link"
     ];
     
     pdfList.forEach((src) => {
@@ -28,7 +29,7 @@ export default function PublicationsPage() {
       <PageTransition>
         <main className="min-h-screen">
           <PublicationsHero />
-          <DocumentsList />
+          <PublicationsMenu />
         </main>
       </PageTransition>
     </ErrorBoundary>

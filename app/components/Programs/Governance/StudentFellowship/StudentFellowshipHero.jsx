@@ -63,7 +63,7 @@ export default function StudentFellowshipHero() {
             style={{
                 backgroundImage: "url('/studentfellowship/hero.jpg')",
                 backgroundSize: "cover",
-                backgroundPosition: "top",
+                backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
             }}
         >

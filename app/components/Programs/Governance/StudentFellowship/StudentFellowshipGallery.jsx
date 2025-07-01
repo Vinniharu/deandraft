@@ -46,27 +46,27 @@ export default function StudentFellowshipGallery() {
   // Gallery images data
   const galleryImages = [
     {
-      src: "/studentfellowship/1.jpeg",
+      src: "/studentfellowship/s1.jpg",
       alt: "Fellowship Training Session",
     },
     {
-      src: "/studentfellowship/2.jpeg",
+      src: "/studentfellowship/s2.jpg",
       alt: "Community Engagement",
     },
     {
-      src: "/studentfellowship/3.jpeg",
+      src: "/studentfellowship/s3.jpg",
       alt: "Budget Analysis Workshop",
     },
     {
-      src: "/studentfellowship/4.jpeg",
+      src: "/studentfellowship/s4.jpg",
       alt: "Advocacy Meeting",
     },
     {
-      src: "/studentfellowship/5.jpeg",
+      src: "/studentfellowship/s5.jpg",
       alt: "Stakeholder Engagement",
     },
     {
-      src: "/studentfellowship/6.jpeg",
+      src: "/studentfellowship/s6.jpg",
       alt: "Fellows Presentation",
     },
   ];

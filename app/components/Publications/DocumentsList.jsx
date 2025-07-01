@@ -59,11 +59,6 @@ const documents = [
     title: "ACTIVITIES REPORT ON GBV, HYGIENE EDUCATION AND CLIMATE CHANGE",
     path: "https://drive.google.com/file/d/1EFWN9MdDvVOMjoc99LvZVTaop1Y3wbp-/view?usp=drive_link",
   },
-  // {
-  //   id: "sdgs-summit",
-  //   title: "SDGsStory Summit Report",
-  //   path: "https://drive.google.com/file/d/1UEvSUxKzhvnDahm3XrAUnoluj5aFBbv2/view?usp=drive_link",
-  // },
   {
     id: "survey",
     title: "Leading Change in a Difficult Time",

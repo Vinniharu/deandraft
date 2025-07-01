@@ -41,7 +41,7 @@ const navLinks = [
       { name: "Climate Democracy Accelerator", path: "/programs/climate-action/democracy-accelerator" },
       { name: "National Action Day", path: "/programs/climate-action/national-action" },
       { name: "CYLCR", path: "/programs/climate-action/cylcr" },
-      { name: "More Climate Projects", path: "/programs/climate-action/more" }
+      // { name: "More Climate Projects", path: "/programs/climate-action/more" }
     ]
   },
   {
@@ -68,6 +68,10 @@ const navLinks = [
   {
     name: "Publications",
     path: "/publications",
+    sublinks: [
+      { name: "Annual Reports", path: "/annual-reports" },
+      { name: "Project Reports", path: "/project-reports" },
+    ]
   },
   {
     name: "Media",
@@ -230,7 +234,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="w-14 h-14 relative flex items-center">
               <img 
-                src="/deanlogo.png" 
+                src="/logo.png" 
                 alt="Dean Initiative Logo" 
                 className="object-contain w-full h-full"
               />

@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center">
               <Image
-                src="/deanlogo.png"
+                src="/logobg.jpg"
                 alt="DEAN Initiative Logo"
                 width={150}
                 height={40}
